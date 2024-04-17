@@ -16,6 +16,12 @@ npm i
 npm run dev
 ```
 
+# Design Guidelines
+
+Access the [figma mockups](https://www.figma.com/file/PoZFiVJE3qQUtFjm8cNOBn/Colorstack-Web-Design?type=design&node-id=226%3A862&mode=design&t=ZLsJFjLyVGeER8bM-1)
+for the website. Follow the design __exactly__ as it is shown in the mockups 
+(i.e. Use the exact colors, fonts, and spacing as shown in the mockups).
+
 # Contributing Guidelines
 
 Our primary branch is `main` so when starting any new features please branch from there.
