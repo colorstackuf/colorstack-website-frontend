@@ -1,38 +1,20 @@
-# create-svelte
+# ColorStack UF Website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Official website for ColorStack UF.
 
-## Creating a project
+# Contributing Guidelines
 
-If you're seeing this, you've probably already done this step. Congrats!
+Our primary branch is `main` so when starting any new features please branch from there.
+Branch names should follow the convention of `username/short-description(-###)`. Where ###
+is the number of the issue you are working (if applicable). In order to merge your changes,
+you will have to open a pull request against main, resolve all feedback conversations, and
+get at least 1 approval from another developer.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Step-By-Step
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+1. Branch off `main` with naming convention `username/short-description(-###)` (ex. `matthewdeguzman/initial-framework-1`).
+2. Work feature (don't worry about a clean history too much).
+3. Make a PR against main (make sure the title is a clean commit message https://cbea.ms/git-commit/).
+4. Receive feedback and resolve all conversations.
+5. Get at least one approval.
+6. Squash and Merge (if you believe your working history is valuable then just Merge).
