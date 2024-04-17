@@ -2,6 +2,20 @@
 
 Official website for ColorStack UF.
 
+# Getting Started
+
+## 1. Install the dependencies with npm
+
+```bash
+npm i
+```
+
+## 2. Start the development server
+
+```bash
+npm run dev
+```
+
 # Contributing Guidelines
 
 Our primary branch is `main` so when starting any new features please branch from there.
