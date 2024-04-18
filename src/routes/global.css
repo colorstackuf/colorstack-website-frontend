@@ -1,0 +1,11 @@
+:root {
+	--page-width: 1200px;
+	--header-height: 100px;
+	--footer-height: 155px;
+	--foreground-primary: #0B0F24;
+	--text-emphasis: #FD9739;
+}
+
+* {
+	font-family: 'Monserrat', sans-serif;
+}
