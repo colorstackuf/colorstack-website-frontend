@@ -33,7 +33,6 @@
 
 	main {
 		width: 100%;
-		max-width: 1200px;
 		display: grid;
 		grid-template-rows: var(--header-height) auto var(--footer-height);
 	}
