@@ -25,7 +25,8 @@
 
 	.header-box {
 		width: 100%;
-		padding: 0 var(--page-padding-y);
+		padding: 1rem 0;
+		height: 100%;
 		max-height: var(--header-height);
 		display: grid;
 		grid-template-columns: repeat(2, auto);
@@ -34,6 +35,7 @@
 
 	.header-container {
 		width: 100%;
+		padding: 0 var(--page-padding-y);
 		background-color: var(--foreground-primary);
 		display: flex;
 		flex-direction: column;
@@ -44,30 +46,22 @@
 	.logo-container {
 		cursor: pointer;
 		height: 100%;
-		margin-left: 26px;
-		width: 36px;
 		display: grid;
 		grid-template-rows: 36px 1rem;
+		justify-content: start;
 	}
 
 	.logo {
 		height: auto;
 		justify-self: end;
+		width: 220px;
 	}
 
 	.uf {
 		justify-self: end;
 		color: var(--text-emphasis);
-		font-size: 0.92rem;
+		font-size: 0.8rem;
 		letter-spacing: 1px;
-	}
-
-	.nav-btn {
-		color: white;
-		font-size: 1.1rem;
-		text-decoration: none;
-		margin-right: 3rem;
-		font-weight: 100;
 	}
 
 	.nav-bar {

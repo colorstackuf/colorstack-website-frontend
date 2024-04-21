@@ -11,26 +11,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </svelte:head>
 
-<div class="main-container">
-	<div></div>
-	<main>
-		<Header />
-		<div>
-			<slot />
-		</div>
-		<Footer />
-	</main>
-	<div></div>
-</div>
+<Header />
+<main>
+	<slot />
+</main>
+<Footer />
 
 <style>
-	.main-container {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		height: 100vh;
-	}
-
 	main {
 		width: 100%;
 		display: grid;

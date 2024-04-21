@@ -1,1 +1,1 @@
-<p>about page. under construction...</p>
+<p>students page. under construction...</p>

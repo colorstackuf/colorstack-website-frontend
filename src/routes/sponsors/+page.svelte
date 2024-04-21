@@ -1,1 +1,1 @@
-<p>about page. under construction...</p>
+<p>sponsors page. under construction...</p>
