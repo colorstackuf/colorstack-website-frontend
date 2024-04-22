@@ -1,22 +1,31 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 
+	$: innerWidth = 0;
+
 	function goHome() {
 		goto('/');
 	}
 </script>
 
+<svelte:window bind:innerWidth />
 <div class="header-container">
 	<div class="header-box">
 		<div class="logo-container" on:click={goHome}>
 			<img class="logo" src="/colorstack-logo-title.svg" alt="Colorstack logo and title" />
-			<h class="uf">At University of Florida</h>
 		</div>
+
 		<div class="nav-bar">
-			<a class="nav-btn" href="/about" >About</a>
-			<a class="nav-btn" href="/sponsors" >Sponsors</a>
-			<a class="nav-btn" href="/students" >Students</a>
-			<a class="nav-btn" id="become-member" href="https://linktr.ee/colorstackuf" >Become a Member</a>
+			{#if innerWidth >= 900}
+				<a class="nav-btn fs" href="/about" >About</a>
+				<a class="nav-btn fs" href="/sponsors" >Sponsors</a>
+				<a class="nav-btn fs" href="/students" >Students</a>
+				<a class="nav-btn fs" id="become-member" href="https://linktr.ee/colorstackuf" >Become a Member</a>
+			{:else}
+				<div class="sidebar-menu">
+					<img src="/sidebar-menu.svg" alt="Sidebar menu" />
+				</div>
+			{/if}
 		</div>
 	</div>
 </div>
@@ -25,17 +34,15 @@
 
 	.header-box {
 		width: 100%;
-		padding: 1rem 0;
 		height: 100%;
-		max-height: var(--header-height);
 		display: grid;
-		grid-template-columns: repeat(2, auto);
+		grid-template-columns: 1fr 3fr;
 		align-content: center;
 	}
 
 	.header-container {
-		width: 100%;
-		padding: 0 var(--page-padding-y);
+		padding: 0 var(--mobile-page-padding-y);
+		height: max(5vw, 5rem);
 		background-color: var(--foreground-primary);
 		display: flex;
 		flex-direction: column;
@@ -45,37 +52,72 @@
 
 	.logo-container {
 		cursor: pointer;
-		height: 100%;
 		display: grid;
-		grid-template-rows: 36px 1rem;
 		justify-content: start;
+		align-items: center;
+		object-fit: contain;
 	}
 
 	.logo {
-		height: auto;
-		justify-self: end;
-		width: 220px;
-	}
-
-	.uf {
-		justify-self: end;
-		color: var(--text-emphasis);
-		font-size: 0.8rem;
-		letter-spacing: 1px;
+		object-fit: contain;
+		height: 2.5vw;
+		min-height: 2rem;
 	}
 
 	.nav-bar {
 		justify-self: end;
-		margin-right: 39px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		gap: 3rem;
+	}
+
+	.nav-btn {
+		color: white;
+		font-size: clamp(1rem, 1.5vw, 1.5rem);
+		text-decoration: none;
+		font-family: 'Montserrat', sans-serif;
 	}
 
 	#become-member {
-		margin-right: 0;
 		border: 2px solid white;
 		padding: 0.75rem 1rem;
-		border-radius: 17px;
+		border-radius: 1.2rem;
 	}
+
+	@media only screen and (min-width: 1201px) and (max-width: 1920px) {
+		.header-container {
+			padding: 0 var(--desktop-page-padding-y);
+		}
+	}
+
+	@media only screen and (min-width: 1921px) {
+		.nav-btn {
+			font-size: clamp(1.5rem, 2vw, 2rem);
+		}
+		
+		.header-container {
+			padding: 0 var(--lg-desktop-page-padding-y);
+		}
+
+		.nav-bar {
+			gap: 5rem;
+		}
+
+	}
+
+	@media only screen and (min-width: 2560px) {
+		.nav-bar {
+			gap: 6rem;
+		}
+
+
+		#become-member {
+			border-width: 3px;
+			padding: 1.3rem 1.3rem;
+			border-radius: 2rem;
+		}
+		
+	}
+
 </style>

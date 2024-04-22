@@ -1,13 +1,13 @@
 :root {
-	--page-padding-y: 2rem;
-	--header-height: 100px;
+	--mobile-page-padding-y: 1rem;
+	--desktop-page-padding-y: 1.5rem;
+	--lg-desktop-page-padding-y: 2rem;
 	--footer-height: 100px;
 	--foreground-primary: #0B0F24;
 	--text-emphasis: #FD9739;
 }
 
-body {
-	overflow-x: hidden;
+html, body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -18,10 +18,3 @@ body {
 	font-family: 'Monserrat', sans-serif;
 }
 
-.nav-btn {
-	color: white;
-	font-size: 1.1rem;
-	text-decoration: none;
-	margin-right: 3rem;
-	font-weight: 100;
-}

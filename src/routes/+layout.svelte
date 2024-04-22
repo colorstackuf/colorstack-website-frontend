@@ -11,17 +11,19 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </svelte:head>
 
-<Header />
-<main>
-	<slot />
-</main>
-<Footer />
+
+<div class="page">
+	<Header />
+	<main>
+		<slot />
+	</main>
+	<Footer />
+</div>
 
 <style>
-	main {
+	.page {
 		width: 100%;
 		display: grid;
-		grid-template-rows: var(--header-height) auto var(--footer-height);
+		grid-template-rows: auto auto auto;
 	}
-
 </style>
