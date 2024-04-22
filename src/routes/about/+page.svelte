@@ -1,6 +1,9 @@
 <script>
     let intro_image_src = 'https://source.unsplash.com/1600x900/?nature';
     let second_image_src = 'https://source.unsplash.com/1600x900/?city';
+
+    let eboard_members = 14;
+
 </script>
 
 <style>
@@ -27,8 +30,6 @@
         max-width: 100vw;
         height: 200vh;
         display: flex;
-        justify-content: center;
-        align-items: center;
         position: relative;
     }
 
@@ -67,6 +68,26 @@
         z-index: 1;
     }
 
+    .eboard-grid-container {
+        width: calc(100% - 10rem);
+        max-width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(20vh, 1fr));
+        justify-content: space-evenly;
+        align-items: space-evenly;
+        padding: 10% 5% 10% 5%;
+        gap: 4rem;
+    }
+
+    .eboard-image-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
     img {
         width: 100%;
         height: 100%;
@@ -90,5 +111,12 @@
 
 <div class="eboard-container">
     <img src={second_image_src} alt="City"/>
+    <div class="eboard-grid-container">
+        {#each Array(eboard_members) as _, i}
+            <div class="eboard-image-container">
+                <img src="https://source.unsplash.com/1600x900/?person" alt="Person"/>
+            </div>
+        {/each}
+    </div>
 </div>
 <div class="contact-us-container" />
