@@ -43,9 +43,8 @@
 			Become a Chapter Member
 		</a>
 	</div>
-	<div>
-		<Carousel {images} imageWidth={200} gap={0}/>
-	</div>
+
+	<Carousel {images} />
 </div>
 
 <style>

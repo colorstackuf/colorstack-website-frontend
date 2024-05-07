@@ -1,49 +1,104 @@
 <script lang="ts">
-  import { type carouselImage } from '$lib/types';
-  import { onMount, onDestroy } from 'svelte';
-  import { flip } from 'svelte/animate';
+	import { type carouselImage } from '$lib/types';
+	import { onMount, onDestroy } from 'svelte';
 
-  export let images: carouselImage[];
-  export let gap: number = 20; // Gap between images
-  export let interval: number = 3000; // Change image every 3000 milliseconds (3 seconds)
-  export let imageWidth: number = 200;
+	export let images: carouselImage[];
+	export let interval: number = 3000; // Change image every 3000 milliseconds (3 seconds)
 
-	function navigate(e: MouseEvent) {
-		const slide = document.querySelector(event.target.getAttribute('href'));
+	let index: number = 0;
+	let intervalId: number;
+	let rightButton: HTMLButtonElement;
+
+	function idToHref(id: string) {
+		return `#${id}`;
+	}
+
+	function updateIndex(href: string) {
+		index = images.findIndex((image) => idToHref(image.id) === href);
+	}
+
+	function navigateTo(href: string, e: MouseEvent) {
+
+		const slide = document.querySelector(href);
 		if(!slide) return;
 
 		if (slide.scrollIntoViewIfNeeded) {
 			e.preventDefault();
 			slide.scrollIntoViewIfNeeded();
+			updateIndex(href);
 		} else if (slide.scrollIntoView) {
 			e.preventDefault();
 			slide.scrollIntoView();
+			updateIndex(href);
 		}
+
 	}
+
+	function navigate(e: MouseEvent) {
+		const href = e.target.getAttribute('href');
+		navigateTo(href, e);
+	}
+
+	function goLeft(e: MouseEvent) {
+		index = (index + images.length - 1) % images.length;
+		navigateTo(idToHref(images[index].id), e);
+	}
+
+	function goRight(e: MouseEvent) {
+		index = (index + 1) % images.length;
+		navigateTo(idToHref(images[index].id), e);
+	}
+
+	function pauseAutoSlide() {
+		console.log('pausing autoscroll...');
+		clearInterval(intervalId);
+	}
+
+	function resumeAutoSlide() {
+		console.log('resuming autoscroll...');
+		startAutoScroll();
+	}
+	
+	function startAutoScroll() {
+		intervalId = setInterval(() => rightButton.click(), interval);
+	}
+
+	onMount(() => {
+		startAutoScroll();
+		return onDestroy(() => clearInterval(intervalId));
+	});
 </script>
 
-<div class="carousel" >
-	{#each images as image}
-		<div id={image.id} class="carousel__item">
-			<img src={image.src} alt={image.alt} class="carousel__image" />
-		</div>
-	{/each}
-</div>
+<div>
+	<div class="carousel" on:mouseover={pauseAutoSlide} on:mouseout={resumeAutoSlide}>
+		{#each images as image}
+			<div id={image.id} class="carousel__item">
+				<img src={image.src} alt={image.alt} class="carousel__image" />
+			</div>
+		{/each}
+	</div>
 
-<button id="controls" class="controls" on:click={navigate}>
-	{#each images as image}
-		<a href={`#${image.id}`} class="controls__dot">
-			<span class="visuallyhidden">{image.alt}</span>
-		</a>
-	{/each}
-</button>
+	<div class="control-container">
+		<button id="controls" class="controls" on:click={navigate}>
+			{#each images as image}
+				<a href={`#${image.id}`} class="controls__dot">
+					<span class="visuallyhidden">{image.alt}</span>
+				</a>
+			{/each}
+		</button>
+	</div>
+	<button on:click={goLeft}>Left</button>
+	<button on:click={goRight} bind:this={rightButton}>Right</button>
+</div>
 
 <style>
   .carousel{
-	  display: flex;
-	  scroll-snap-type: x mandatory;
-	  overflow-x: scroll;
-	  scroll-behavior: smooth;
+	display: flex;
+	scroll-snap-type: x mandatory;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
   }
 
 	.carousel::-webkit-scrollbar {
@@ -96,5 +151,11 @@
   #controls {
 	  background: none;
 	  border: none;
+  }
+
+  .control-container {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
   }
 </style>
