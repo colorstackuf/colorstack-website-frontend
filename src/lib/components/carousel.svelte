@@ -3,11 +3,14 @@
 	import { onMount, onDestroy } from 'svelte';
 
 	export let images: carouselImage[];
-	export let interval: number = 3000; // Change image every 3000 milliseconds (3 seconds)
+	export let interval: number = 3000;
+
+	const selectedColor = '#F7F7F7';
+	const unselectedColor = '#B4AFAF';
 
 	let index: number = 0;
 	let intervalId: number;
-	let rightButton: HTMLButtonElement;
+	let currentSelection: HTMLElement;
 
 	function idToHref(id: string) {
 		return `#${id}`;
@@ -15,13 +18,17 @@
 
 	function updateIndex(href: string) {
 		index = images.findIndex((image) => idToHref(image.id) === href);
+		if (currentSelection) {
+			currentSelection.style.backgroundColor = unselectedColor;
+		}
+		currentSelection = document.querySelector(`a[href="${href}"]`);
+		currentSelection.style.backgroundColor = selectedColor;
 	}
 
 	function navigateTo(href: string, e: MouseEvent) {
 
 		const slide = document.querySelector(href);
 		if(!slide) return;
-
 		if (slide.scrollIntoViewIfNeeded) {
 			e.preventDefault();
 			slide.scrollIntoViewIfNeeded();
@@ -39,31 +46,30 @@
 		navigateTo(href, e);
 	}
 
-	function goLeft(e: MouseEvent) {
-		index = (index + images.length - 1) % images.length;
-		navigateTo(idToHref(images[index].id), e);
-	}
-
-	function goRight(e: MouseEvent) {
-		index = (index + 1) % images.length;
-		navigateTo(idToHref(images[index].id), e);
-	}
-
 	function pauseAutoSlide() {
-		console.log('pausing autoscroll...');
 		clearInterval(intervalId);
 	}
 
 	function resumeAutoSlide() {
-		console.log('resuming autoscroll...');
 		startAutoScroll();
 	}
 	
 	function startAutoScroll() {
-		intervalId = setInterval(() => rightButton.click(), interval);
+		intervalId = setInterval(() => {
+			index = (index + 1) % images.length;
+			const id = images[index].id;
+			const href = idToHref(id);
+			navigateTo(href, new MouseEvent('click'));
+		}, interval);
 	}
 
 	onMount(() => {
+		currentSelection = document.querySelector(`a[href="${idToHref(images[0].id)}"]`);
+		if (!currentSelection) {
+			console.error("Could not find the first image");
+			return;
+		}
+		currentSelection.style.backgroundColor = selectedColor;
 		startAutoScroll();
 		return onDestroy(() => clearInterval(intervalId));
 	});
@@ -87,36 +93,19 @@
 			{/each}
 		</button>
 	</div>
-	<div class="button-container">
-		<button class="nav-button" id="left-button" on:click={goLeft}>Left</button>
-		<button class="nav-button" id="right-button" on:click={goRight} bind:this={rightButton}>Right</button>
-	</div>
 </div>
 
 <style>
 
 .carousel-container {
 	position: relative;
+	width: 606px;
+	height: 638px;
 }
 
-.button-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}
-
-#left-button {
-	justify-self: start;
-	position: absolute;
-	top: 50%;
-}
-
-#right-button {
-	justify-self: end;
-	position: absolute;
-	top: 50%;
-}
-
-.carousel{
+.carousel {
+	width: 100%;
+	height: 100%;
 	display: flex;
 	scroll-snap-type: x mandatory;
 	overflow-x: scroll;
@@ -137,6 +126,8 @@
 
 .carousel__image {
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	display: block;
 }
 
@@ -146,13 +137,13 @@
 	height: 0.85em;
 	border-radius: 50%;
 	outline: none;
-	background-color: black;
+	background-color: #B4AFAF;
 	opacity: 0.8;
 	cursor: pointer;
 	transition: opacity 0.2s;
 
 	&:not(:first-child) {
-		margin-left: 0.25em;
+		margin-left: 1em;
 	}
 
 	&:hover,
@@ -178,6 +169,8 @@
 }
 
 .control-container {
+	position: relative;
+	bottom: 35px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
