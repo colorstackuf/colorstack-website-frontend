@@ -69,7 +69,7 @@
 	});
 </script>
 
-<div>
+<div class="carousel-container">
 	<div class="carousel" on:mouseover={pauseAutoSlide} on:mouseout={resumeAutoSlide}>
 		{#each images as image}
 			<div id={image.id} class="carousel__item">
@@ -87,12 +87,36 @@
 			{/each}
 		</button>
 	</div>
-	<button on:click={goLeft}>Left</button>
-	<button on:click={goRight} bind:this={rightButton}>Right</button>
+	<div class="button-container">
+		<button class="nav-button" id="left-button" on:click={goLeft}>Left</button>
+		<button class="nav-button" id="right-button" on:click={goRight} bind:this={rightButton}>Right</button>
+	</div>
 </div>
 
 <style>
-  .carousel{
+
+.carousel-container {
+	position: relative;
+}
+
+.button-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+#left-button {
+	justify-self: start;
+	position: absolute;
+	top: 50%;
+}
+
+#right-button {
+	justify-self: end;
+	position: absolute;
+	top: 50%;
+}
+
+.carousel{
 	display: flex;
 	scroll-snap-type: x mandatory;
 	overflow-x: scroll;
@@ -101,61 +125,62 @@
 	scrollbar-width: none;
   }
 
-	.carousel::-webkit-scrollbar {
-		display: none;
-	}
-	
-  .carousel__item {
-	  width: 100%;
-	  flex-shrink: 0;
-	  scroll-snap-align: start;
-  }
-
-  .carousel__image {
-	  width: 100%;
-	  display: block;
-  }
-
-  .controls__dot {
-	  display: inline-block;
-	  width: 0.85em;
-	  height: 0.85em;
-	  border-radius: 50%;
-	  outline: none;
-	  background-color: black;
-	  opacity: 0.8;
-	  cursor: pointer;
-	  transition: opacity 0.2s;
-	  
-	  &:not(:first-child) {
-		margin-left: 0.25em;
-	  }
-
-	  &:hover,
-	  &:focus {
-		opacity: 1;
-  }
+.carousel::-webkit-scrollbar {
+	display: none;
 }
 
-  .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
+.carousel__item {
+	width: 100%;
+	flex-shrink: 0;
+	scroll-snap-align: start;
+}
 
-  #controls {
-	  background: none;
-	  border: none;
-  }
+.carousel__image {
+	width: 100%;
+	display: block;
+}
 
-  .control-container {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-  }
+.controls__dot {
+	display: inline-block;
+	width: 0.85em;
+	height: 0.85em;
+	border-radius: 50%;
+	outline: none;
+	background-color: black;
+	opacity: 0.8;
+	cursor: pointer;
+	transition: opacity 0.2s;
+
+	&:not(:first-child) {
+		margin-left: 0.25em;
+	}
+
+	&:hover,
+	&:focus {
+		opacity: 1;
+	}
+}
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+#controls {
+	background: none;
+	border: none;
+}
+
+.control-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 </style>
