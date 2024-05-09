@@ -1,3 +1,4 @@
+
 <script>
     let intro_image_src = 'https://source.unsplash.com/1600x900/?nature';
     let second_image_src = 'https://source.unsplash.com/1600x900/?city';
@@ -120,3 +121,6 @@
     </div>
 </div>
 <div class="contact-us-container" />
+=======
+<p>about page. under construction...</p>
+
