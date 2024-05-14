@@ -2,6 +2,7 @@
 	import { type carouselImage } from '$lib/types';
 	import Carousel from '$lib/components/carousel.svelte';
 	import Pillar from '$lib/components/pillar.svelte';
+	import Accordion from '$lib/components/accordion.svelte';
 
 	const images: carouselImage[] = [
 		{
@@ -127,6 +128,34 @@
 	<div>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] px-16 mt-16">
 			Frequently Asked Questions
+			<Accordion>
+				<span slot="head">
+					<h3 class="text-black font-gotham-medium text-[1.2rem]">What does ColorStack do?</h3>
+				</span>
+				<div slot="details">
+					<p class="text-black text-base">Answer</p>
+				</div>
+			</Accordion>
+			<Accordion>
+				<span slot="head">
+					<h3 class="text-black font-gotham-medium text-[1.2rem]">
+						Do I have to be Black or Latinx to join?
+					</h3>
+				</span>
+				<div slot="details">
+					<p class="text-black text-base">Answer</p>
+				</div>
+			</Accordion>
+			<Accordion>
+				<span slot="head">
+					<h3 class="text-black font-gotham-medium text-[1.2rem]">
+						If I join ColorStack UF am I automatically in ColorStack National?
+					</h3>
+				</span>
+				<div slot="details">
+					<p class="text-black text-base">Answer</p>
+				</div>
+			</Accordion>
 		</h2>
 	</div>
 </div>
