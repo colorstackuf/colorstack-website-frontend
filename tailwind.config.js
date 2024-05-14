@@ -13,7 +13,8 @@ export default {
 				'body-background-light-blue': '#c6d1ef'
 			},
 			padding: {
-				'page-padding-x': '1rem'
+				'mobile-padding-x': '12px',
+				'tablet-padding-x': '16px'
 			}
 		},
 		fontFamily: {
@@ -23,6 +24,13 @@ export default {
 			'gotham-ultra': ['Gotham-Ultra', 'sans-serif'],
 			archer: ['Archer-Medium', 'sans-serif'],
 			'archer-book': ['Archer-Book', 'sans-serif']
+		},
+		screens: {
+			tablet: '640px',
+			notebook: '768px',
+			laptop: '1024px',
+			desktop: '1280px',
+			'lg-desktop': '1536px'
 		}
 	},
 	plugins: []

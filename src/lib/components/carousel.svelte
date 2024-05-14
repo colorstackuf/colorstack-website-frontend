@@ -75,7 +75,7 @@
 	});
 </script>
 
-<div class="relative w-[600px] h-[640px] z-10">
+<div class="relative w-full tablet:w-[600px] tablet:h-[640px] z-10">
 	<div
 		class="w-full h-full flex scroll-smooth overflow-x-scroll carousel rounded-lg"
 		on:mouseover={pauseAutoSlide}
@@ -85,16 +85,21 @@
 		role="img"
 	>
 		{#each images as image}
-			<div id={image.id} class="carousel__item">
-				<img src={image.src} alt={image.alt} class="carousel__image" />
+			<div id={image.id} class="w-full shrink-0 snap-start">
+				<img src={image.src} alt={image.alt} class="w-full h-full object-cover block" />
 			</div>
 		{/each}
 	</div>
 
-	<div class="relative bottom-[55px] flex justify-center items-center">
-		<button id="controls" class="controls" on:click={navigate}>
+	<div class="relative bottom-[25px] tablet:bottom-[55px] flex justify-center items-center">
+		<button class="bg-none border-none" on:click={navigate}>
 			{#each images as image}
-				<a href={`#${image.id}`} class="controls__dot">
+				<a
+					href={`#${image.id}`}
+					class="inline-block w-3 h-3 tablet:w-[0.85rem] tablet:h-[0.85rem] rounded-[50%] bg-[#b4afaf]
+			opacity-85 cursor-pointer transition-[opacity] duration-200 hover:opacity-100
+	 focus:opacity-100 [&:not(:first-child)]:ml-4"
+				>
 					<span class="visuallyhidden">{image.alt}</span>
 				</a>
 			{/each}
@@ -113,40 +118,6 @@
 		display: none;
 	}
 
-	.carousel__item {
-		width: 100%;
-		flex-shrink: 0;
-		scroll-snap-align: start;
-	}
-
-	.carousel__image {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		display: block;
-	}
-
-	.controls__dot {
-		display: inline-block;
-		width: 0.85em;
-		height: 0.85em;
-		border-radius: 50%;
-		outline: none;
-		background-color: #b4afaf;
-		opacity: 0.8;
-		cursor: pointer;
-		transition: opacity 0.2s;
-
-		&:not(:first-child) {
-			margin-left: 1em;
-		}
-
-		&:hover,
-		&:focus {
-			opacity: 1;
-		}
-	}
-
 	.visuallyhidden {
 		border: 0;
 		clip: rect(0 0 0 0);
@@ -156,10 +127,5 @@
 		padding: 0;
 		position: absolute;
 		width: 1px;
-	}
-
-	#controls {
-		background: none;
-		border: none;
 	}
 </style>

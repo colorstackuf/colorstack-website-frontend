@@ -73,10 +73,14 @@
 
 <div class="mt-6">
 	<!-- What We Do -->
-	<div class="container grid grid-cols-2 gap-[20px] px-16">
+	<div
+		class="container grid grid-cols-1 tablet:grid-cols-2 gap-[40px] tablet:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x"
+	>
 		<div class="flex flex-col justify-center items-center">
 			<h1 class="text-colorstackuf-blue text-[1.4rem] font-gotham-medium">WHAT WE DO</h1>
-			<p class="text-white font-archer-book text-4xl text-center mt-8 leading-[2.5rem]">
+			<p
+				class="text-white font-archer-book text-2xl tablet:text-4xl tablet:leading-[2.5rem] text-center mt-8"
+			>
 				ColorStack's mission is to increase the number of Black and Latinx Computer Science
 				graduates that go on to start
 				<em class="text-colorstackuf-orange">rewarding</em> techincal careers.
@@ -84,7 +88,7 @@
 			<a
 				target="_blank"
 				href="https://linktr.ee/colorstackuf"
-				class="bg-colorstackuf-orange py-4 px-7 rounded-3xl mt-16 font-gotham-medium"
+				class="bg-colorstackuf-orange py-4 px-7 rounded-3xl mt-8 tablet:mt-16 font-gotham-medium"
 			>
 				Become a Chapter Member
 			</a>
@@ -95,9 +99,7 @@
 
 	<!-- Pillars -->
 	<div
-		class="grid grid-cols-3 gap-[70px] px-8 mt-16 bg-body-background-white py-40
-	 translate-y-[-130px]
-	 "
+		class="grid grid-cols-1 tablet:grid-cols-3 gap-[70px] mt-16 bg-body-background-white py-20 tablet:py-40 px-mobile-padding-x tablet:px-tablet-padding-x translate-y-[-110px] tablet:translate-y-[-130px]"
 	>
 		{#each pillars as pillar}
 			<Pillar {...pillar} />
@@ -105,9 +107,13 @@
 	</div>
 
 	<!-- Sponsors -->
-	<div class="translate-y-[-130px]">
-		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] px-8 mt-16">Our Sponsors</h2>
-		<div class="grid grid-cols-3 px-16 my-20 items-center justify-items-center">
+	<div
+		class="translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:tablet-padding-x"
+	>
+		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16">Our Sponsors</h2>
+		<div
+			class="grid grid-cols-1 gap-[50px] tablet:grid-cols-3 tablet:px-16 my-20 items-center justify-items-center"
+		>
 			{#each sponsors as sponsor}
 				<img
 					src={sponsor.src}
@@ -121,18 +127,24 @@
 	</div>
 
 	<!-- Follow Instagram -->
-	<div class="translate-y-[-130px]">
-		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] px-8 mt-16">
+	<div
+		class="translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:tablet-padding-x"
+	>
+		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16">
 			Follow our Instagram!
 		</h2>
 	</div>
 
 	<!-- FAQ -->
-	<div class="translate-y-[-130px] px-8 flex flex-col gap-y-6">
+	<div
+		class="translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 px-mobile-padding-x tablet:tablet-padding-x"
+	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-4">FAQs</h2>
 		<Accordion>
 			<span slot="head">
-				<h3 class="text-black font-gotham-medium text-[1.2rem]">What does ColorStack do?</h3>
+				<h3 class="text-black font-gotham-medium text-[1.1rem] tablet:text-[1.2rem]">
+					What does ColorStack do?
+				</h3>
 			</span>
 			<div slot="details">
 				<p class="text-black text-base">Answer</p>
@@ -140,7 +152,7 @@
 		</Accordion>
 		<Accordion>
 			<span slot="head">
-				<h3 class="text-black font-gotham-medium text-[1.2rem]">
+				<h3 class="text-black font-gotham-medium text-[1.1rem] tablet:text-[1.2rem]">
 					Do I have to be Black or Latinx to join?
 				</h3>
 			</span>
@@ -150,7 +162,7 @@
 		</Accordion>
 		<Accordion>
 			<span slot="head">
-				<h3 class="text-black font-gotham-medium text-[1.2rem]">
+				<h3 class="text-black font-gotham-medium text-[1.1rem] tablet:text-[1.2rem]">
 					If I join ColorStack UF am I automatically in ColorStack National?
 				</h3>
 			</span>
@@ -164,8 +176,5 @@
 <style>
 	.bny-mellon {
 		transform: translateY(-28px);
-	}
-	.container > div:nth-child(1) {
-		display: flex;
 	}
 </style>
