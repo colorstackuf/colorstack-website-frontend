@@ -9,7 +9,8 @@ export default {
 				'text-emphasis': '#fd9739',
 				'colorstackuf-blue': '#0699ab',
 				'colorstackuf-orange': '#fd9739',
-				'font-color-dark-blue': '#0b0f24'
+				'font-color-dark-blue': '#0b0f24',
+				'body-background-light-blue': '#c6d1ef'
 			}
 		},
 		fontFamily: {
