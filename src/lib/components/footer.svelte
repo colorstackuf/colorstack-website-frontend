@@ -45,10 +45,9 @@
 
 	.nav-btn {
 		color: white;
-		font-size: 0.8rem;
 		text-decoration: none;
 		width: fit-content;
-		font-family: 'Gotham-Light', sans-serif;
+		font-family: 'Gotham-Book', sans-serif;
 	}
 
 	@media only screen and (min-width: 900px) {

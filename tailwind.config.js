@@ -18,9 +18,11 @@ export default {
 		},
 		fontFamily: {
 			'gotham-light': ['Gotham-Light', 'sans-serif'],
+			'gotham-book': ['Gotham-Book', 'sans-serif'],
 			'gotham-medium': ['Gotham-Medium', 'sans-serif'],
 			'gotham-ultra': ['Gotham-Ultra', 'sans-serif'],
-			archer: ['Archer-Medium', 'sans-serif']
+			archer: ['Archer-Medium', 'sans-serif'],
+			'archer-book': ['Archer-Book', 'sans-serif']
 		}
 	},
 	plugins: []

@@ -3,9 +3,9 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<div class="header-container font-gotham-light">
-	<div class="w-full h-full grid grid-cols-[1fr_3fr] content-center">
-		<a href="/">
+<div class="header-container font-gotham-book mt-4">
+	<div class="w-full h-full flex items-center">
+		<a href="/" class="flex-[1]">
 			<img
 				class="object-contain w-[20rem]"
 				src="/logos/colorstack-logo-title.svg"
@@ -13,16 +13,18 @@
 			/>
 		</a>
 
-		<div class="justify-self-end flex flex-row items-center gap-12">
+		<div class="flex items-center gap-12 h-full">
 			{#if innerWidth >= 900}
 				<a class="nav-btn" href="/about">About</a>
 				<a class="nav-btn" href="/sponsors">Sponsors</a>
 				<a class="nav-btn" href="/students">Students</a>
-				<a
-					class="nav-btn text-white text-[clamp(1rem,_1.5vw,_1.5rem)] no-underline
-	 border-2 border-solid border-white py-[0.75rem] px-4 rounded-[1.2rem]"
-					href="https://linktr.ee/colorstackuf">Become a Member</a
+				<div
+					class="border-2 border-solid border-white self-center flex items-center py-[0.8rem] px-6 rounded-[1.2rem]"
 				>
+					<a class="nav-btn text-align-center" href="https://linktr.ee/colorstackuf"
+						>Become a Member</a
+					>
+				</div>
 			{:else}
 				<div class="sidebar-menu">
 					<img src="/sidebar-menu.svg" alt="Sidebar menu" />
@@ -44,8 +46,9 @@
 	}
 
 	.nav-btn {
+		transform: translateY(0.5rem);
 		color: white;
-		font-size: clamp(1rem, 1.5vw, 1.5rem);
+		font-size: 1.2rem;
 		text-decoration: none;
 	}
 

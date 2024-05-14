@@ -11,6 +11,6 @@
 		alt="Circle background"
 		class="w-12 h-12 mb-6 translate-x-2 translate-y-2"
 	/>
-	<h2 class="font-gotham-medium mb-6">{label}</h2>
+	<h2 class="font-gotham-medium mb-6 text-xl">{label}</h2>
 	<p class="font-archer text-center text-2xl">{description}</p>
 </div>

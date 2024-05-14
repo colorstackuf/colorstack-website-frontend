@@ -4,6 +4,14 @@
 
 @layer base {
 	@font-face {
+		font-family: 'Gotham-Book';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts/GothamBook.ttf') format('TrueType');
+	}
+
+	@font-face {
 		font-family: 'Gotham-Medium';
 		font-style: normal;
 		font-weight: 400;
@@ -33,5 +41,13 @@
 		font-weight: 400;
 		font-display: swap;
 		src: url('/fonts/Archer_Medium.ttf') format('TrueType');
+	}
+
+	@font-face {
+		font-family: 'Archer-Book';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts/ArcherBookPro.otf') format('opentype');
 	}
 }

@@ -76,7 +76,7 @@
 	<div class="container grid grid-cols-2 gap-[20px] px-16">
 		<div class="flex flex-col justify-center items-center">
 			<h1 class="text-colorstackuf-blue text-[1.4rem] font-gotham-medium">WHAT WE DO</h1>
-			<p class="text-white font-archer text-3xl text-center mt-8">
+			<p class="text-white font-archer-book text-4xl text-center mt-8 leading-[2.5rem]">
 				ColorStack's mission is to increase the number of Black and Latinx Computer Science
 				graduates that go on to start
 				<em class="text-colorstackuf-orange">rewarding</em> techincal careers.
@@ -95,7 +95,7 @@
 
 	<!-- Pillars -->
 	<div
-		class="grid grid-cols-3 gap-[70px] px-16 mt-16 bg-body-background-white py-40
+		class="grid grid-cols-3 gap-[70px] px-8 mt-16 bg-body-background-white py-40
 	 translate-y-[-130px]
 	 "
 	>
@@ -106,9 +106,7 @@
 
 	<!-- Sponsors -->
 	<div class="translate-y-[-130px]">
-		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] px-16 mt-16">
-			Our Sponsors
-		</h2>
+		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] px-8 mt-16">Our Sponsors</h2>
 		<div class="grid grid-cols-3 px-16 my-20 items-center justify-items-center">
 			{#each sponsors as sponsor}
 				<img
@@ -124,44 +122,42 @@
 
 	<!-- Follow Instagram -->
 	<div class="translate-y-[-130px]">
-		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] px-16 mt-16">
-			Follow our Instagram
+		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] px-8 mt-16">
+			Follow our Instagram!
 		</h2>
 	</div>
 
 	<!-- FAQ -->
-	<div class="translate-y-[-130px]">
-		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] px-16 mt-16">
-			FAQs
-			<Accordion>
-				<span slot="head">
-					<h3 class="text-black font-gotham-medium text-[1.2rem]">What does ColorStack do?</h3>
-				</span>
-				<div slot="details">
-					<p class="text-black text-base">Answer</p>
-				</div>
-			</Accordion>
-			<Accordion>
-				<span slot="head">
-					<h3 class="text-black font-gotham-medium text-[1.2rem]">
-						Do I have to be Black or Latinx to join?
-					</h3>
-				</span>
-				<div slot="details">
-					<p class="text-black text-base">Answer</p>
-				</div>
-			</Accordion>
-			<Accordion>
-				<span slot="head">
-					<h3 class="text-black font-gotham-medium text-[1.2rem]">
-						If I join ColorStack UF am I automatically in ColorStack National?
-					</h3>
-				</span>
-				<div slot="details">
-					<p class="text-black text-base">Answer</p>
-				</div>
-			</Accordion>
-		</h2>
+	<div class="translate-y-[-130px] px-8 flex flex-col gap-y-6">
+		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-4">FAQs</h2>
+		<Accordion>
+			<span slot="head">
+				<h3 class="text-black font-gotham-medium text-[1.2rem]">What does ColorStack do?</h3>
+			</span>
+			<div slot="details">
+				<p class="text-black text-base">Answer</p>
+			</div>
+		</Accordion>
+		<Accordion>
+			<span slot="head">
+				<h3 class="text-black font-gotham-medium text-[1.2rem]">
+					Do I have to be Black or Latinx to join?
+				</h3>
+			</span>
+			<div slot="details">
+				<p class="text-black text-base">Answer</p>
+			</div>
+		</Accordion>
+		<Accordion>
+			<span slot="head">
+				<h3 class="text-black font-gotham-medium text-[1.2rem]">
+					If I join ColorStack UF am I automatically in ColorStack National?
+				</h3>
+			</span>
+			<div slot="details">
+				<p class="text-black text-base">Answer</p>
+			</div>
+		</Accordion>
 	</div>
 </div>
 
