@@ -6,7 +6,7 @@
 <div class="header-container">
 	<div class="header-box">
 		<a href="/" class="logo-container">
-			<img class="logo" src="/colorstack-logo-title.svg" alt="Colorstack logo and title" />
+			<img class="logo" src="/logos/colorstack-logo-title.svg" alt="Colorstack logo and title" />
 		</a>
 
 		<div class="nav-bar">

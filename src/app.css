@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Gotham-Medium';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts/Gotham-Medium.otf') format('opentype');
+	}
+
+	@font-face {
+		font-family: 'Gotham-Ultra';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts/Gotham-Ultra.otf') format('opentype');
+	}
+
+	@font-face {
+		font-family: 'Archer-Medium';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts/Archer_Medium.ttf') format('TrueType');
+	}
+}

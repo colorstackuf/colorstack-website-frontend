@@ -31,15 +31,21 @@
 	];
 </script>
 
-<div class="container grid grid-cols-2 gap-[20px]">
+<div class="container grid grid-cols-2 gap-[20px] px-16">
 	<div class="flex flex-col justify-center items-center">
-		<h1>WHAT WE DO</h1>
-		<p>
+		<h1 class="text-colorstackuf-blue text-[1.4rem] font-gotham-medium">WHAT WE DO</h1>
+		<p class="text-white font-archer text-3xl text-center mt-8">
 			ColorStack's mission is to increase the number of Black and Latinx Computer Science graduates
 			that go on to start
-			<em>rewarding</em> techincal careers.
+			<em class="text-colorstackuf-orange">rewarding</em> techincal careers.
 		</p>
-		<a target="_blank" href="https://linktr.ee/colorstackuf"> Become a Chapter Member </a>
+		<a
+			target="_blank"
+			href="https://linktr.ee/colorstackuf"
+			class="bg-colorstackuf-orange py-4 px-7 rounded-3xl mt-16 font-gotham-medium"
+		>
+			Become a Chapter Member
+		</a>
 	</div>
 
 	<Carousel {images} />

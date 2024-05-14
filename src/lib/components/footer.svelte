@@ -1,6 +1,6 @@
 <div class="footer-box">
 	<a class="logo-container" href="/">
-		<img class="logo" src="/colorstack-logo-title.svg" alt="Colorstack logo and title" />
+		<img class="logo" src="/logos/colorstack-logo-title.svg" alt="Colorstack logo and title" />
 	</a>
 
 	<div class="nav-bar">
@@ -13,12 +13,14 @@
 		<a class="nav-btn" id="email">hello@colorstack.org</a>
 		<div class="icon-container">
 			<a href="https://www.instagram.com/colorstackuf/">
-				<img class="contact-icon" src="/instagram.svg" alt="Instagram" />
+				<img class="contact-icon" src="/logos/instagram.svg" alt="Instagram" />
 			</a>
 			<a href="https://www.linkedin.com/company/colorstackuf/">
-				<img class="contact-icon" src="/linkedin.svg" alt="LinkedIn" />
+				<img class="contact-icon" src="/logos/linkedin.svg" alt="LinkedIn" />
 			</a>
-			<img class="contact-icon" src="/discord.svg" alt="Discord" />
+			<a href="https://discord.gg/qt9ZfUBqnj">
+				<img class="contact-icon" src="/logos/discord.svg" alt="Discord" />
+			</a>
 		</div>
 	</div>
 </div>

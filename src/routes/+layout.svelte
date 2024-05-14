@@ -15,7 +15,7 @@
 	/>
 </svelte:head>
 
-<main class="page">
+<main class="page bg-body-background-blue">
 	<Header />
 	<slot />
 	<Footer />
