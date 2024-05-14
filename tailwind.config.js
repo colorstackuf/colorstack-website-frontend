@@ -11,9 +11,13 @@ export default {
 				'colorstackuf-orange': '#fd9739',
 				'font-color-dark-blue': '#0b0f24',
 				'body-background-light-blue': '#c6d1ef'
+			},
+			padding: {
+				'page-padding-x': '1rem'
 			}
 		},
 		fontFamily: {
+			'gotham-light': ['Gotham-Light', 'sans-serif'],
 			'gotham-medium': ['Gotham-Medium', 'sans-serif'],
 			'gotham-ultra': ['Gotham-Ultra', 'sans-serif'],
 			archer: ['Archer-Medium', 'sans-serif']

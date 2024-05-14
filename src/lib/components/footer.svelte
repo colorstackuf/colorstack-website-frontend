@@ -1,25 +1,35 @@
 <div class="footer-box">
-	<a class="logo-container" href="/">
-		<img class="logo" src="/logos/colorstack-logo-title.svg" alt="Colorstack logo and title" />
+	<a class="self-center" href="/">
+		<img
+			src="/logos/colorstack-logo-title.svg"
+			alt="Colorstack logo and title"
+			class="justify-self-start object-contain w-[23rem]"
+		/>
 	</a>
 
-	<div class="nav-bar">
-		<a class="nav-btn" href="/about">About</a>
-		<a class="nav-btn" href="/sponsors">Sponsors</a>
-		<a class="nav-btn" href="/students">Students</a>
-		<a class="nav-btn" id="become-member" href="https://linktr.ee/colorstackuf">Become a Member</a>
+	<div class="grid grid-cols-[repeat(2,_1fr)] grid-rows-[repeat(4,_1fr)] gap-y-2">
+		<!-- Navigation Section -->
+		<a class="nav-btn col-start-1 row-start-1" href="/about">About</a>
+		<a class="nav-btn col-start-1 row-start-2" href="/sponsors">Sponsors</a>
+		<a class="nav-btn col-start-1 row-start-3" href="/students">Students</a>
+		<a
+			class="nav-btn col-start-1 row-start-4"
+			id="become-member"
+			href="https://linktr.ee/colorstackuf">Become a Member</a
+		>
 
-		<h class="nav-btn" id="contact">Contact Us</h>
-		<a class="nav-btn" id="email">hello@colorstack.org</a>
-		<div class="icon-container">
-			<a href="https://www.instagram.com/colorstackuf/">
-				<img class="contact-icon" src="/logos/instagram.svg" alt="Instagram" />
+		<!-- Contact Section -->
+		<h class="nav-btn inline-block font-medium">Contact Us</h>
+		<a class="nav-btn" id="email" href="mailto:colorstackuf@gmail.com">colorstackuf@gmail.com</a>
+		<div class="flex gap-6 items-center">
+			<a target="_blank" href="https://www.instagram.com/colorstackuf/">
+				<img class="h-8 w-8" src="/logos/instagram.svg" alt="Instagram" />
 			</a>
-			<a href="https://www.linkedin.com/company/colorstackuf/">
-				<img class="contact-icon" src="/logos/linkedin.svg" alt="LinkedIn" />
+			<a target="_blank" href="https://www.linkedin.com/company/colorstackuf/">
+				<img class="w-[2.1rem] h-[2.1rem]" src="/logos/linkedin.svg" alt="LinkedIn" />
 			</a>
-			<a href="https://discord.gg/qt9ZfUBqnj">
-				<img class="contact-icon" src="/logos/discord.svg" alt="Discord" />
+			<a target="_blank" href="https://discord.gg/qt9ZfUBqnj">
+				<img class="w-8 h-8" src="/logos/discord.svg" alt="Discord" />
 			</a>
 		</div>
 	</div>
@@ -33,76 +43,12 @@
 		padding: 1.5rem var(--mobile-page-padding-y);
 	}
 
-	.logo-container {
-		cursor: pointer;
-		display: grid;
-		justify-content: start;
-		margin-bottom: 1rem;
-		object-fit: contain;
-	}
-
-	.logo {
-		height: 3vw;
-		min-width: 10rem;
-		justify-self: start;
-		object-fit: contain;
-	}
-
-	.nav-bar {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(4, 1fr);
-		row-gap: 0.5rem;
-	}
-
-	.nav-btn[href='/about'] {
-		grid-column: 1;
-		grid-row: 1;
-	}
-
-	.nav-btn[href='/sponsors'] {
-		grid-column: 1;
-		grid-row: 2;
-	}
-
-	.nav-btn[href='/students'] {
-		grid-column: 1;
-		grid-row: 3;
-	}
-
-	.nav-btn[id='become-member'] {
-		grid-column: 1;
-		grid-row: 4;
-	}
-
-	.contact-icon {
-		width: 1.7rem;
-		height: 1.7rem;
-	}
-
-	.icon-container {
-		display: flex;
-		gap: 0.75rem;
-	}
-
-	.contact-icon {
-		width: 1.5rem;
-		height: 1.5rem;
-	}
-
 	.nav-btn {
 		color: white;
-		font-size: 1.0625rem;
+		font-size: 0.8rem;
 		text-decoration: none;
-		font-size: 0.9rem;
 		width: fit-content;
-		font-weight: 300;
-		font-family: 'Montserrat', sans-serif;
-	}
-
-	#contact {
-		display: inline-block;
-		font-weight: 500;
+		font-family: 'Gotham-Light', sans-serif;
 	}
 
 	@media only screen and (min-width: 900px) {

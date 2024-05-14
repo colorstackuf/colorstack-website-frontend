@@ -71,7 +71,7 @@
 	];
 </script>
 
-<div>
+<div class="mt-6">
 	<div class="container grid grid-cols-2 gap-[20px] px-16">
 		<div class="flex flex-col justify-center items-center">
 			<h1 class="text-colorstackuf-blue text-[1.4rem] font-gotham-medium">WHAT WE DO</h1>
@@ -125,7 +125,7 @@
 	</div>
 
 	<!-- FAQ -->
-	<div>
+	<div class="mb-16">
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] px-16 mt-16">
 			Frequently Asked Questions
 			<Accordion>
