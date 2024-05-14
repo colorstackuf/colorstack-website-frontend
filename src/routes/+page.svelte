@@ -69,12 +69,23 @@
 			src: '/logos/capital-one.svg'
 		}
 	];
+
+	let sponsorSize = 200;
+	$: innerWidth = 0;
+	$: {
+		if (innerWidth >= 640) {
+			sponsorSize = 120;
+		} else {
+			sponsorSize = 200;
+		}
+	}
 </script>
 
+<svelte:window bind:innerWidth />
 <div class="mt-6">
 	<!-- What We Do -->
 	<div
-		class="container grid grid-cols-1 tablet:grid-cols-2 gap-[40px] mt-12 tablet:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x"
+		class="grid grid-cols-1 notebook:grid-cols-2 mt-12 gap-[40px] tablet:gap-[65px] notebook:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x"
 	>
 		<div class="flex flex-col justify-center items-center">
 			<h1 class="text-colorstackuf-blue text-[1.4rem] font-gotham-medium">WHAT WE DO</h1>
@@ -88,7 +99,7 @@
 			<a
 				target="_blank"
 				href="https://linktr.ee/colorstackuf"
-				class="bg-colorstackuf-orange py-4 px-7 rounded-3xl mt-8 tablet:mt-16 font-gotham-medium"
+				class="bg-colorstackuf-orange py-4 px-7 rounded-3xl mt-8 notebook:mt-16 font-gotham-medium"
 			>
 				Become a Chapter Member
 			</a>
@@ -99,7 +110,7 @@
 
 	<!-- Pillars -->
 	<div
-		class="grid grid-cols-1 tablet:grid-cols-3 gap-[70px] mt-16 bg-body-background-white py-20 tablet:py-40 px-mobile-padding-x tablet:px-tablet-padding-x translate-y-[-110px] tablet:translate-y-[-130px]"
+		class="grid grid-cols-1 tablet:grid-cols-3 gap-[70px] tablet:gap-[40px] mt-16 bg-body-background-white py-20 tablet:py-36 notebook:py-40 px-mobile-padding-x tablet:px-tablet-padding-x translate-y-[-110px] tablet:translate-y-[-130px]"
 	>
 		{#each pillars as pillar}
 			<Pillar {...pillar} />
@@ -118,9 +129,8 @@
 				<img
 					src={sponsor.src}
 					alt={sponsor.name}
-					width={225}
-					height={100}
-					class:bny-mellon={sponsor.name === bnyMellon}
+					width={sponsorSize}
+					class={sponsor.name === bnyMellon ? 'translate-y-[-28px] tablet:translate-y-[-15px]' : ''}
 				/>
 			{/each}
 		</div>
@@ -128,7 +138,7 @@
 
 	<!-- Follow Instagram -->
 	<div
-		class="translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:tablet-padding-x"
+		class="translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16">
 			Follow our Instagram!
@@ -137,7 +147,7 @@
 
 	<!-- FAQ -->
 	<div
-		class="translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 px-mobile-padding-x tablet:tablet-padding-x"
+		class="translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 px-mobile-padding-x tablet:px-tablet-padding-x"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-4">FAQs</h2>
 		<Accordion>
@@ -172,9 +182,3 @@
 		</Accordion>
 	</div>
 </div>
-
-<style>
-	.bny-mellon {
-		transform: translateY(-28px);
-	}
-</style>

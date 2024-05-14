@@ -75,7 +75,7 @@
 	});
 </script>
 
-<div class="relative w-full tablet:w-[600px] tablet:h-[640px] z-10">
+<div class="relative w-full notebook:w-[600px] notebook:h-[640px] z-10">
 	<div
 		class="w-full h-full flex scroll-smooth overflow-x-scroll carousel rounded-lg"
 		on:mouseover={pauseAutoSlide}

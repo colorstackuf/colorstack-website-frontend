@@ -52,6 +52,7 @@
 		text-decoration: none;
 	}
 
+	/*
 	@media only screen and (min-width: 1201px) and (max-width: 1920px) {
 		.header-container {
 			padding: 0 var(--desktop-page-padding-y);
@@ -83,4 +84,5 @@
 			border-radius: 2rem;
 		}
 	}
+	*/
 </style>

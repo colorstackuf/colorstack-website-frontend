@@ -1,7 +1,7 @@
 <div
-	class="h-full flex flex-col gap-[2rem] bg-body-background-blue py-[1.5rem] px-mobile-padding-x"
+	class="h-full flex flex-col gap-[2rem] bg-body-background-blue px-mobile-padding-x tablet:px-tablet-padding-x"
 >
-	<a class="tablet:self-center" href="/">
+	<a class="notebook:self-center" href="/">
 		<img
 			src="/logos/colorstack-logo-title.svg"
 			alt="Colorstack logo and title"
