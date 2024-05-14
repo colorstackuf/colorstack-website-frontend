@@ -3,11 +3,16 @@
 	--desktop-page-padding-y: 1.5rem;
 	--lg-desktop-page-padding-y: 2rem;
 	--footer-height: 100px;
-	--foreground-primary: #0B0F24;
-	--text-emphasis: #FD9739;
+	--body-background-white: #f6f2ed;
+	--body-background-blue: #0b0f24;
+	--text-emphasis: #fd9739;
+	--colorstack-uf-blue: #0699ab;
+	--colorstack-uf-orange: #fd9739;
+	--font-color-dark-blue: #0b0f24;
 }
 
-html, body {
+html,
+body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -17,4 +22,3 @@ html, body {
 * {
 	font-family: 'Monserrat', sans-serif;
 }
-
