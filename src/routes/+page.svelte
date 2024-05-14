@@ -72,6 +72,7 @@
 </script>
 
 <div class="mt-6">
+	<!-- What We Do -->
 	<div class="container grid grid-cols-2 gap-[20px] px-16">
 		<div class="flex flex-col justify-center items-center">
 			<h1 class="text-colorstackuf-blue text-[1.4rem] font-gotham-medium">WHAT WE DO</h1>
@@ -93,14 +94,18 @@
 	</div>
 
 	<!-- Pillars -->
-	<div class="grid grid-cols-3 gap-[70px] px-16 mt-16 bg-body-background-white py-40">
+	<div
+		class="grid grid-cols-3 gap-[70px] px-16 mt-16 bg-body-background-white py-40
+	 translate-y-[-130px]
+	 "
+	>
 		{#each pillars as pillar}
 			<Pillar {...pillar} />
 		{/each}
 	</div>
 
 	<!-- Sponsors -->
-	<div>
+	<div class="translate-y-[-130px]">
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] px-16 mt-16">
 			Our Sponsors
 		</h2>
@@ -118,16 +123,16 @@
 	</div>
 
 	<!-- Follow Instagram -->
-	<div>
+	<div class="translate-y-[-130px]">
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] px-16 mt-16">
 			Follow our Instagram
 		</h2>
 	</div>
 
 	<!-- FAQ -->
-	<div class="mb-16">
+	<div class="translate-y-[-130px]">
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] px-16 mt-16">
-			Frequently Asked Questions
+			FAQs
 			<Accordion>
 				<span slot="head">
 					<h3 class="text-black font-gotham-medium text-[1.2rem]">What does ColorStack do?</h3>

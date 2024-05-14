@@ -75,7 +75,7 @@
 	});
 </script>
 
-<div class="relative w-[600px] h-[640px]">
+<div class="relative w-[600px] h-[640px] z-10">
 	<div
 		class="w-full h-full flex scroll-smooth overflow-x-scroll carousel rounded-lg"
 		on:mouseover={pauseAutoSlide}
@@ -91,7 +91,7 @@
 		{/each}
 	</div>
 
-	<div class="control-container">
+	<div class="relative bottom-[55px] flex justify-center items-center">
 		<button id="controls" class="controls" on:click={navigate}>
 			{#each images as image}
 				<a href={`#${image.id}`} class="controls__dot">
@@ -161,13 +161,5 @@
 	#controls {
 		background: none;
 		border: none;
-	}
-
-	.control-container {
-		position: relative;
-		bottom: 35px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 	}
 </style>
