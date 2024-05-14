@@ -1,26 +1,22 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-
 	$: innerWidth = 0;
-
-	function goHome() {
-		goto('/');
-	}
 </script>
 
 <svelte:window bind:innerWidth />
 <div class="header-container">
 	<div class="header-box">
-		<div class="logo-container" on:click={goHome}>
+		<a href="/" class="logo-container">
 			<img class="logo" src="/colorstack-logo-title.svg" alt="Colorstack logo and title" />
-		</div>
+		</a>
 
 		<div class="nav-bar">
 			{#if innerWidth >= 900}
-				<a class="nav-btn fs" href="/about" >About</a>
-				<a class="nav-btn fs" href="/sponsors" >Sponsors</a>
-				<a class="nav-btn fs" href="/students" >Students</a>
-				<a class="nav-btn fs" id="become-member" href="https://linktr.ee/colorstackuf" >Become a Member</a>
+				<a class="nav-btn fs" href="/about">About</a>
+				<a class="nav-btn fs" href="/sponsors">Sponsors</a>
+				<a class="nav-btn fs" href="/students">Students</a>
+				<a class="nav-btn fs" id="become-member" href="https://linktr.ee/colorstackuf"
+					>Become a Member</a
+				>
 			{:else}
 				<div class="sidebar-menu">
 					<img src="/sidebar-menu.svg" alt="Sidebar menu" />
@@ -31,7 +27,6 @@
 </div>
 
 <style>
-
 	.header-box {
 		width: 100%;
 		height: 100%;
@@ -43,7 +38,7 @@
 	.header-container {
 		padding: 0 var(--mobile-page-padding-y);
 		height: max(5vw, 5rem);
-		background-color: var(--foreground-primary);
+		background-color: var(--body-background-blue);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -95,7 +90,7 @@
 		.nav-btn {
 			font-size: clamp(1.5rem, 2vw, 2rem);
 		}
-		
+
 		.header-container {
 			padding: 0 var(--lg-desktop-page-padding-y);
 		}
@@ -103,7 +98,6 @@
 		.nav-bar {
 			gap: 5rem;
 		}
-
 	}
 
 	@media only screen and (min-width: 2560px) {
@@ -111,13 +105,10 @@
 			gap: 6rem;
 		}
 
-
 		#become-member {
 			border-width: 3px;
 			padding: 1.3rem 1.3rem;
 			border-radius: 2rem;
 		}
-		
 	}
-
 </style>

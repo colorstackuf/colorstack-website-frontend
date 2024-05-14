@@ -1,21 +1,13 @@
-<script lang="ts">
-	import { goto } from '$app/navigation';
-
-	function goHome() {
-		goto('/');
-	}
-</script>
-
 <div class="footer-box">
-	<div class="logo-container" on:click={goHome}>
+	<a class="logo-container" href="/">
 		<img class="logo" src="/colorstack-logo-title.svg" alt="Colorstack logo and title" />
-	</div>
+	</a>
 
 	<div class="nav-bar">
-		<a class="nav-btn" href="/about" >About</a>
-		<a class="nav-btn" href="/sponsors" >Sponsors</a>
-		<a class="nav-btn" href="/students" >Students</a>
-		<a class="nav-btn" id="become-member" href="https://linktr.ee/colorstackuf" >Become a Member</a>
+		<a class="nav-btn" href="/about">About</a>
+		<a class="nav-btn" href="/sponsors">Sponsors</a>
+		<a class="nav-btn" href="/students">Students</a>
+		<a class="nav-btn" id="become-member" href="https://linktr.ee/colorstackuf">Become a Member</a>
 
 		<h class="nav-btn" id="contact">Contact Us</h>
 		<a class="nav-btn" id="email">hello@colorstack.org</a>
@@ -32,9 +24,9 @@
 </div>
 
 <style>
-	.footer-box{
+	.footer-box {
 		height: 100%;
-		background-color: var(--foreground-primary);
+		background-color: var(--body-background-blue);
 		display: grid;
 		padding: 1.5rem var(--mobile-page-padding-y);
 	}
@@ -61,22 +53,22 @@
 		row-gap: 0.5rem;
 	}
 
-	.nav-btn[href="/about"] {
+	.nav-btn[href='/about'] {
 		grid-column: 1;
 		grid-row: 1;
 	}
 
-	.nav-btn[href="/sponsors"] {
+	.nav-btn[href='/sponsors'] {
 		grid-column: 1;
 		grid-row: 2;
 	}
 
-	.nav-btn[href="/students"] {
+	.nav-btn[href='/students'] {
 		grid-column: 1;
 		grid-row: 3;
 	}
 
-	.nav-btn[id="become-member"] {
+	.nav-btn[id='become-member'] {
 		grid-column: 1;
 		grid-row: 4;
 	}
