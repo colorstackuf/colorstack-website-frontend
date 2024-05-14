@@ -14,7 +14,7 @@
 		</a>
 
 		<div class="flex items-center gap-12 h-full">
-			{#if innerWidth >= 900}
+			{#if innerWidth >= 1024}
 				<a class="nav-btn" href="/about">About</a>
 				<a class="nav-btn" href="/sponsors">Sponsors</a>
 				<a class="nav-btn" href="/students">Students</a>

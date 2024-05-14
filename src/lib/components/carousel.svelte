@@ -75,7 +75,7 @@
 	});
 </script>
 
-<div class="relative w-full notebook:w-[600px] notebook:h-[640px] z-10">
+<div class="relative w-full laptop:w-[600px] laptop:h-[640px] z-10">
 	<div
 		class="w-full h-full flex scroll-smooth overflow-x-scroll carousel rounded-lg"
 		on:mouseover={pauseAutoSlide}

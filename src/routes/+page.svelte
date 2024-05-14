@@ -73,7 +73,9 @@
 	let sponsorSize = 200;
 	$: innerWidth = 0;
 	$: {
-		if (innerWidth >= 640) {
+		if (innerWidth >= 768) {
+			sponsorSize = 160;
+		} else if (innerWidth >= 640) {
 			sponsorSize = 120;
 		} else {
 			sponsorSize = 200;
@@ -85,12 +87,12 @@
 <div class="mt-6">
 	<!-- What We Do -->
 	<div
-		class="grid grid-cols-1 notebook:grid-cols-2 mt-12 gap-[40px] tablet:gap-[65px] notebook:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x"
+		class="grid grid-cols-1 laptop:grid-cols-2 mt-12 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x"
 	>
 		<div class="flex flex-col justify-center items-center">
 			<h1 class="text-colorstackuf-blue text-[1.4rem] font-gotham-medium">WHAT WE DO</h1>
 			<p
-				class="text-white font-archer-book text-2xl tablet:text-4xl tablet:leading-[2.5rem] text-center mt-8"
+				class="text-white font-archer-book text-2xl tablet:text-4xl tablet:leading-[2.5rem] max-w-2xl text-center mt-8"
 			>
 				ColorStack's mission is to increase the number of Black and Latinx Computer Science
 				graduates that go on to start
@@ -99,7 +101,7 @@
 			<a
 				target="_blank"
 				href="https://linktr.ee/colorstackuf"
-				class="bg-colorstackuf-orange py-4 px-7 rounded-3xl mt-8 notebook:mt-16 font-gotham-medium"
+				class="bg-colorstackuf-orange py-4 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium"
 			>
 				Become a Chapter Member
 			</a>
@@ -130,7 +132,10 @@
 					src={sponsor.src}
 					alt={sponsor.name}
 					width={sponsorSize}
-					class={sponsor.name === bnyMellon ? 'translate-y-[-28px] tablet:translate-y-[-15px]' : ''}
+					height={sponsorSize}
+					class={sponsor.name === bnyMellon
+						? 'translate-y-[-28px] tablet:translate-y-[-15px] notebook:translate-y-[-19px]'
+						: ''}
 				/>
 			{/each}
 		</div>
