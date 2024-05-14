@@ -74,7 +74,7 @@
 <div class="mt-6">
 	<!-- What We Do -->
 	<div
-		class="container grid grid-cols-1 tablet:grid-cols-2 gap-[40px] tablet:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x"
+		class="container grid grid-cols-1 tablet:grid-cols-2 gap-[40px] mt-12 tablet:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x"
 	>
 		<div class="flex flex-col justify-center items-center">
 			<h1 class="text-colorstackuf-blue text-[1.4rem] font-gotham-medium">WHAT WE DO</h1>
