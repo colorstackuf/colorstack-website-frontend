@@ -9,20 +9,24 @@
 	};
 </script>
 
-<div class="bg-body-background-white border border-white py-6 px-4 rounded-lg">
-	<button class="flex w-full items-center" on:click={handleClick}>
-		<div class="flex-[1] mr-[10px] text-left">
-			<slot name="head"></slot>
+<div class="bg-body-background-white border border-white rounded-lg">
+	<button
+		class="w-full py-6 px-4 transition-bg-color rounded-lg hover:bg-colorstackuf-orange duration-300"
+		on:click={handleClick}
+	>
+		<div class="flex w-full h-full items-center">
+			<div class="flex-[1] mr-[10px] text-left">
+				<slot name="head"></slot>
+			</div>
+
+			<img
+				src="/chevron.svg"
+				alt="chevron"
+				bind:this={chevron}
+				class="transition linear duration-300 w-[20px] h-[20px]"
+			/>
 		</div>
-
-		<img
-			src="/chevron.svg"
-			alt="chevron"
-			bind:this={chevron}
-			class="transition linear duration-300 w-[20px] h-[20px]"
-		/>
 	</button>
-
 	{#if open}
 		<div class="p-4" transition:slide>
 			<slot name="details"></slot>

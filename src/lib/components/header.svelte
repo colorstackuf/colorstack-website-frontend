@@ -17,16 +17,27 @@
 
 		<div class="flex items-center gap-12 h-full">
 			{#if innerWidth >= 1024}
-				<a class="nav-btn" href="/about">About</a>
-				<a class="nav-btn" href="/sponsors">Sponsors</a>
-				<a class="nav-btn" href="/students">Students</a>
-				<div
-					class="border-2 border-solid border-white self-center flex items-center py-[0.8rem] px-6 rounded-[1.2rem]"
+				<a
+					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300"
+					href="/about">About</a
 				>
-					<a class="nav-btn text-align-center" href="https://linktr.ee/colorstackuf"
-						>Become a Member</a
-					>
-				</div>
+				<a
+					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300"
+					href="/sponsors">Sponsors</a
+				>
+				<a
+					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300"
+					href="/students">Students</a
+				>
+				<a
+					class="border-2 border-solid border-white self-center flex items-center py-[0.8rem] px-6 rounded-[1.2rem] hover:bg-colorstackuf-blue hover:border-colorstackuf-blue text-white hover:text-black transition-colors duration-300"
+					href="https://linktr.ee/colorstackuf"
+					target="_blank"
+				>
+					<p class="translate-y-[0.5rem] text-[1.2rem] no-underline text-align-center">
+						Become a Member
+					</p>
+				</a>
 			{:else}
 				<div class="sidebar-menu">
 					<img src="/sidebar-menu.svg" alt="Sidebar menu" />
@@ -39,7 +50,6 @@
 <style>
 	.nav-btn {
 		transform: translateY(0.5rem);
-		color: white;
 		font-size: 1.2rem;
 		text-decoration: none;
 	}

@@ -104,7 +104,7 @@
 			<a
 				target="_blank"
 				href="https://linktr.ee/colorstackuf"
-				class="bg-colorstackuf-orange py-4 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium"
+				class="bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-4 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium"
 			>
 				Become a Chapter Member
 			</a>
