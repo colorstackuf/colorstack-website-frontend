@@ -67,6 +67,10 @@
 		{
 			name: 'Capital One',
 			src: '/logos/capital-one.svg'
+		},
+		{
+			name: 'Cisco',
+			src: '/logos/cisco.png'
 		}
 	];
 
@@ -130,7 +134,7 @@
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16">Our Sponsors</h2>
 		<div
-			class="grid grid-cols-1 gap-[50px] tablet:grid-cols-3 tablet:px-16 my-20 items-center justify-items-center"
+			class="grid grid-cols-1 gap-[50px] tablet:grid-cols-4 tablet:px-16 my-20 items-center justify-items-center"
 		>
 			{#each sponsors as sponsor}
 				<img
