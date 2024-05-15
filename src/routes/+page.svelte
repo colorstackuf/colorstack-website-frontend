@@ -3,7 +3,7 @@
 	import Carousel from '$lib/components/carousel.svelte';
 	import Pillar from '$lib/components/pillar.svelte';
 	import Accordion from '$lib/components/accordion.svelte';
-	import Sponsor from '$lib/components/sponsors.svelte';
+	import Sponsors from '$lib/components/sponsors.svelte';
 
 	const images: carouselImage[] = [
 		{
@@ -97,7 +97,12 @@
 	</div>
 
 	<!-- Sponsors -->
-	<Sponsor />
+	<div
+		class="lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
+	>
+		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-8">Our Sponsors</h2>
+		<Sponsors />
+	</div>
 
 	<!-- Follow Instagram -->
 	<div
