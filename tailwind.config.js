@@ -14,7 +14,8 @@ export default {
 			},
 			padding: {
 				'mobile-padding-x': '12px',
-				'tablet-padding-x': '16px'
+				'tablet-padding-x': '16px',
+				'laptop-padding-x': '26px'
 			},
 			width: {
 				'page-width': '1536px'

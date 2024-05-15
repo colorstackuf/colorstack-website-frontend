@@ -3,6 +3,7 @@
 	import Carousel from '$lib/components/carousel.svelte';
 	import Pillar from '$lib/components/pillar.svelte';
 	import Accordion from '$lib/components/accordion.svelte';
+	import Sponsor from '$lib/components/sponsors.svelte';
 
 	const images: carouselImage[] = [
 		{
@@ -52,51 +53,18 @@
 			icon: '/pillars/career.svg'
 		}
 	];
-
-	const bnyMellon = 'BNY Mellon';
-
-	const sponsors = [
-		{
-			name: 'BNY Mellon',
-			src: '/logos/bny-mellon.svg'
-		},
-		{
-			name: 'Bloomberg',
-			src: '/logos/bloomberg.svg'
-		},
-		{
-			name: 'Capital One',
-			src: '/logos/capital-one.svg'
-		},
-		{
-			name: 'Cisco',
-			src: '/logos/cisco.png'
-		}
-	];
-
-	let sponsorSize = 200;
-	$: innerWidth = 0;
-	$: {
-		if (innerWidth >= 768) {
-			sponsorSize = 160;
-		} else if (innerWidth >= 640) {
-			sponsorSize = 120;
-		} else {
-			sponsorSize = 200;
-		}
-	}
 </script>
 
-<svelte:window bind:innerWidth />
-<!-- <div class="mt-6 justify-center"> -->
 <div
-	class="mt-6 justify-center laptop:grid laptop:grid-cols-[1fr_1536px_1fr] bg-body-background-blue"
+	class="mt-6 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-blue"
 >
 	<!-- What We Do -->
 	<div
-		class="grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 mt-12 laptop:mt-0 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:max-h-[600px] laptop:min-h-[550px]"
+		class="grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 mt-12 laptop:mt-0 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:max-h-[600px] laptop:min-h-[550px] laptop:justify-items-end min-[1150px]:px-[50px] desktop:px-[30px]"
 	>
-		<div class="flex flex-col justify-center laptop:justify-normal laptop:mt-20 items-center">
+		<div
+			class="flex flex-col justify-center laptop:justify-normal laptop:mt-20 desktop:mt-28 items-center laptop:justify-self-center"
+		>
 			<h1 class="text-colorstackuf-blue text-[1.4rem] font-gotham-medium">WHAT WE DO</h1>
 			<p
 				class="text-white font-archer-book text-2xl tablet:text-4xl tablet:leading-[2.5rem] max-w-[500px] text-center mt-8"
@@ -119,7 +87,7 @@
 
 	<!-- Pillars -->
 	<div
-		class="laptop:col-start-1 laptop:col-end-4 mt-16 bg-body-background-white py-20 tablet:py-36 notebook:py-40 px-mobile-padding-x tablet:px-tablet-padding-x translate-y-[-110px] tablet:translate-y-[-130px] laptop:flex laptop:justify-center"
+		class="tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-white py-20 tablet:py-36 notebook:py-40 px-mobile-padding-x tablet:px-tablet-padding-x translate-y-[-110px] tablet:translate-y-[-130px] laptop:flex laptop:justify-center laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
 	>
 		<div class="max-w-page-width grid grid-cols-1 tablet:grid-cols-3 gap-[70px] tablet:gap-[40px]">
 			{#each pillars as pillar}
@@ -129,30 +97,11 @@
 	</div>
 
 	<!-- Sponsors -->
-	<div
-		class="laptop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:tablet-padding-x"
-	>
-		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16">Our Sponsors</h2>
-		<div
-			class="grid grid-cols-1 gap-[50px] tablet:grid-cols-4 tablet:px-16 my-20 items-center justify-items-center"
-		>
-			{#each sponsors as sponsor}
-				<img
-					src={sponsor.src}
-					alt={sponsor.name}
-					width={sponsorSize}
-					height={sponsorSize}
-					class={sponsor.name === bnyMellon
-						? 'translate-y-[-28px] tablet:translate-y-[-15px] notebook:translate-y-[-19px]'
-						: ''}
-				/>
-			{/each}
-		</div>
-	</div>
+	<Sponsor />
 
 	<!-- Follow Instagram -->
 	<div
-		class="laptop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x"
+		class="lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16">
 			Follow our Instagram!
@@ -161,7 +110,7 @@
 
 	<!-- FAQ -->
 	<div
-		class="col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 px-mobile-padding-x tablet:px-tablet-padding-x"
+		class="lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px] desktop:mb-24"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-4">FAQs</h2>
 		<Accordion>

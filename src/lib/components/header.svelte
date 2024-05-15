@@ -4,7 +4,7 @@
 
 <svelte:window bind:innerWidth />
 <div
-	class="px-mobile-padding-x h-[5rem] flex flex-col items-center justify-center font-gotham-book mt-4"
+	class="px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x h-[5rem] flex flex-col items-center justify-center font-gotham-book mt-4"
 >
 	<div class="w-full max-w-page-width h-full flex items-center">
 		<a href="/" class="flex-[1]">

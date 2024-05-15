@@ -76,7 +76,7 @@
 </script>
 
 <div
-	class="relative w-full laptop:w-[57vw] laptop:h-[60vw] laptop:max-h-[638px] laptop:max-w-[606px] z-10"
+	class="relative w-full laptop:w-[47.5vw] laptop:h-[50vw] laptop:max-h-[638px] laptop:max-w-[606px] desktop:max-h-[701px] desktop:max-w-[666px] z-10"
 >
 	<div
 		class="w-full h-full flex scroll-smooth overflow-x-scroll carousel rounded-lg"

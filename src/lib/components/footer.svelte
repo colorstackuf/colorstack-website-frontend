@@ -1,4 +1,6 @@
-<div class="px-mobile-padding-x flex flex-col items-center justify-center font-gotham-book">
+<div
+	class="px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x flex flex-col items-center justify-center font-gotham-book"
+>
 	<div
 		class="grid grid-rows-2 laptop:grid-rows-1 laptop:grid-cols-[45%_auto] w-full max-w-page-width"
 	>
