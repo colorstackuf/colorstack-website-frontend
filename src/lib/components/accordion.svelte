@@ -5,7 +5,7 @@
 	let chevron: HTMLImageElement;
 	const handleClick = () => {
 		chevron.style.transform = open ? 'rotate(0deg)' : 'rotate(90deg)';
-		return (open = !open);
+		open = !open;
 	};
 </script>
 

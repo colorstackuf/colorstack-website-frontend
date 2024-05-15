@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { type carouselImage } from '$lib/types';
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 
 	export let images: carouselImage[];
 	export let interval: number = 3000;
@@ -71,7 +71,7 @@
 		}
 		currentSelection.style.backgroundColor = selectedColor;
 		startAutoScroll();
-		return onDestroy(() => clearInterval(intervalId));
+		return () => clearInterval(intervalId);
 	});
 </script>
 
