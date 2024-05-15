@@ -6,16 +6,8 @@
 	import './global.css';
 </script>
 
-<main class="page bg-body-background-blue">
+<main class="grid grid-rows-auto">
 	<Header />
 	<slot />
 	<Footer />
 </main>
-
-<style>
-	.page {
-		width: 100%;
-		display: grid;
-		grid-template-rows: auto auto auto;
-	}
-</style>

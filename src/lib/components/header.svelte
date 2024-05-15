@@ -3,8 +3,10 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<div class="header-container font-gotham-book mt-4">
-	<div class="w-full h-full flex items-center">
+<div
+	class="px-mobile-padding-x h-[5rem] flex flex-col items-center justify-center font-gotham-book mt-4"
+>
+	<div class="w-full max-w-page-width h-full flex items-center">
 		<a href="/" class="flex-[1]">
 			<img
 				class="object-contain w-[20rem]"
@@ -35,54 +37,10 @@
 </div>
 
 <style>
-	.header-container {
-		padding: 0 var(--mobile-page-padding-y);
-		height: max(5vw, 5rem);
-		background-color: var(--body-background-blue);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
 	.nav-btn {
 		transform: translateY(0.5rem);
 		color: white;
 		font-size: 1.2rem;
 		text-decoration: none;
 	}
-
-	/*
-	@media only screen and (min-width: 1201px) and (max-width: 1920px) {
-		.header-container {
-			padding: 0 var(--desktop-page-padding-y);
-		}
-	}
-
-	@media only screen and (min-width: 1921px) {
-		.nav-btn {
-			font-size: clamp(1.5rem, 2vw, 2rem);
-		}
-
-		.header-container {
-			padding: 0 var(--lg-desktop-page-padding-y);
-		}
-
-		.nav-bar {
-			gap: 5rem;
-		}
-	}
-
-	@media only screen and (min-width: 2560px) {
-		.nav-bar {
-			gap: 6rem;
-		}
-
-		#become-member {
-			border-width: 3px;
-			padding: 1.3rem 1.3rem;
-			border-radius: 2rem;
-		}
-	}
-	*/
 </style>

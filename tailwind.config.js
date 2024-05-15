@@ -15,6 +15,12 @@ export default {
 			padding: {
 				'mobile-padding-x': '12px',
 				'tablet-padding-x': '16px'
+			},
+			width: {
+				'page-width': '1536px'
+			},
+			maxWidth: {
+				'page-width': '1536px'
 			}
 		},
 		fontFamily: {

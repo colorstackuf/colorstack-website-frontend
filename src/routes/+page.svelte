@@ -84,15 +84,18 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<div class="mt-6">
+<!-- <div class="mt-6 justify-center"> -->
+<div
+	class="mt-6 justify-center laptop:grid laptop:grid-cols-[1fr_1536px_1fr] bg-body-background-blue"
+>
 	<!-- What We Do -->
 	<div
-		class="grid grid-cols-1 laptop:grid-cols-2 mt-12 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x"
+		class="grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 mt-12 laptop:mt-0 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:max-h-[600px] laptop:min-h-[550px]"
 	>
-		<div class="flex flex-col justify-center items-center">
+		<div class="flex flex-col justify-center laptop:justify-normal laptop:mt-20 items-center">
 			<h1 class="text-colorstackuf-blue text-[1.4rem] font-gotham-medium">WHAT WE DO</h1>
 			<p
-				class="text-white font-archer-book text-2xl tablet:text-4xl tablet:leading-[2.5rem] max-w-2xl text-center mt-8"
+				class="text-white font-archer-book text-2xl tablet:text-4xl tablet:leading-[2.5rem] max-w-[500px] text-center mt-8"
 			>
 				ColorStack's mission is to increase the number of Black and Latinx Computer Science
 				graduates that go on to start
@@ -112,16 +115,18 @@
 
 	<!-- Pillars -->
 	<div
-		class="grid grid-cols-1 tablet:grid-cols-3 gap-[70px] tablet:gap-[40px] mt-16 bg-body-background-white py-20 tablet:py-36 notebook:py-40 px-mobile-padding-x tablet:px-tablet-padding-x translate-y-[-110px] tablet:translate-y-[-130px]"
+		class="laptop:col-start-1 laptop:col-end-4 mt-16 bg-body-background-white py-20 tablet:py-36 notebook:py-40 px-mobile-padding-x tablet:px-tablet-padding-x translate-y-[-110px] tablet:translate-y-[-130px] laptop:flex laptop:justify-center"
 	>
-		{#each pillars as pillar}
-			<Pillar {...pillar} />
-		{/each}
+		<div class="max-w-page-width grid grid-cols-1 tablet:grid-cols-3 gap-[70px] tablet:gap-[40px]">
+			{#each pillars as pillar}
+				<Pillar {...pillar} />
+			{/each}
+		</div>
 	</div>
 
 	<!-- Sponsors -->
 	<div
-		class="translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:tablet-padding-x"
+		class="laptop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:tablet-padding-x"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16">Our Sponsors</h2>
 		<div
@@ -143,7 +148,7 @@
 
 	<!-- Follow Instagram -->
 	<div
-		class="translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x"
+		class="laptop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16">
 			Follow our Instagram!
@@ -152,7 +157,7 @@
 
 	<!-- FAQ -->
 	<div
-		class="translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 px-mobile-padding-x tablet:px-tablet-padding-x"
+		class="col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 px-mobile-padding-x tablet:px-tablet-padding-x"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-4">FAQs</h2>
 		<Accordion>
