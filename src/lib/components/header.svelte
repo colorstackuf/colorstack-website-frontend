@@ -1,13 +1,22 @@
 <script lang="ts">
+	import { slide } from 'svelte/transition';
+	import { Hamburger } from 'svelte-hamburgers';
+
+	export let ariaLabel: string = 'Toggle navigation';
+	let open: boolean;
+	const handleNavigation = () => {
+		open = false;
+	};
+
 	$: innerWidth = 0;
 </script>
 
 <svelte:window bind:innerWidth />
 <div
-	class="px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x h-[5rem] flex flex-col items-center justify-center font-gotham-book mt-4"
+	class="h-[80px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x h-[5rem] flex flex-col items-center justify-center font-gotham-book mt-4"
 >
 	<div class="w-full max-w-page-width h-full flex items-center">
-		<a href="/" class="flex-[1]">
+		<a href="/" class="flex-[1]" on:click={() => (open = false)}>
 			<img
 				class="object-contain w-[20rem]"
 				src="/logos/colorstack-logo-title.svg"
@@ -39,9 +48,32 @@
 					</p>
 				</a>
 			{:else}
-				<div class="sidebar-menu">
-					<img src="/sidebar-menu.svg" alt="Sidebar menu" />
-				</div>
+				{#if open}
+					<div
+						transition:slide
+						class="absolute w-full left-0 top-[86px] h-[10rem] flex flex-col items-center justify-evenly bg-body-background-blue"
+					>
+						<a
+							class="text-white hover:text-colorstackuf-orange transition-colors duration-300"
+							href="/about"
+							on:click={handleNavigation}>About</a
+						>
+						<a
+							class="text-white hover:text-colorstackuf-orange transition-colors duration-300"
+							href="/sponsors"
+							on:click={handleNavigation}>Sponsors</a
+						>
+						<a
+							class="text-white hover:text-colorstackuf-orange transition-colors duration-300"
+							href="/students"
+							on:click={handleNavigation}>Students</a
+						>
+					</div>
+				{/if}
+
+				<button>
+					<Hamburger --color={'#fd9739'} {ariaLabel} type="slider" bind:open />
+				</button>
 			{/if}
 		</div>
 	</div>
