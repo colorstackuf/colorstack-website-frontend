@@ -48,32 +48,32 @@
 					</p>
 				</a>
 			{:else}
-				{#if open}
-					<div
-						transition:slide
-						class="absolute w-full left-0 top-[86px] h-[10rem] flex flex-col items-center justify-evenly bg-body-background-blue"
-					>
-						<a
-							class="text-white hover:text-colorstackuf-orange transition-colors duration-300"
-							href="/about"
-							on:click={handleNavigation}>About</a
+				<div>
+					{#if open}
+						<div
+							transition:slide
+							class="absolute w-full left-0 top-[86px] h-[10rem] flex flex-col items-center justify-evenly bg-body-background-blue"
 						>
-						<a
-							class="text-white hover:text-colorstackuf-orange transition-colors duration-300"
-							href="/sponsors"
-							on:click={handleNavigation}>Sponsors</a
-						>
-						<a
-							class="text-white hover:text-colorstackuf-orange transition-colors duration-300"
-							href="/students"
-							on:click={handleNavigation}>Students</a
-						>
-					</div>
-				{/if}
+							<a
+								class="text-white hover:text-colorstackuf-orange transition-colors duration-300"
+								href="/about"
+								on:click={handleNavigation}>About</a
+							>
+							<a
+								class="text-white hover:text-colorstackuf-orange transition-colors duration-300"
+								href="/sponsors"
+								on:click={handleNavigation}>Sponsors</a
+							>
+							<a
+								class="text-white hover:text-colorstackuf-orange transition-colors duration-300"
+								href="/students"
+								on:click={handleNavigation}>Students</a
+							>
+						</div>
+					{/if}
 
-				<button>
 					<Hamburger --color={'#fd9739'} {ariaLabel} type="slider" bind:open />
-				</button>
+				</div>
 			{/if}
 		</div>
 	</div>
