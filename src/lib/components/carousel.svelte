@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { type carouselImage } from '$lib/types';
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 
 	export let images: carouselImage[];
 	export let interval: number = 3000;
@@ -10,7 +10,7 @@
 
 	let index: number = 0;
 	let intervalId: number;
-	let currentSelection: HTMLElement;
+	let currentSelection: HTMLElement | null;
 
 	function idToHref(id: string) {
 		return `#${id}`;
@@ -22,23 +22,23 @@
 			currentSelection.style.backgroundColor = unselectedColor;
 		}
 		currentSelection = document.querySelector(`a[href="${href}"]`);
+		if (!currentSelection) {
+			console.error(`Could not find element with href ${href}`);
+			return;
+		}
 		currentSelection.style.backgroundColor = selectedColor;
 	}
 
 	function navigateTo(href: string, e: MouseEvent) {
-
 		const slide = document.querySelector(href);
-		if(!slide) return;
-		if (slide.scrollIntoViewIfNeeded) {
+		if (!slide) return;
+
+		if (slide.scrollIntoView) {
 			e.preventDefault();
-			slide.scrollIntoViewIfNeeded();
-			updateIndex(href);
-		} else if (slide.scrollIntoView) {
-			e.preventDefault();
-			slide.scrollIntoView();
+			slide.scrollIntoView(false);
+			// slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
 			updateIndex(href);
 		}
-
 	}
 
 	function navigate(e: MouseEvent) {
@@ -53,41 +53,55 @@
 	function resumeAutoSlide() {
 		startAutoScroll();
 	}
-	
+
 	function startAutoScroll() {
-		intervalId = setInterval(() => {
-			index = (index + 1) % images.length;
-			const id = images[index].id;
-			const href = idToHref(id);
-			navigateTo(href, new MouseEvent('click'));
-		}, interval);
+		// intervalId = setInterval(() => {
+		// 	index = (index + 1) % images.length;
+		// 	const id = images[index].id;
+		// 	const href = idToHref(id);
+		// 	navigateTo(href, new MouseEvent('click'));
+		// }, interval);
 	}
 
 	onMount(() => {
 		currentSelection = document.querySelector(`a[href="${idToHref(images[0].id)}"]`);
 		if (!currentSelection) {
-			console.error("Could not find the first image");
+			console.error('Could not find the first image');
 			return;
 		}
 		currentSelection.style.backgroundColor = selectedColor;
 		startAutoScroll();
-		return onDestroy(() => clearInterval(intervalId));
+		return () => clearInterval(intervalId);
 	});
 </script>
 
-<div class="carousel-container">
-	<div class="carousel" on:mouseover={pauseAutoSlide} on:mouseout={resumeAutoSlide}>
+<div
+	class="relative w-full laptop:w-[47.5vw] laptop:h-[50vw] laptop:max-h-[638px] laptop:max-w-[606px] desktop:max-h-[701px] desktop:max-w-[666px] z-10"
+>
+	<div
+		class="w-full h-full flex scroll-smooth overflow-x-scroll carousel rounded-lg"
+		on:mouseover={pauseAutoSlide}
+		on:blur={() => 0}
+		on:mouseout={resumeAutoSlide}
+		on:focus={() => 0}
+		role="img"
+	>
 		{#each images as image}
-			<div id={image.id} class="carousel__item">
-				<img src={image.src} alt={image.alt} class="carousel__image" />
+			<div id={image.id} class="w-full shrink-0 snap-start">
+				<img src={image.src} alt={image.alt} class="w-full h-full object-cover block" />
 			</div>
 		{/each}
 	</div>
 
-	<div class="control-container">
-		<button id="controls" class="controls" on:click={navigate}>
+	<div class="relative bottom-[25px] tablet:bottom-[55px] flex justify-center items-center">
+		<button class="bg-none border-none" on:click={navigate}>
 			{#each images as image}
-				<a href={`#${image.id}`} class="controls__dot">
+				<a
+					href={`#${image.id}`}
+					class="inline-block w-3 h-3 tablet:w-[0.85rem] tablet:h-[0.85rem] rounded-[50%] bg-[#b4afaf]
+			opacity-85 cursor-pointer transition-[opacity] duration-200 hover:opacity-100
+	 focus:opacity-100 [&:not(:first-child)]:ml-4"
+				>
 					<span class="visuallyhidden">{image.alt}</span>
 				</a>
 			{/each}
@@ -96,84 +110,24 @@
 </div>
 
 <style>
-
-.carousel-container {
-	position: relative;
-	width: 606px;
-	height: 638px;
-}
-
-.carousel {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	scroll-snap-type: x mandatory;
-	overflow-x: scroll;
-	scroll-behavior: smooth;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-  }
-
-.carousel::-webkit-scrollbar {
-	display: none;
-}
-
-.carousel__item {
-	width: 100%;
-	flex-shrink: 0;
-	scroll-snap-align: start;
-}
-
-.carousel__image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	display: block;
-}
-
-.controls__dot {
-	display: inline-block;
-	width: 0.85em;
-	height: 0.85em;
-	border-radius: 50%;
-	outline: none;
-	background-color: #B4AFAF;
-	opacity: 0.8;
-	cursor: pointer;
-	transition: opacity 0.2s;
-
-	&:not(:first-child) {
-		margin-left: 1em;
+	.carousel {
+		scroll-snap-type: x mandatory;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
 	}
 
-	&:hover,
-	&:focus {
-		opacity: 1;
+	.carousel::-webkit-scrollbar {
+		display: none;
 	}
-}
 
-.visuallyhidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
-
-#controls {
-	background: none;
-	border: none;
-}
-
-.control-container {
-	position: relative;
-	bottom: 35px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
+	.visuallyhidden {
+		border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
 </style>
