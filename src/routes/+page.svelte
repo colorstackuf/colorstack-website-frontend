@@ -125,7 +125,10 @@
 				</h3>
 			</span>
 			<div slot="details">
-				<p class="text-black text-base">Answer</p>
+				<p class="text-black text-base">
+					Increase the number of Black & Latinx computer science students that start rewarding
+					technical careers.
+				</p>
 			</div>
 		</Accordion>
 		<Accordion>
@@ -135,7 +138,10 @@
 				</h3>
 			</span>
 			<div slot="details">
-				<p class="text-black text-base">Answer</p>
+				<p class="text-black text-base">
+					While you must be Black or Latinx to become a member of the National Organization, the
+					chapter is open to everyone that is committed to our mission.
+				</p>
 			</div>
 		</Accordion>
 		<Accordion>
@@ -145,7 +151,13 @@
 				</h3>
 			</span>
 			<div slot="details">
-				<p class="text-black text-base">Answer</p>
+				<p class="text-black text-base">
+					No, you still need to apply to become a member of ColorStack national at <a
+						href="https://colorstack.org/"
+						class="decoration-solid decoration-2 decoration-colorstackuf-blue underline underline-offset-4 hover:decoration-colorstackuf-orange transition-color duration-300"
+						target="_blank">www.colorstack.org.</a
+					>
+				</p>
 			</div>
 		</Accordion>
 	</div>
