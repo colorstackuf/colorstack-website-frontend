@@ -10,15 +10,15 @@
 	};
 
 	let timeSincePost = dateDifferenceInDays(post.timestamp); // in days
-	let unit = timeSincePost === 1 ? 'days' : 'day';
+	let unit = timeSincePost.toFixed(0) === '1' ? 'days' : 'day';
 	if (timeSincePost >= 7) {
 		timeSincePost = timeSincePost / 7; // in weeks
-		unit = timeSincePost === 1 ? 'week' : 'weeks';
+		unit = timeSincePost.toFixed(0) === '1' ? 'week' : 'weeks';
 	}
 
 	if (timeSincePost > 4) {
 		timeSincePost = timeSincePost / 4; // in months
-		unit = timeSincePost === 1 ? 'month' : 'months';
+		unit = timeSincePost.toFixed(0) === '1' ? 'month' : 'months';
 	}
 </script>
 
