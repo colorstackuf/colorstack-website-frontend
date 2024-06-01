@@ -65,7 +65,7 @@
 				class={(large
 					? 'w-[16rem] tablet:w-[34rem] notebook:w-[43rem] laptop:w-[22rem] desktop:w-[28rem] lg-desktop:w-[35rem]'
 					: 'w-[9rem] tablet:w-[16rem] notebook:w-[20rem] laptop:w-[16rem] desktop:w-[20rem] lg-desktop:w-[25rem]') +
-					' relative text-white truncate'}
+					' relative text-white font-gotham-light truncate'}
 			>
 				{post.caption}
 			</p>
