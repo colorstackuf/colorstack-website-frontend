@@ -47,6 +47,8 @@
 		for (let i = 0; i < images.length; i++) {
 			if (images[i].id === imageId) {
 				navigateTo(i);
+				stopScroll(); // Restart the scroll after the user interacts with the carousel
+				startScroll();
 				break;
 			}
 		}
