@@ -36,6 +36,12 @@
 	};
 
 	$: innerWidth = 0;
+	$: {
+		if (innerWidth >= 1024) {
+			open = false;
+			document.body.classList.toggle('no-scroll', false);
+		}
+	}
 </script>
 
 <svelte:window bind:innerWidth />
