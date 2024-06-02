@@ -2,12 +2,12 @@
 	import { slide } from 'svelte/transition';
 	import { Hamburger } from 'svelte-hamburgers';
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
 
 	export let ariaLabel: string = 'Toggle navigation';
 	let open: boolean = false;
 	const toggleMenu = () => {
 		open = !open;
-		console.log(open);
 		document.body.classList.toggle('no-scroll', open);
 	};
 
@@ -20,7 +20,6 @@
 	let onStudents = $page.url.pathname === '/students';
 
 	const handleStyleChange = (page: string) => {
-		console.log(page);
 		if (page === 'about') {
 			onStudents = onSponsors = false;
 			onAbout = true;
@@ -42,6 +41,12 @@
 			document.body.classList.toggle('no-scroll', false);
 		}
 	}
+
+	onMount(() => {
+		return () => {
+			document.body.classList.remove('no-scroll');
+		};
+	});
 </script>
 
 <svelte:window bind:innerWidth />

@@ -8,28 +8,33 @@
 
 	const images: carouselImage[] = [
 		{
+			id: 'gbm0',
+			src: '/carousel/img0.jpg',
+			alt: 'Image 0'
+		},
+		{
 			id: 'fdl1',
-			src: '/nvidia-fdl/fdl1.jpg',
+			src: '/carousel/fdl1.jpg',
 			alt: 'Image 1'
 		},
 		{
 			id: 'fdl2',
-			src: '/nvidia-fdl/fdl2.jpg',
+			src: '/carousel/fdl2.jpg',
 			alt: 'Image 2'
 		},
 		{
 			id: 'fdl3',
-			src: '/nvidia-fdl/fdl3.jpg',
+			src: '/carousel/fdl3.jpg',
 			alt: 'Image 3'
 		},
 		{
 			id: 'fdl4',
-			src: '/nvidia-fdl/fdl4.jpg',
+			src: '/carousel/fdl4.jpg',
 			alt: 'Image 4'
 		},
 		{
 			id: 'fdl5',
-			src: '/nvidia-fdl/fdl5.jpg',
+			src: '/carousel/fdl5.jpg',
 			alt: 'Image 5'
 		}
 	];

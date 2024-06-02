@@ -14,6 +14,7 @@
 	}
 
 	function unhighlight(idx: number) {
+		if (!images[idx]) return;
 		const href = idToHref(images[idx].id);
 		const element = document.querySelector(`a[href="${href}"]`) as HTMLElement;
 		if (element) {
@@ -22,11 +23,11 @@
 	}
 
 	function highlight(idx: number) {
+		if (!images[idx]) return;
 		const href = idToHref(images[idx].id);
 		const element = document.querySelector(`a[href="${href}"]`) as HTMLElement;
 		if (element) {
 			element.classList.add('selected');
-			console.log('added selected class');
 		}
 	}
 
@@ -40,7 +41,9 @@
 	function handleNavigationClick(e: MouseEvent) {
 		e.preventDefault();
 		// @ts-expect-error - href is a valid attribute
-		const imageId = e.target.getAttribute('href').slice(1);
+		const href = e.target.getAttribute('href');
+		if (!href) return;
+		const imageId = href.slice(1);
 		for (let i = 0; i < images.length; i++) {
 			if (images[i].id === imageId) {
 				navigateTo(i);
@@ -54,6 +57,7 @@
 	}
 
 	function scrollCarousel() {
+		if (!carouselContainer) return;
 		if (carouselContainer.scrollWidth > carouselContainer.clientWidth) {
 			if (
 				carouselContainer.scrollLeft + carouselContainer.clientWidth >=

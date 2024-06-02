@@ -1,13 +1,7 @@
 <script lang="ts">
 	import InstagramPost from '$lib/components/instagramPost.svelte';
-	import { onMount } from 'svelte';
 	const url = 'https://feeds.behold.so/driyRZEieOYErh2i3tFk';
 	const promise = fetch(url).then((response) => response.json());
-	onMount(async () => {
-		const url = 'https://feeds.behold.so/driyRZEieOYErh2i3tFk';
-		const promise = await fetch(url).then((response) => response.json());
-		console.log(promise);
-	});
 </script>
 
 {#await promise then data}
