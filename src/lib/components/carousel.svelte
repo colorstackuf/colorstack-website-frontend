@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { type carouselImage } from '$lib/types';
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 
 	export let images: carouselImage[];
 	export let interval: number = 3000;
@@ -8,9 +8,9 @@
 	const selectedColor = '#F7F7F7';
 	const unselectedColor = '#B4AFAF';
 
-	let index: number = 0;
-	let intervalId: number;
+	let scrollInterval = 0;
 	let currentSelection: HTMLElement | null;
+	let carouselContainer: HTMLElement;
 
 	function idToHref(id: string) {
 		return `#${id}`;
@@ -46,32 +46,27 @@
 		navigateTo(href, e);
 	}
 
-	function pauseAutoSlide() {
-		clearInterval(intervalId);
-	}
-
-	function resumeAutoSlide() {
-		startAutoScroll();
-	}
-
-	function startAutoScroll() {
-		// intervalId = setInterval(() => {
-		// 	index = (index + 1) % images.length;
-		// 	const id = images[index].id;
-		// 	const href = idToHref(id);
-		// 	navigateTo(href, new MouseEvent('click'));
-		// }, interval);
+	function scrollCarousel() {
+		if (carouselContainer.scrollWidth > carouselContainer.clientWidth) {
+			if (
+				carouselContainer.scrollLeft + carouselContainer.clientWidth >=
+				carouselContainer.scrollWidth
+			) {
+				carouselContainer.scrollTo({ left: 0, behavior: 'smooth' });
+			} else {
+				carouselContainer.scrollBy({ left: carouselContainer.clientWidth, behavior: 'smooth' });
+			}
+		}
 	}
 
 	onMount(() => {
-		currentSelection = document.querySelector(`a[href="${idToHref(images[0].id)}"]`);
-		if (!currentSelection) {
-			console.error('Could not find the first image');
-			return;
-		}
-		currentSelection.style.backgroundColor = selectedColor;
-		startAutoScroll();
-		return () => clearInterval(intervalId);
+		// Set an interval to scroll the carousel
+		scrollInterval = setInterval(scrollCarousel, 3000); // Adjust the interval time as needed
+	});
+
+	onDestroy(() => {
+		// Clear the interval when the component is destroyed
+		clearInterval(scrollInterval);
 	});
 </script>
 
@@ -79,11 +74,8 @@
 	class="relative w-full laptop:w-[47.5vw] laptop:h-[50vw] laptop:max-h-[638px] laptop:max-w-[606px] desktop:max-h-[701px] desktop:max-w-[666px] z-10"
 >
 	<div
+		bind:this={carouselContainer}
 		class="w-full h-full flex scroll-smooth overflow-x-scroll carousel rounded-lg"
-		on:mouseover={pauseAutoSlide}
-		on:blur={() => 0}
-		on:mouseout={resumeAutoSlide}
-		on:focus={() => 0}
 		role="img"
 	>
 		{#each images as image}
