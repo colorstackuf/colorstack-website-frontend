@@ -10,32 +10,32 @@
 		{
 			id: 'gbm0',
 			src: '/carousel/img0.jpg',
-			alt: 'Image 0'
+			alt: 'ColorStack GBM 1'
 		},
 		{
 			id: 'fdl1',
 			src: '/carousel/fdl1.jpg',
-			alt: 'Image 1'
+			alt: 'Nvidia Fundamentals of Deep learning Workshop'
 		},
 		{
 			id: 'fdl2',
 			src: '/carousel/fdl2.jpg',
-			alt: 'Image 2'
+			alt: 'Nvidia Fundamentals of Deep learning Workshop'
 		},
 		{
 			id: 'fdl3',
 			src: '/carousel/fdl3.jpg',
-			alt: 'Image 3'
+			alt: 'Nvidia Fundamentals of Deep learning Workshop'
 		},
 		{
 			id: 'fdl4',
 			src: '/carousel/fdl4.jpg',
-			alt: 'Image 4'
+			alt: 'Nvidia Fundamentals of Deep learning Workshop'
 		},
 		{
 			id: 'fdl5',
 			src: '/carousel/fdl5.jpg',
-			alt: 'Image 5'
+			alt: 'Nvidia Fundamentals of Deep learning Workshop'
 		}
 	];
 
@@ -132,7 +132,7 @@
 				</h3>
 			</span>
 			<div slot="details">
-				<p class="text-black text-base">
+				<p class="text-black text-base font-archer">
 					Increase the number of Black & Latinx computer science students that start rewarding
 					technical careers.
 				</p>
@@ -145,7 +145,7 @@
 				</h3>
 			</span>
 			<div slot="details">
-				<p class="text-black text-base">
+				<p class="text-black text-base font-archer">
 					While you must be Black or Latinx to become a member of the National Organization, the
 					chapter is open to everyone that is committed to our mission.
 				</p>
@@ -158,7 +158,7 @@
 				</h3>
 			</span>
 			<div slot="details">
-				<p class="text-black text-base">
+				<p class="text-black text-base font-archer">
 					No, you still need to apply to become a member of ColorStack national at <a
 						href="https://colorstack.org/"
 						class="decoration-solid decoration-2 decoration-colorstackuf-blue underline underline-offset-4 hover:decoration-colorstackuf-orange transition-color duration-300"
