@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.no-scroll {
+	overflow: hidden;
+}
+
 @layer base {
 	@font-face {
 		font-family: 'Gotham-Book';

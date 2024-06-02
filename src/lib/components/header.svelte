@@ -4,9 +4,15 @@
 	import { page } from '$app/stores';
 
 	export let ariaLabel: string = 'Toggle navigation';
-	let open: boolean;
-	const handleNavigation = () => {
-		open = false;
+	let open: boolean = false;
+	const toggleMenu = () => {
+		open = !open;
+		console.log(open);
+		document.body.classList.toggle('no-scroll', open);
+	};
+
+	const toggleBurger = () => {
+		document.body.classList.toggle('no-scroll', !open);
 	};
 
 	let onAbout = $page.url.pathname === '/about';
@@ -43,6 +49,7 @@
 			on:click={() => {
 				open = false;
 				handleStyleChange('');
+				document.body.classList.toggle('no-scroll', false);
 			}}
 		>
 			<img
@@ -84,35 +91,53 @@
 			{:else}
 				<div>
 					{#if open}
+						<div class="absolute top-[86px] left-0 w-full h-full bg-black bg-opacity-90 z-20" />
 						<div
 							transition:slide
-							class="absolute w-full left-0 top-[86px] h-[10rem] flex flex-col items-center justify-evenly bg-body-background-blue"
+							class="absolute w-full left-0 top-[86px] h-[14rem] flex flex-col items-left justify-evenly bg-body-background-blue px-6 py-8 gap-4 z-20"
 						>
 							<a
-								class="text-white hover:text-colorstackuf-orange transition-colors duration-300"
+								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl"
 								href="/about"
-								on:click={() => handleStyleChange('about')}
-								class:on-page={onAbout}
-								on:click={handleNavigation}>About</a
+								on:click={() => {
+									handleStyleChange('about');
+									toggleMenu();
+								}}
+								class:on-page={onAbout}>About</a
 							>
 							<a
-								class="text-white hover:text-colorstackuf-orange transition-colors duration-300"
+								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl"
 								href="/sponsors"
-								on:click={() => handleStyleChange('sponsors')}
-								class:on-page={onSponsors}
-								on:click={handleNavigation}>Sponsors</a
+								on:click={() => {
+									handleStyleChange('sponsors');
+									toggleMenu();
+								}}
+								class:on-page={onSponsors}>Sponsors</a
 							>
 							<a
-								class="text-white hover:text-colorstackuf-orange transition-colors duration-300"
+								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl"
 								href="/students"
-								on:click={() => handleStyleChange('students')}
-								class:on-page={onStudents}
-								on:click={handleNavigation}>Students</a
+								on:click={() => {
+									handleStyleChange('students');
+									toggleMenu();
+								}}
+								class:on-page={onStudents}>Students</a
+							>
+							<a
+								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl"
+								href="https://linktr.ee/colorstackuf"
+								target="_blank">Get Involved</a
 							>
 						</div>
 					{/if}
 
-					<Hamburger --color={'#fd9739'} {ariaLabel} type="slider" bind:open />
+					<Hamburger
+						--color={'#fd9739'}
+						{ariaLabel}
+						type="slider"
+						on:click={toggleBurger}
+						bind:open
+					/>
 				</div>
 			{/if}
 		</div>
