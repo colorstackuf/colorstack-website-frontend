@@ -127,7 +127,7 @@
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-4">FAQs</h2>
 		<Accordion>
 			<span slot="head">
-				<h3 class="text-black font-gotham-medium text-[1.1rem] tablet:text-[1.2rem]">
+				<h3 class="text-black font-gotham-medium text-[1.1rem] leading-5 tablet:text-[1.2rem]">
 					What does ColorStack do?
 				</h3>
 			</span>
@@ -140,26 +140,26 @@
 		</Accordion>
 		<Accordion>
 			<span slot="head">
-				<h3 class="text-black font-gotham-medium text-[1.1rem] tablet:text-[1.2rem]">
+				<h3 class="text-black font-gotham-medium text-[1.1rem] leading-5 tablet:text-[1.2rem]">
 					Do I have to be Black or Latinx to join?
 				</h3>
 			</span>
 			<div slot="details">
 				<p class="text-black text-base font-archer">
-					While you must be Black or Latinx to become a member of the National Organization, the
+					While you must be Black or Latinx to become a member of the national organization, the
 					chapter is open to everyone that is committed to our mission.
 				</p>
 			</div>
 		</Accordion>
 		<Accordion>
 			<span slot="head">
-				<h3 class="text-black font-gotham-medium text-[1.1rem] tablet:text-[1.2rem]">
+				<h3 class="text-black font-gotham-medium text-[1.1rem] leading-5 tablet:text-[1.2rem]">
 					If I join ColorStack UF am I automatically in ColorStack National?
 				</h3>
 			</span>
 			<div slot="details">
 				<p class="text-black text-base font-archer">
-					No, you still need to apply to become a member of ColorStack national at <a
+					No, you still need to apply to become a member of the ColorStack national chapter at <a
 						href="https://colorstack.org/"
 						class="decoration-solid decoration-2 decoration-colorstackuf-blue underline underline-offset-4 hover:decoration-colorstackuf-orange transition-color duration-300"
 						target="_blank">www.colorstack.org.</a
