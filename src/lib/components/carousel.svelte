@@ -5,45 +5,52 @@
 	export let images: carouselImage[];
 	export let interval: number = 3000;
 
-	const selectedColor = '#F7F7F7';
-	const unselectedColor = '#B4AFAF';
-
 	let scrollInterval = 0;
-	let currentSelection: HTMLElement | null;
+	let index = 0;
 	let carouselContainer: HTMLElement;
 
 	function idToHref(id: string) {
 		return `#${id}`;
 	}
 
-	function updateIndex(href: string) {
-		index = images.findIndex((image) => idToHref(image.id) === href);
-		if (currentSelection) {
-			currentSelection.style.backgroundColor = unselectedColor;
-		}
-		currentSelection = document.querySelector(`a[href="${href}"]`);
-		if (!currentSelection) {
-			console.error(`Could not find element with href ${href}`);
-			return;
-		}
-		currentSelection.style.backgroundColor = selectedColor;
-	}
-
-	function navigateTo(href: string, e: MouseEvent) {
-		const slide = document.querySelector(href);
-		if (!slide) return;
-
-		if (slide.scrollIntoView) {
-			e.preventDefault();
-			slide.scrollIntoView(false);
-			// slide.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-			updateIndex(href);
+	function unhighlight(idx: number) {
+		const href = idToHref(images[idx].id);
+		const element = document.querySelector(`a[href="${href}"]`) as HTMLElement;
+		if (element) {
+			element.classList.remove('selected');
 		}
 	}
 
-	function navigate(e: MouseEvent) {
-		const href = e.target.getAttribute('href');
-		navigateTo(href, e);
+	function highlight(idx: number) {
+		const href = idToHref(images[idx].id);
+		const element = document.querySelector(`a[href="${href}"]`) as HTMLElement;
+		if (element) {
+			element.classList.add('selected');
+			console.log('added selected class');
+		}
+	}
+
+	function navigateTo(idx: number) {
+		navigateToIndex(idx);
+		unhighlight(index);
+		highlight(idx);
+		index = idx;
+	}
+
+	function handleNavigationClick(e: MouseEvent) {
+		e.preventDefault();
+		// @ts-expect-error - href is a valid attribute
+		const imageId = e.target.getAttribute('href').slice(1);
+		for (let i = 0; i < images.length; i++) {
+			if (images[i].id === imageId) {
+				navigateTo(i);
+				break;
+			}
+		}
+	}
+
+	function navigateToIndex(idx: number) {
+		carouselContainer.scrollTo({ left: carouselContainer.clientWidth * idx, behavior: 'smooth' });
 	}
 
 	function scrollCarousel() {
@@ -52,22 +59,23 @@
 				carouselContainer.scrollLeft + carouselContainer.clientWidth >=
 				carouselContainer.scrollWidth
 			) {
-				carouselContainer.scrollTo({ left: 0, behavior: 'smooth' });
+				navigateTo(0);
 			} else {
-				carouselContainer.scrollBy({ left: carouselContainer.clientWidth, behavior: 'smooth' });
+				navigateTo(index + 1);
 			}
 		}
 	}
 
-	onMount(() => {
-		// Set an interval to scroll the carousel
-		scrollInterval = setInterval(scrollCarousel, 3000); // Adjust the interval time as needed
-	});
+	function startScroll() {
+		scrollInterval = setInterval(scrollCarousel, interval); // Adjust the interval time as needed
+	}
 
-	onDestroy(() => {
-		// Clear the interval when the component is destroyed
+	function stopScroll() {
 		clearInterval(scrollInterval);
-	});
+	}
+
+	onMount(startScroll);
+	onDestroy(stopScroll);
 </script>
 
 <div
@@ -75,6 +83,10 @@
 >
 	<div
 		bind:this={carouselContainer}
+		on:mouseover={stopScroll}
+		on:mouseout={startScroll}
+		on:focus={() => {}}
+		on:blur={() => {}}
 		class="w-full h-full flex scroll-smooth overflow-x-scroll carousel rounded-lg"
 		role="img"
 	>
@@ -86,13 +98,14 @@
 	</div>
 
 	<div class="relative bottom-[25px] tablet:bottom-[55px] flex justify-center items-center">
-		<button class="bg-none border-none" on:click={navigate}>
-			{#each images as image}
+		<button class="bg-none border-none" on:click={handleNavigationClick}>
+			{#each images as image, i}
 				<a
 					href={`#${image.id}`}
 					class="inline-block w-3 h-3 tablet:w-[0.85rem] tablet:h-[0.85rem] rounded-[50%] bg-[#b4afaf]
-			opacity-85 cursor-pointer transition-[opacity] duration-200 hover:opacity-100
+			opacity-100 cursor-pointer transition duration-200 hover:bg-[#f7f7f7]
 	 focus:opacity-100 [&:not(:first-child)]:ml-4"
+					class:selected={i === 0}
 				>
 					<span class="visuallyhidden">{image.alt}</span>
 				</a>

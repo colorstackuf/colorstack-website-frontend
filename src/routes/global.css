@@ -24,3 +24,7 @@ body {
 * {
 	font-family: 'Gotham-Medium', sans-serif;
 }
+
+.selected {
+	background-color: #f7f7f7;
+}
