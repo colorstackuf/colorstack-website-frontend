@@ -19,7 +19,7 @@ npm run dev
 # Design Guidelines
 
 Access the [figma mockups](https://www.figma.com/file/PoZFiVJE3qQUtFjm8cNOBn/Colorstack-Web-Design?type=design&node-id=226%3A862&mode=design&t=ZLsJFjLyVGeER8bM-1)
-for the website. Follow the design __exactly__ as it is shown in the mockups 
+for the website. Follow the design **exactly** as it is shown in the mockups
 (i.e. Use the exact colors, fonts, and spacing as shown in the mockups).
 
 # Contributing Guidelines
