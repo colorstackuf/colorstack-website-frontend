@@ -7,15 +7,8 @@
 
 	export let ariaLabel: string = 'Toggle navigation';
 
-	let about: HTMLElement;
-	let sponsors: HTMLElement;
-	let students: HTMLElement;
-
-	let aboutMobile: HTMLElement;
-	let sponsorsMobile: HTMLElement;
-	let studentsMobile: HTMLElement;
-
 	let open: boolean = false;
+
 	const toggleMenu = () => {
 		open = !open;
 		document.body.classList.toggle('no-scroll', open);
@@ -57,7 +50,7 @@
 	<div class="w-full max-w-page-width h-full flex items-center">
 		<a
 			href="/"
-			class="flex-[1]"
+			class="flex-[1] pt-1"
 			on:click={() => {
 				open = false;
 				handleStyleChange('');
@@ -71,34 +64,32 @@
 			/>
 		</a>
 
+		<!-- Navigation Section -->
 		<div class="flex items-center gap-12 h-full">
 			{#if innerWidth >= 1024}
 				<a
-					bind:this={about}
 					on:click={() => handleStyleChange('about')}
 					class:on-page={$onAbout}
 					id="aboutNav"
-					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300"
+					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300 pt-1"
 					href="/about">About</a
 				>
 				<a
-					bind:this={sponsors}
 					on:click={() => handleStyleChange('sponsors')}
 					class:on-page={$onSponsors}
 					id="sponsorsNav"
-					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300"
+					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300 pt-1"
 					href="/sponsors">Sponsors</a
 				>
 				<a
-					bind:this={students}
 					on:click={() => handleStyleChange('students')}
 					class:on-page={$onStudents}
 					id="studentsNav"
-					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300"
+					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300 pt-1"
 					href="/students">Students</a
 				>
 				<a
-					class="border-2 border-solid border-white self-center flex items-center py-[0.8rem] px-6 rounded-[1.2rem] hover:bg-colorstackuf-blue hover:border-colorstackuf-blue text-white hover:text-black transition-colors duration-300"
+					class="border-2 border-solid border-white self-center flex items-center pt-4 pb-[1.1rem] px-6 rounded-[1.4rem] hover:bg-colorstackuf-blue hover:border-colorstackuf-blue text-white hover:text-black transition-colors duration-300"
 					href="https://linktr.ee/colorstackuf"
 					target="_blank"
 				>
@@ -115,7 +106,7 @@
 							class="absolute w-full left-0 top-[86px] h-[14rem] flex flex-col items-left justify-evenly bg-body-background-blue px-6 py-8 gap-4 z-20"
 						>
 							<a
-								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl"
+								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
 								class:on-page={$onAbout}
 								href="/about"
 								on:click={() => {
@@ -124,7 +115,7 @@
 								}}>About</a
 							>
 							<a
-								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl"
+								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
 								href="/sponsors"
 								class:on-page={$onSponsors}
 								on:click={() => {
@@ -133,7 +124,7 @@
 								}}>Sponsors</a
 							>
 							<a
-								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl"
+								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
 								href="/students"
 								class:on-page={$onStudents}
 								on:click={() => {
@@ -142,7 +133,7 @@
 								}}>Students</a
 							>
 							<a
-								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl"
+								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
 								href="https://linktr.ee/colorstackuf"
 								target="_blank">Get Involved</a
 							>
