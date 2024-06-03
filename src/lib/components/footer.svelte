@@ -1,3 +1,14 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { onAbout, onSponsors, onStudents } from '$lib/currentPage';
+
+	function handleNav(page: string) {
+		$onAbout = page === 'about';
+		$onSponsors = page === 'sponsors';
+		$onStudents = page === 'students';
+	}
+</script>
+
 <div
 	class="px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x flex flex-col items-center justify-center font-gotham-book"
 >
@@ -5,7 +16,7 @@
 		class="grid grid-rows-2 laptop:grid-rows-1 laptop:grid-cols-[45%_auto] w-full max-w-page-width"
 	>
 		<!-- Logo and Title -->
-		<a href="/">
+		<a on:click={() => handleNav('')} href="/">
 			<img src="/logos/colorstack-logo-title.svg" alt="Colorstack logo and title" width="400" />
 		</a>
 
@@ -14,14 +25,19 @@
 		>
 			<!-- Navigation Section -->
 			<a
+				on:click={() => {
+					handleNav('about');
+				}}
 				class="nav-btn transition-color hover:text-colorstackuf-orange duration-300 col-start-1 row-start-1"
 				href="/about">About</a
 			>
 			<a
+				on:click={() => handleNav('sponsors')}
 				class="nav-btn transition-color hover:text-colorstackuf-orange duration-300 col-start-1 row-start-2"
 				href="/sponsors">Sponsors</a
 			>
 			<a
+				on:click={() => handleNav('students')}
 				class="nav-btn transition-color hover:text-colorstackuf-orange duration-300 col-start-1 row-start-3"
 				href="/students">Students</a
 			>
