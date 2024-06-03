@@ -1,4 +1,6 @@
 <script lang="ts">
+	/** Accordion component for displaying collapsible content */
+
 	export let open = false;
 	import { slide } from 'svelte/transition';
 
@@ -27,6 +29,8 @@
 			/>
 		</div>
 	</button>
+
+	<!-- Content to display-->
 	{#if open}
 		<div class="p-4" transition:slide>
 			<slot name="details"></slot>

@@ -5,14 +5,15 @@
 	export let images: carouselImage[];
 	export let interval: number = 3000;
 
-	let scrollInterval = 0;
-	let index = 0;
+	let intervalId = 0;
+	let imgIndex = 0;
 	let carouselContainer: HTMLElement;
 
 	function idToHref(id: string) {
 		return `#${id}`;
 	}
 
+	// unhighlight the selector for the given index
 	function unhighlight(idx: number) {
 		if (!images[idx]) return;
 		const href = idToHref(images[idx].id);
@@ -22,6 +23,7 @@
 		}
 	}
 
+	// highlight the selector for the given index
 	function highlight(idx: number) {
 		if (!images[idx]) return;
 		const href = idToHref(images[idx].id);
@@ -31,11 +33,12 @@
 		}
 	}
 
+	// navigate to the image of the given index
 	function navigateTo(idx: number) {
 		navigateToIndex(idx);
-		unhighlight(index);
+		unhighlight(imgIndex);
 		highlight(idx);
-		index = idx;
+		imgIndex = idx;
 	}
 
 	function handleNavigationClick(e: MouseEvent) {
@@ -54,6 +57,7 @@
 		}
 	}
 
+	// Scroll the carousel to the image of the given index
 	function navigateToIndex(idx: number) {
 		carouselContainer.scrollTo({ left: carouselContainer.clientWidth * idx, behavior: 'smooth' });
 	}
@@ -67,17 +71,17 @@
 			) {
 				navigateTo(0);
 			} else {
-				navigateTo(index + 1);
+				navigateTo(imgIndex + 1);
 			}
 		}
 	}
 
 	function startScroll() {
-		scrollInterval = setInterval(scrollCarousel, interval); // Adjust the interval time as needed
+		intervalId = setInterval(scrollCarousel, interval); // Adjust the interval time as needed
 	}
 
 	function stopScroll() {
-		clearInterval(scrollInterval);
+		clearInterval(intervalId);
 	}
 
 	onMount(startScroll);
@@ -87,6 +91,7 @@
 <div
 	class="relative w-full laptop:w-[47.5vw] laptop:h-[50vw] laptop:max-h-[638px] laptop:max-w-[606px] desktop:max-h-[701px] desktop:max-w-[666px] z-10"
 >
+	<!-- Carousel Images -->
 	<div
 		bind:this={carouselContainer}
 		on:mouseover={stopScroll}
@@ -103,6 +108,7 @@
 		{/each}
 	</div>
 
+	<!-- Carousel Navigation -->
 	<div class="relative bottom-[25px] tablet:bottom-[55px] flex justify-center items-center">
 		<button class="bg-none border-none" on:click={handleNavigationClick}>
 			{#each images as image, i}

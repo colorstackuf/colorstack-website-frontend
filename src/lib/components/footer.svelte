@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { onAbout, onSponsors, onStudents } from '$lib/currentPage';
 
 	function handleNav(page: string) {

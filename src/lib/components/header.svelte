@@ -9,14 +9,14 @@
 
 	let open: boolean = false;
 
-	const toggleMenu = () => {
+	function toggleMenu() {
 		open = !open;
 		document.body.classList.toggle('no-scroll', open);
-	};
+	}
 
-	const toggleBurger = () => {
+	function toggleBurger() {
 		document.body.classList.toggle('no-scroll', !open);
-	};
+	}
 
 	$onAbout = $page.url.pathname === '/about';
 	$onSponsors = $page.url.pathname === '/sponsors';
@@ -30,6 +30,7 @@
 
 	$: innerWidth = 0;
 	$: {
+		// Close the menu when the screen is resized to desktop
 		if (innerWidth >= 1024) {
 			open = false;
 			document.body.classList.toggle('no-scroll', false);
@@ -48,6 +49,7 @@
 	class="h-[80px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x h-[5rem] flex flex-col items-center justify-center font-gotham-book mt-4"
 >
 	<div class="w-full max-w-page-width h-full flex items-center">
+		<!-- Logo and Title -->
 		<a
 			href="/"
 			class="flex-[1] pt-1"
@@ -98,6 +100,7 @@
 					</p>
 				</a>
 			{:else}
+				<!-- Hamburger Menu -->
 				<div>
 					{#if open}
 						<div class="absolute top-[86px] left-0 w-full h-full bg-black bg-opacity-90 z-20" />
