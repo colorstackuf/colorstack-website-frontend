@@ -1,0 +1,34 @@
+:root {
+	--mobile-page-padding-y: 1rem;
+	--desktop-page-padding-y: 1.5rem;
+	--lg-desktop-page-padding-y: 2rem;
+	--footer-height: 100px;
+	--body-background-white: #f6f2ed;
+	--body-background-blue: #0b0f24;
+	--body-background-light-blue: #c6d1ef;
+	--text-emphasis: #fd9739;
+	--colorstack-uf-blue: #0699ab;
+	--colorstack-uf-orange: #fd9739;
+	--font-color-dark-blue: #0b0f24;
+}
+
+html,
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	background-color: var(--body-background-blue);
+}
+
+* {
+	font-family: 'Gotham-Medium', sans-serif;
+}
+
+.selected {
+	background-color: #f7f7f7;
+}
+
+.on-page {
+	color: var(--colorstack-uf-orange);
+}
