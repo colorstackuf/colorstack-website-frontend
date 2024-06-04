@@ -24,9 +24,7 @@
 		>
 			<!-- Navigation Section -->
 			<a
-				on:click={() => {
-					handleNav('about');
-				}}
+				on:click={() => handleNav('about')}
 				class="nav-btn transition-color hover:text-colorstackuf-orange duration-300 col-start-1 row-start-1"
 				href="/about">About</a
 			>

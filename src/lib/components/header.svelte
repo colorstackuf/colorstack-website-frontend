@@ -72,21 +72,18 @@
 				<a
 					on:click={() => handleStyleChange('about')}
 					class:on-page={$onAbout}
-					id="aboutNav"
 					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300 pt-1"
 					href="/about">About</a
 				>
 				<a
 					on:click={() => handleStyleChange('sponsors')}
 					class:on-page={$onSponsors}
-					id="sponsorsNav"
 					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300 pt-1"
 					href="/sponsors">Sponsors</a
 				>
 				<a
 					on:click={() => handleStyleChange('students')}
 					class:on-page={$onStudents}
-					id="studentsNav"
 					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300 pt-1"
 					href="/students">Students</a
 				>
