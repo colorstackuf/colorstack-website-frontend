@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { type Post } from '$lib/types';
+	import type { Post, InstagramData } from '$lib/types';
 
 	// Defined here https://behold.so/docs/api/#response-format
 	export let post: Post;
 	export let large = false;
+	export let instagramData: InstagramData;
 
 	const dateDifferenceInDays = (date: string) => {
 		const currentDate = Date.now();
@@ -53,7 +54,7 @@
 				</p>
 			</div>
 			<img
-				src="/logos/colorstack-logo-insta.svg"
+				src={instagramData.profilePictureUrl}
 				alt="ColorStack Logo"
 				class={(large
 					? 'h-[35px] w-[35px] tablet:h-[45px] tablet:w-[45px] laptop:h-[55px] laptop:w-[55px] left-2'

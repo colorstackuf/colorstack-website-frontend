@@ -17,7 +17,7 @@
 	{#await promiseData then data}
 		<!-- Large Post -->
 		<div class="laptop:col-start-1 h-[400px] notebook:h-[500px] laptop:h-full w-full rounded-md">
-			<InstagramPost post={data.posts[0]} large={true} />
+			<InstagramPost instagramData={data} post={data.posts[0]} large={true} />
 		</div>
 
 		<!-- Small Posts -->
@@ -25,22 +25,22 @@
 			class="laptop:col-start-2 h-[450px] notebook:h-[600px] laptop:h-full grid grid-cols-2 grid-rows-2 gap-3"
 		>
 			<div class="rounded-md laptop:col-start-1 h-full w-full">
-				<InstagramPost post={data.posts[1]} />
+				<InstagramPost instagramData={data} post={data.posts[1]} />
 			</div>
 			<div class="rounded-md laptop:col-start-2 h-full w-full">
-				<InstagramPost post={data.posts[2]} />
+				<InstagramPost instagramData={data} post={data.posts[2]} />
 			</div>
 			<div class="rounded-md laptop:col-start-1 laptop:row-start-2 h-full w-full">
-				<InstagramPost post={data.posts[3]} />
+				<InstagramPost instagramData={data} post={data.posts[3]} />
 			</div>
 			<div class="rounded-md laptop:col-start-2 laptop:row-start-2 h-full w-full">
-				<InstagramPost post={data.posts[4]} />
+				<InstagramPost instagramData={data} post={data.posts[4]} />
 			</div>
 		</div>
 	{:catch}
 		<!-- Large Post -->
 		<div class="laptop:col-start-1 h-[400px] notebook:h-[500px] laptop:h-full w-full rounded-md">
-			<InstagramPost post={fallbackData.posts[0]} large={true} />
+			<InstagramPost instagramData={fallbackData} post={fallbackData.posts[0]} large={true} />
 		</div>
 
 		<!-- Small Posts -->
@@ -48,16 +48,16 @@
 			class="laptop:col-start-2 h-[450px] notebook:h-[600px] laptop:h-full grid grid-cols-2 grid-rows-2 gap-3"
 		>
 			<div class="rounded-md laptop:col-start-1 h-full w-full">
-				<InstagramPost post={fallbackData.posts[1]} />
+				<InstagramPost instagramData={fallbackData} post={fallbackData.posts[1]} />
 			</div>
 			<div class="rounded-md laptop:col-start-2 h-full w-full">
-				<InstagramPost post={fallbackData.posts[2]} />
+				<InstagramPost instagramData={fallbackData} post={fallbackData.posts[2]} />
 			</div>
 			<div class="rounded-md laptop:col-start-1 laptop:row-start-2 h-full w-full">
-				<InstagramPost post={fallbackData.posts[3]} />
+				<InstagramPost instagramData={fallbackData} post={fallbackData.posts[3]} />
 			</div>
 			<div class="rounded-md laptop:col-start-2 laptop:row-start-2 h-full w-full">
-				<InstagramPost post={fallbackData.posts[4]} />
+				<InstagramPost instagramData={fallbackData} post={fallbackData.posts[4]} />
 			</div>
 		</div>
 	{/await}
