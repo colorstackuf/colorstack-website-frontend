@@ -1,6 +1,8 @@
 <script lang="ts">
-	// @ts-expect-error - Defined here https://behold.so/docs/api/#response-format
-	export let post;
+	import { type Post } from '$lib/types';
+
+	// Defined here https://behold.so/docs/api/#response-format
+	export let post: Post;
 	export let large = false;
 
 	const dateDifferenceInDays = (date: string) => {
