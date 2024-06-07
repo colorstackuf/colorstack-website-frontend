@@ -83,11 +83,12 @@
 
 </script>
 
+
 <!-- ColorStack UF intro -->
 <div style="background-image: url('https://source.unsplash.com/1600x900/?people');">
-    <div class="relative grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 mt-12 laptop:mt-0 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:max-h-[600px] laptop:min-h-[550px] laptop:justify-items-end min-[1150px]:px-[50px] desktop:px-[30px]">
-        <div class="flex flex-col shrink justify-center laptop:justify-normal laptop:mt-20 desktop:mt-28 items-center laptop:justify-self-center w-3/5 bg-cover bg-center">
-            <div class="bg-body-background-blue p-12">
+    <div class="relative grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 mt-12  laptop:mt-0 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:max-h-[600px] laptop:min-h-[550px] laptop:justify-items-end min-[1150px]:px-[50px] desktop:px-[30px]">
+        <div class="flex flex-col shrink justify-center laptop:justify-normal laptop:mt-20 desktop:mt-28 items-center laptop:justify-self-center laptop:w-3/5 bg-cover bg-center">
+            <div class="bg-body-background-blue p-12 rounded-lg mb-12 text-center laptop:text-left">
                 <h1 class="text-white text-[1.4rem] pb-4 font-gotham-medium">ColorStack UF is a team committed to...</h1>
                 <p class="text-white font-archer"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. A labore mollitia, illo sint eius vero nulla quos sequi, doloribus temporibus libero, enim soluta dolore voluptates qui natus possimus suscipit unde.</p>
                 <!-- Need to change to standard -->
@@ -98,32 +99,33 @@
 </div>
 
 <!-- About ColorStack National -->
-<div class="bg-body-background-white px-12 py-[10rem]">
-    <div class = "bg-body-background-blue p-[4rem]">
+<div class="laptop:bg-body-background-white bg-body-background-blue laptop:px-12 laptop:py-40 py-6 px-6">
+    <div class = "bg-body-background-blue rounded-lg laptop:p-16">
         <div class="items-center relative grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 gap-x-12">
-            <div class="w-full">
-                <img src="https://source.unsplash.com/1600x1200/?people" alt="People"/>
+            <div>
+                <img src="https://source.unsplash.com/1600x1200/?people" alt="People" class="w-full rounded-lg"/>
             </div>
 
             <div class="flex flex-col justify-center items-center text-center">
                 <h1 class="text-white text-[1.4rem] py-8 font-gotham-medium">About ColorStack National</h1>
                 <p class="text-white font-archer"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. A labore mollitia, illo sint eius vero nulla quos sequi, doloribus temporibus libero, enim soluta dolore voluptates qui natus possimus suscipit unde.</p>
                 <!-- Need to change to standard -->
-                <button class="w-1/2 text-black text-center bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-4 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium">Become a National Member</button>
+                <button class="laptop:w-1/2 text-black text-center bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-4 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium">Become a National Member</button>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Eboard Grid -->
-<div class="bg-body-background-blue py-12 px-12">
+<div class="bg-body-background-blue py-12 laptop:px-12 px-6">
     <div class="flex flex-col justify-center items-center font-gotham-medium pb-12">
         <h1 class="text-white text-[2rem] text-center">Meet the E-Board</h1>
+        <p class="text-white text-center pt-3">2023-2024</p>
     </div>
     <div class="grid grid-cols-2 laptop:grid-cols-4 laptop:col-start-2 col-span-5 gap-x-7 gap-y-12">
         {#each eboard_members as member}
             <div class="flex flex-col justify-center items-center text-white text-[1.4rem] font-gotham-medium">
-                <img src={member.image} alt="Photo of {member.name}" class="w-[20ch] h-[20ch] object-cover rounded-md" />
+                <img src={member.image} alt="Photo of {member.name}" class="w-48 h-48 tablet:w-64 tablet:h-64 laptop:w-80 laptop:h-80 object-cover rounded-md" />
                 <h1 class="py-5">{member.name}</h1>
                 <p class="text-sm text-center">{member.position}</p>
             </div>
@@ -132,8 +134,8 @@
 </div>
 
 <!-- Contact Us -->
-<div class="bg-body-background-light-blue px-[10rem] py-[10rem] mb-7">
-    <div class="grid grid-cols-2">
+<div class="bg-body-background-light-blue laptop:px-24 laptop:py-36 py-12 px-12 mb-7">
+    <div class="grid grid-cols-1 laptop:grid-cols-2 laptop:cols-start-2">
         <div class="text-black">
             <!-- Need to ask team on what sizes these should be (Are there ones for this part specifically?) -->
             <h1 class="text-[1.4rem] pb-8 font-gotham-medium">Contact Us</h1>
@@ -141,10 +143,10 @@
         </div>
         
         <div class="justify-center items-center w-full">
-            <input type="text" placeholder="First Name" class="w-full h-[3rem] mt-4 rounded-md border-2 px-3" bind:value={first_name} />
-            <input type="text" placeholder="Last Name" class="w-full h-[3rem] mt-4 rounded-md border-2 px-3" bind:value={last_name}>
-            <input type="text" placeholder="Email" class="w-full h-[3rem] mt-4 rounded-md border-2 px-3" bind:value={email} />
-            <textarea placeholder="Message" class="w-full h-[12rem] mt-4 rounded-md border-2 px-3 py-3" bind:value={message} />
+            <input type="text" placeholder="First Name" class="w-full h-12 mt-4 rounded-md border-2 px-3" bind:value={first_name} />
+            <input type="text" placeholder="Last Name" class="w-full h-12 mt-4 rounded-md border-2 px-3" bind:value={last_name}>
+            <input type="text" placeholder="Email" class="w-full h-12 mt-4 rounded-md border-2 px-3" bind:value={email} />
+            <textarea placeholder="Message" class="w-full h-48 mt-4 rounded-md border-2 px-3 py-3" bind:value={message} />
             <!-- Need to ask team on what color the button transition should be -->
             <button class="w-full text-white bg-body-background-blue transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-black duration-300 py-4 px-7 rounded mt-4 font-gotham-medium" on:click={submitForm}>Submit</button>
         </div>
