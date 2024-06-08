@@ -3,54 +3,79 @@
     
     let eboard_members = [
         {
-            "name": "Hupey",
+            "name": "Carson Johnson",
             "position": "President",
-            "image": "https://source.unsplash.com/1600x900/?people"
+            "image": "e-board/Carson_Johnson.png"
         },
         {
-            "name": "Alex",
+            "name": "Gabriel Castejon",
             "position": "Vice President",
-            "image": "https://source.unsplash.com/1600x900/?person"
+            "image": "e-board/Gabriel_Castejon.png"
         },
         {
-            "name": "Jordan",
-            "position": "Secretary",
-            "image": "https://source.unsplash.com/1600x900/?individual"
-        },
-        {
-            "name": "Taylor",
+            "name": "Yakub Mungai",
             "position": "Treasurer",
-            "image": "https://source.unsplash.com/1600x900/?man"
+            "image": "e-board/Yakub_Mungai.png"
         },
         {
-            "name": "Morgan",
-            "position": "Events Coordinator",
-            "image": "https://source.unsplash.com/1600x900/?woman"
+            "name": "Kacie Ross",
+            "position": "VP of Marketing",
+            "image": "e-board/Kacie_Ross.png"
         },
         {
-            "name": "Chris",
-            "position": "Public Relations",
-            "image": "https://source.unsplash.com/1600x900/?worker"
+            "name": "Bryan Hernandez-Sanchez",
+            "position": "VP of Events",
+            "image": "e-board/Bryan_Hernandez-Sanchez.png"
+        },
+        // {
+        //     "name": "Yohance de Souza",
+        //     "position": "Administration Chair",
+        //     "image": "e-board/Yohance_de_Souza.png"
+        // },
+        {
+            "name": "Mya Ramsey",
+            "position": "Physical Marketing Coordinator",
+            "image": "e-board/Mya_Ramsey.png"
         },
         {
-            "name": "Jamie",
-            "position": "Social Media Manager",
-            "image": "https://source.unsplash.com/1600x900/?person,smiling"
+            "name": "Soraya Sardine",
+            "position": "Graphic Design Coordinator",
+            "image": "e-board/Soraya_Sardine.png"
+        },
+        // {
+        //     "name": "Natahja Graddy",
+        //     "position": "Community Events Coordinator",
+        //     "image": "e-board/Natahja_Graddy.png"
+        // },
+        {
+            "name": "Yonas Worku",
+            "position": "Career Events Coordinator",
+            "image": "e-board/Yonas_Worku.png"
         },
         {
-            "name": "Pat",
-            "position": "Tech Lead",
-            "image": "https://source.unsplash.com/1600x900/?developer"
+            "name": "Matthew DeGuzman",
+            "position": "Technical Events Coordinator",
+            "image": "e-board/Matthew_DeGuzman.png"
         },
         {
-            "name": "Katie",
-            "position": "Webmaster",
-            "image": "https://source.unsplash.com/1600x900/?developer"
+            "name": "Alex Huper",
+            "position": "Academic Programs Coordinator",
+            "image": "e-board/Alex_Huper.png"
+        },
+        // {
+        //     "name": "Josue Vicente",
+        //     "position": "Academic Events Coordinator",
+        //     "image": "e-board/Josue_Vicente.png"
+        // },
+        {
+            "name": "Abigail Erefah",
+            "position": "Digital Marketing Coordinator",
+            "image": "e-board/Abigail_Erefah.png"
         },
         {
-            "name": "Matthew",
-            "position": "Dungeon Master",
-            "image": "https://source.unsplash.com/1600x900/?developer"
+            "name": "Dr. Sanethia Thomas",
+            "position": "Faculty Advisor",
+            "image": "e-board/Sanethia_Thomas.png"
         },
     ];
 
@@ -99,16 +124,16 @@
 </div>
 
 <!-- About ColorStack National -->
-<div class="laptop:bg-body-background-white bg-body-background-blue laptop:px-12 laptop:py-40 py-6 px-6">
+<div class="laptop:bg-body-background-white bg-body-background-blue laptop:px-16 laptop:py-40 py-6 px-12">
     <div class = "bg-body-background-blue rounded-lg laptop:p-16">
-        <div class="items-center relative grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 gap-x-12">
+        <div class="relative grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 gap-x-12">
             <div>
-                <img src="https://source.unsplash.com/1600x1200/?people" alt="People" class="w-full rounded-lg"/>
+                <img src="graphics/colorstack_students.png" alt="People" class="w-full rounded-lg"/>
             </div>
 
-            <div class="flex flex-col justify-center items-center text-center">
-                <h1 class="text-white text-[1.4rem] py-8 font-gotham-medium">About ColorStack National</h1>
-                <p class="text-white font-archer"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. A labore mollitia, illo sint eius vero nulla quos sequi, doloribus temporibus libero, enim soluta dolore voluptates qui natus possimus suscipit unde.</p>
+            <div class="flex flex-col items-center text-center">
+                <h1 class="text-white text-xl laptop:text-4xl pt-8 font-gotham-medium pb-4 laptop:pb-12">About ColorStack National</h1>
+                <p class="text-white font-archer text-lg"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. A labore mollitia, illo sint eius vero nulla quos sequi, doloribus temporibus libero, enim soluta dolore voluptates qui natus possimus suscipit unde.</p>
                 <!-- Need to change to standard -->
                 <button class="laptop:w-1/2 text-black text-center bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-4 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium">Become a National Member</button>
             </div>
@@ -126,8 +151,8 @@
         {#each eboard_members as member}
             <div class="flex flex-col justify-center items-center text-white text-[1.4rem] font-gotham-medium">
                 <img src={member.image} alt="Photo of {member.name}" class="w-48 h-48 tablet:w-64 tablet:h-64 laptop:w-80 laptop:h-80 object-cover rounded-md" />
-                <h1 class="py-5">{member.name}</h1>
-                <p class="text-sm text-center">{member.position}</p>
+                <h1 class="py-2 text-base text-center laptop:text-2xl">{member.name}</h1>
+                <p class="text-xs text-center laptop:text-base">{member.position}</p>
             </div>
         {/each}
     </div>
