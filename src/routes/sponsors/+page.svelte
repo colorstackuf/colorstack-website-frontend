@@ -41,19 +41,20 @@
 <div
 	class="pt-4 mt-2 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white mb-5"
 >
-	<!-- Sponsors -->
-	<div
-		class="lg-desktop:col-start-2 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
-	>
-		<h2
-			class="text-body-background-blue font-gotham-medium text-[1.7rem] tablet:text-[2rem] mb-10 text-center tablet:text-left"
-		>
-			Our Sponsors
-		</h2>
-		<div class="ml-4 tablet:ml-6 lg:ml-8">
-			<Sponsors />
-		</div>
-	</div>
+        <!-- Sponsors -->
+    <div
+        class="lg-desktop:col-start-2 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
+        >
+        <h2
+            class="text-body-background-blue font-gotham-medium text-[1.7rem] tablet:text-[2rem] mb-10 text-center tablet:text-left"
+        >
+            Our Sponsors
+        </h2>
+        <div class="ml-0 tablet:ml-0 lg:ml-0">
+            <Sponsors />
+        </div>
+    </div>
+
 
 	<!-- Sponsored Events -->
 	<div
@@ -111,52 +112,27 @@
 					</div>
 				{/each}
 			</div>
-			<div
-				class="flex justify-center mt-9 tablet:mt-15 laptop:mt-3 desktop:mt-3 items-center laptop:justify-self-center"
-			>
-				<a
-					target="_blank"
-					href="https://docs.google.com/forms/d/e/1FAIpQLSdP6MhOXXjmgDYIJHjqef6MQSPa9xnBdr1SZzhVvqYJvksYMA/viewform"
-					class="bg-body-background-blue text-body-background-light-blue transition-bg-color transition-color hover:bg-colorstackuf-orange hover:text-body-background-blue duration-300 py-4 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium"
-				>
-					Support Us
-				</a>
-			</div>
+            <div
+            class="flex justify-center tablet:mt-15 laptop:mt-3 desktop:mt-3 items-center laptop:justify-self-center"
+          >
+            <a
+              target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdP6MhOXXjmgDYIJHjqef6MQSPa9xnBdr1SZzhVvqYJvksYMA/viewform"
+              class="bg-body-background-blue text-body-background-light-blue transition-bg-color transition-color hover:bg-colorstackuf-orange hover:text-body-background-blue duration-300 py-4 px-7 rounded-3xl mt-4 laptop:mt-8 font-gotham-medium"
+            >
+              Support Us
+            </a>
+          </div>
+          
 		</div>
 	</div>
 
 	<!-- Our LinkedIn -->
-	<div
-		class="tablet:col-start-1 tablet:col-end-4 bg-body-background-blue py-10 tablet:py-24 px-mobile-padding-x tablet:px-tablet-padding-x laptop:flex laptop:justify-center laptop:px-laptop-padding-x"
-	>
-		<div class="max-w-page-width w-full">
-			<h2
-				class="text-white font-gotham-medium text-[1.5rem] tablet:text-[2rem] mt-20 mb-10 text-center tablet:text-left"
-			>
-				Our LinkedIn
-			</h2>
-			<div class="sk-ww-linkedin-page-post" data-embed-id="25416637"></div>
-			<script
-				src="https://widgets.sociablekit.com/linkedin-page-posts/widget.js"
-				async
-				defer
-			></script>
-		</div>
-	</div>
+
 </div>
-
-<!-- 
-    
-    -"Our Sponsors" on ipad air
-    -bottom margin
-    -photos
-    -linedin
-
--->
 
 <style>
 	.no-scrollbar::-webkit-scrollbar {
 		display: none;
 	}
 </style>
-

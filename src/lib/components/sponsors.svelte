@@ -29,7 +29,7 @@
 <div class="flex flex-col gap-12">
 
 	<!-- blue background for sponsor images -->
-	<div class="bg-body-background-blue p-8 rounded-lg ml-0.5 mr-5"> <!-- added blue background -->
+	<div class="bg-body-background-blue p-8 rounded-lg ml-0.5 mr-0.5"> <!-- added blue background -->
 
 		<!-- Platinum Sponsors -->
 		<div class="flex flex-col gap-16 ml-2">
