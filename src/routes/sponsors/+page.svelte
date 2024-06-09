@@ -90,42 +90,41 @@
 	</div>
 
 	<!-- Why Support Colorstack UF -->
-	<div
-		class="tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-light-blue py-10 tablet:py-24 px-mobile-padding-x tablet:px-tablet-padding-x laptop:flex laptop:justify-center laptop:px-laptop-padding-x pb-20"
-	>
-		<div class="max-w-page-width w-full text-center">
-			<h2
-				class="font-gotham-medium text-font-color-dark-blue text-center text-[1.5rem] tablet:text-4xl mb-20"
-			>
-				Why should you support ColorStack UF?
-			</h2>
-			<div
-				class="max-w-page-width grid grid-cols-1 tablet:grid-cols-3 gap-[70px] tablet:gap-[40px]"
-			>
-				{#each descriptions as { title, content }}
-					<div class="flex flex-col items-center">
-						<h3 class="font-gotham-medium text-xl tablet:text-2xl text-font-color-dark-blue mb-4">
-							{title}
-						</h3>
-						<!-- Increased margin-bottom -->
-						<p class="font-archer text-center text-xl">{content}</p>
-					</div>
-				{/each}
-			</div>
-            <div
-            class="flex justify-center tablet:mt-15 laptop:mt-3 desktop:mt-3 items-center laptop:justify-self-center"
-          >
-            <a
-              target="_blank"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdP6MhOXXjmgDYIJHjqef6MQSPa9xnBdr1SZzhVvqYJvksYMA/viewform"
-              class="bg-body-background-blue text-body-background-light-blue transition-bg-color transition-color hover:bg-colorstackuf-orange hover:text-body-background-blue duration-300 py-4 px-7 rounded-3xl mt-4 laptop:mt-8 font-gotham-medium"
-            >
-              Support Us
-            </a>
-          </div>
-          
+    <div
+	class="tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-light-blue py-10 tablet:py-24 px-mobile-padding-x tablet:px-tablet-padding-x laptop:flex laptop:justify-center laptop:px-laptop-padding-x pb-20"
+>
+	<div class="max-w-page-width w-full text-center">
+		<h2
+			class="font-gotham-medium text-font-color-dark-blue text-center text-[1.5rem] tablet:text-4xl mb-20"
+		>
+			Why should you support ColorStack UF?
+		</h2>
+		<div
+			class="max-w-page-width grid grid-cols-1 tablet:grid-cols-3 gap-[70px] tablet:gap-[40px]"
+		>
+			{#each descriptions as { title, content }}
+				<div class="flex flex-col items-center">
+					<h3 class="font-gotham-medium text-xl tablet:text-2xl text-font-color-dark-blue mb-4">
+						{title}
+					</h3>
+					<p class="font-archer text-center text-xl">{content}</p>
+				</div>
+			{/each}
 		</div>
+        <div
+        class="flex justify-center mt-8 tablet:mt-10 laptop:mt-3 desktop:mt-3 items-center laptop:justify-self-center ipad-pro:mt-0"
+      >
+        <a
+          target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdP6MhOXXjmgDYIJHjqef6MQSPa9xnBdr1SZzhVvqYJvksYMA/viewform"
+          class="bg-body-background-blue text-body-background-light-blue transition-bg-color transition-color hover:bg-colorstackuf-orange hover:text-body-background-blue duration-300 py-4 px-7 rounded-3xl mt-4 laptop:mt-12 ipad-pro:mt-2 font-gotham-medium"
+        >
+          Support Us
+        </a>
+      </div>
+      
 	</div>
+</div>
 
 	<!-- Our LinkedIn -->
 
