@@ -27,11 +27,11 @@
             "position": "VP of Events",
             "image": "e-board/Bryan_Hernandez-Sanchez.png"
         },
-        // {
-        //     "name": "Yohance de Souza",
-        //     "position": "Administration Chair",
-        //     "image": "e-board/Yohance_de_Souza.png"
-        // },
+        {
+            "name": "Yohance de Souza",
+            "position": "Administration Chair",
+            "image": "e-board/Yohance_de_Souza.png"
+        },
         {
             "name": "Mya Ramsey",
             "position": "Physical Marketing Coordinator",
@@ -62,11 +62,11 @@
             "position": "Academic Programs Coordinator",
             "image": "e-board/Alex_Huper.png"
         },
-        // {
-        //     "name": "Josue Vicente",
-        //     "position": "Academic Events Coordinator",
-        //     "image": "e-board/Josue_Vicente.png"
-        // },
+        {
+            "name": "Josue Vicente",
+            "position": "Academic Events Coordinator",
+            "image": "e-board/Josue_Vicente.png"
+        },
         {
             "name": "Abigail Erefah",
             "position": "Digital Marketing Coordinator",
@@ -110,12 +110,12 @@
 
 
 <!-- ColorStack UF intro -->
-<div style="background-image: url('https://source.unsplash.com/1600x900/?people');">
+<div style="background-image: url('graphics/about-intro.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="relative grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 mt-12  laptop:mt-0 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:max-h-[600px] laptop:min-h-[550px] laptop:justify-items-end min-[1150px]:px-[50px] desktop:px-[30px]">
-        <div class="flex flex-col shrink justify-center laptop:justify-normal laptop:mt-20 desktop:mt-28 items-center laptop:justify-self-center laptop:w-3/5 bg-cover bg-center">
-            <div class="bg-body-background-blue p-12 rounded-lg mb-12 text-center laptop:text-left">
+        <div class="flex flex-col shrink justify-center laptop:justify-normal laptop:mt-20 desktop:mt-28 laptop:justify-self-center laptop:w-3/5 bg-cover bg-center">
+            <div class="bg-body-background-blue p-12 rounded-lg mb-12 text-center laptop:text-left laptop:w-3/5 tablet:w-1/3">
                 <h1 class="text-white text-[1.4rem] pb-4 font-gotham-medium">ColorStack UF is a team committed to...</h1>
-                <p class="text-white font-archer"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. A labore mollitia, illo sint eius vero nulla quos sequi, doloribus temporibus libero, enim soluta dolore voluptates qui natus possimus suscipit unde.</p>
+                <p class="text-white font-archer"> Investing in the futures of those left behind every day. We’re a tech student organization cultivating the strongest campus community of its kind to deliver community building, academic support, and career development opportunities.</p>
                 <!-- Need to change to standard -->
                 <button class="text-black text-center bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-4 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium">View Link Tree</button>
             </div>
@@ -124,7 +124,7 @@
 </div>
 
 <!-- About ColorStack National -->
-<div class="laptop:bg-body-background-white bg-body-background-blue laptop:px-16 laptop:py-40 py-6 px-12">
+<div class="laptop:bg-body-background-white bg-body-background-blue laptop:px-16 laptop:py-40 py-6 px-8">
     <div class = "bg-body-background-blue rounded-lg laptop:p-16">
         <div class="relative grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 gap-x-12">
             <div>
@@ -133,7 +133,7 @@
 
             <div class="flex flex-col items-center text-center">
                 <h1 class="text-white text-xl laptop:text-4xl pt-8 font-gotham-medium pb-4 laptop:pb-12">About ColorStack National</h1>
-                <p class="text-white font-archer text-lg"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. A labore mollitia, illo sint eius vero nulla quos sequi, doloribus temporibus libero, enim soluta dolore voluptates qui natus possimus suscipit unde.</p>
+                <p class="text-white font-archer text-lg"> The ColorStack Family is our community of 10,000+ Black and Latinx Computer Science students from 900+ schools nationwide. We’re committed to providing community building, academic support, and career development year-round. Through our active Slack, monthly Fam Fridays, and partnerships with 70+ top tech companies. </p>
                 <!-- Need to change to standard -->
                 <button class="laptop:w-1/2 text-black text-center bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-4 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium">Become a National Member</button>
             </div>

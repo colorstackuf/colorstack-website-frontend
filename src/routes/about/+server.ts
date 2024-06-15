@@ -26,7 +26,7 @@ export async function POST({ request }: RequestEvent) {
             from: `${data.first_name} ${data.last_name} <${data.email}>`,
             to: GOOGLE_EMAIL,
             subject: 'Message from ColorStack Contact Form',
-            text: data.message
+            text: 'REPLY TO: ' + data.email + '\n\n' + data.message,
         };
 
         try {
