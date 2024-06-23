@@ -109,25 +109,27 @@
 
 <div class="bg-body-background-white">
 	<!-- ColorStack UF intro -->
-	<div class="h-[40rem]">
+	<div class="h-[40rem] laptop:h-auto">
 		<div
-			class="relative flex flex-col items-end bg-[url('graphics/about-intro.png')] bg-cover bg-no-repeat bg-center h-[25rem] laptop:h-[45rem]"
+			class="relative flex flex-col items-end laptop:items-start bg-[url('graphics/about-intro.png')] bg-cover bg-no-repeat bg-center h-[25rem] laptop:h-[45rem]"
 		>
 			<div
-				class="relative grid grid-cols-1 top-[16rem] z-10 bg-body-background-blue pl-7 pr-4 py-7 rounded-l-lg mb-12 w-11/12 min-w-[310px] h-[380px]"
+				class="relative grid grid-cols-1 top-[16rem] laptop:top-0 laptop:left-[3rem] laptop:top-[5rem] z-10 bg-body-background-blue pl-7 pr-4 py-7 laptop:p-12 rounded-l-lg laptop:rounded-lg mb-12 w-11/12 min-w-[310px] h-[380px] laptop:w-[460px] laptop:h-auto"
 			>
-				<h1 class="text-white text-lg tablet:text-2xl font-gotham-medium">
+				<h1
+					class="text-white text-lg tablet:text-2xl laptop:text-3xl font-gotham-medium laptop:pb-4"
+				>
 					ColorStack UF is a team committed to...
 				</h1>
-				<p class="text-white font-archer text-lg tablet:text-2xl leading-6 self-start">
+				<p class="text-white font-archer text-lg tablet:text-xl leading-6 self-start">
 					Investing in the futures of those left behind every day. We’re a tech student organization
 					cultivating the strongest campus community of its kind to deliver community building,
 					academic support, and career development opportunities.
 				</p>
 				<!-- Need to change to standard -->
-				<a href="https://linktr.ee/colorstackuf" target="_blank" class="self-end">
+				<a href="https://linktr.ee/colorstackuf" target="_blank" class="self-end laptop:self-start">
 					<div
-						class="text-black w-44 text-center bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-3 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium"
+						class="text-black w-44 text-center bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-3 px-7 rounded-3xl mt-8 font-gotham-medium"
 					>
 						View Link Tree
 					</div>
@@ -137,9 +139,7 @@
 	</div>
 
 	<!-- About ColorStack National -->
-	<div
-		class="laptop:bg-body-background-white bg-body-background-blue laptop:px-16 laptop:py-40 py-6 px-8"
-	>
+	<div class="laptop:bg-body-background-white bg-body-background-blue laptop:py-40 py-6 px-8">
 		<div class="bg-body-background-blue rounded-lg laptop:p-16">
 			<div class="relative grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 gap-x-12">
 				<img src="graphics/colorstack_students.png" alt="People" class="w-full rounded-lg" />
@@ -151,12 +151,12 @@
 					<p class="text-white font-archer text-lg">
 						The ColorStack Family is our community of 10,000+ Black and Latinx Computer Science
 						students from 900+ schools nationwide. We’re committed to providing community building,
-						academic support, and career development year-round. Through our active Slack, monthly
-						Fam Fridays, and partnerships with 70+ top tech companies.
+						academic support, and career development year-round through our active Slack channel,
+						monthly Fam Fridays, and partnerships with 70+ top tech companies.
 					</p>
 					<!-- Need to change to standard -->
 					<button
-						class="laptop:w-1/2 text-black text-center bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-4 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium"
+						class="text-black text-center bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-4 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium"
 						>Become a National Member</button
 					>
 				</div>
@@ -173,12 +173,12 @@
 		<div class="grid grid-cols-2 laptop:grid-cols-4 laptop:col-start-2 col-span-5 gap-x-7 gap-y-12">
 			{#each eboard_members as member}
 				<div
-					class="flex flex-col justify-center items-center text-white text-[1.4rem] font-gotham-medium"
+					class="grid grid-cols-1 justify-items-center items-center text-white text-[1.4rem] font-gotham-medium"
 				>
 					<img
 						src={member.image}
 						alt="Photo of {member.name}"
-						class="w-48 h-48 tablet:w-64 tablet:h-64 laptop:w-80 laptop:h-80 object-cover rounded-md"
+						class="self-start w-48 h-48 tablet:w-64 tablet:h-64 laptop:w-80 laptop:h-80 object-cover rounded-md"
 					/>
 					<h1 class="py-2 text-base text-center laptop:text-2xl">{member.name}</h1>
 					<p class="text-xs text-center laptop:text-base">{member.position}</p>
@@ -192,39 +192,39 @@
 		<div class="grid grid-cols-1 laptop:grid-cols-2 laptop:cols-start-2">
 			<div class="text-black">
 				<!-- Need to ask team on what sizes these should be (Are there ones for this part specifically?) -->
-				<h1 class="text-[1.4rem] pb-8 font-gotham-medium">Contact Us</h1>
-				<p class="font-archer">
-					If you have any questions or concerns don't hesitate to contact us.
+				<h1 class="text-3xl pb-8 font-gotham-medium">Contact Us</h1>
+				<p class="text-2xl font-archer">
+					If you have any questions or concerns don't hesitate to contact us!
 				</p>
 			</div>
 
-			<div class="justify-center items-center w-full">
+			<div class="justify-center items-center w-full font-archer">
 				<input
 					type="text"
 					placeholder="First Name"
-					class="w-full h-12 mt-4 rounded-md border-2 px-3"
+					class="w-full h-12 mt-4 rounded-md px-3 text-[#767676]"
 					bind:value={first_name}
 				/>
 				<input
 					type="text"
 					placeholder="Last Name"
-					class="w-full h-12 mt-4 rounded-md border-2 px-3"
+					class="w-full h-12 mt-4 rounded-md px-3"
 					bind:value={last_name}
 				/>
 				<input
 					type="text"
-					placeholder="Email"
-					class="w-full h-12 mt-4 rounded-md border-2 px-3"
+					placeholder="Email Address"
+					class="w-full h-12 mt-4 rounded-md px-3"
 					bind:value={email}
 				/>
 				<textarea
 					placeholder="Message"
-					class="w-full h-48 mt-4 rounded-md border-2 px-3 py-3"
+					class="w-full h-48 mt-4 rounded-md px-3 py-3"
 					bind:value={message}
 				/>
 				<!-- Need to ask team on what color the button transition should be -->
 				<button
-					class="w-full text-white bg-body-background-blue transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-black duration-300 py-4 px-7 rounded mt-4 font-gotham-medium"
+					class="w-full text-white bg-body-background-blue transition-bg-color transition-color hover:bg-colorstackuf-orange hover:text-black duration-300 py-4 px-7 rounded mt-4 font-gotham-medium"
 					on:click={submitForm}>Submit</button
 				>
 			</div>
