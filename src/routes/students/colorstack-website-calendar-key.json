@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "colorstack-website-calendar",
+  "private_key_id": "9fe131f037c66670c635150657449888331a2556",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDEgSxr+4YVYioZ\nBprenxLV5UJy45M+stk0OS+bPvYJ/npasBHhThUB7EmFJ+xe1ENsL0Xw/PI6QXQ/\nIJDn9993xWt5U1LxF1g9+Tg6uBXa2xmyUlErhnjhlwXPzYV0sv+t92f4sUkpKCNO\nUyOoSrWuZOq+eP4FVi0sbjfw658Od66hyOfTfJ95UoxO7WeYmW7rYydAeET4SNI6\numov6xBzOH9tK7czsqaJmz4j4LPyPMfJnpRJBp1Yt9V2uPDP6MtVfMVbc1sfKvrt\nRHELPpE/iQogzWXFHJFWzH5klale3smfpQJzsVg7dRxNA6DA36H8CKSmwrEL+dLq\ncFEbWdI7AgMBAAECggEAFlq5knk1KjaWIm2xbZT8IBAqLIa+J/pRolLFGyyg8ccc\n5Tc1eYOX+TWHsZm2lp0gJG0GUGF+LulmT44lXfZBWk8/qDg17c5hj/9LicaKWfDl\n7fbWXBS6qLM1CoxPW9THKGPGVLDaaU+zIIRtwIXrQDEj0VJTV4kTr4PEYmhzmkIJ\nMekA+5V7/2DW62kWeJbraZx6Mhymz4x+y4a7DepE+IVAZTV+cLC430EmRA5l+zJm\nhytlUGRk1rERerm0EwwTOyos7QbtktzffluMDya4Hq1Du7EvmlOodkS6QY0lhpn8\npwypB7VFloEuN7qByKt+qJi+FryMs38qudx2iMKivQKBgQDndCI2BV5OL6rgU3ys\nn/XkFWQsO4ip+mtBO8Y49k+LOYkxd/+Sm6IblL7W5CJXd/j9/BIn3h3A5Dm4a6Zl\noGVIfWLAdUytkgqtTm1pdQHLFBkCBXNRI1pwZpy4F49XPNJ9ioBkmhhYgVNEEjAp\nNZQf/UEJ4gtcYA0v+BGvvMIP7QKBgQDZWDAde7GEil5nSETv/66DUKbccGYoJPtp\nIT0R55URp2sdLun8yoAM3x/19sWNtrO8kEbSpXbfD81otkm2i3IyF6Df9mop+pPR\nalZR63g4LBx1VaROpNb2GvJp1rg8Vm3FeuPjdKuvcAGlYTUJCpcOI4p6bHKtCVNh\n7bXiadUVxwKBgQC67TcoC+PjH2pQ6/xX6oSLZZ9Wfepc5Us0DxODM6KAXcJoenKl\nNB6TSelq4iq+G72zWp5LJn8/JtNbF03267iA+AsGRnXcBIOs/hctQXtmSN/9mutM\nT1IeTzEpGJYCrbOOAoq5NR6OdDwMUOgmkAgGYeHiGnZ0b3qXEDEwjjDo7QKBgQDA\niA1/YJ59YbGE3pEq5RzreFuH9Q2ZzEDl/SrDHJmB3QPXA0MFy0CpplICqgqQoeMQ\nS+JhIXBu4um8M5aS3W5Yj3PUUc3zx+R/4yn6QZPqdrDzA92cSQufUXmiZjIoSQvO\nnzEWwbiAncDnhnfbvYTYYoV+M2lWfWde3Zt8qPG46wKBgB4O4WD89BAh+eBiQvxg\nNMGsBAAJPRdoI8MWkSwd20rgjm5Xr3fovUHRc642vuUubnFyiYzOjvwR+BAMKM+u\n5EGAlGnM349gVE9WOTk8k622BcBDy2LQFODM9gM/4jN5O/QPYjEpAPDVm8x7GAUm\nh0lU+ATAlaqSTqLCG1EWEctR\n-----END PRIVATE KEY-----\n",
+  "client_email": "colorstackuf@colorstack-website-calendar.iam.gserviceaccount.com",
+  "client_id": "113092830456293855279",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/colorstackuf%40colorstack-website-calendar.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
