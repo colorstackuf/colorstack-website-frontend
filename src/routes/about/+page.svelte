@@ -5,77 +5,92 @@
 		{
 			name: 'Carson Johnson',
 			position: 'President',
-			image: 'e-board/Carson_Johnson.png'
+			image: 'e-board/Carson_Johnson.png',
+			linkedin: 'https://www.linkedin.com/in/carson74johnson/'
 		},
 		{
 			name: 'Gabriel Castejon',
 			position: 'Vice President',
-			image: 'e-board/Gabriel_Castejon.png'
+			image: 'e-board/Gabriel_Castejon.png',
+			linkedin: 'https://www.linkedin.com/in/gabriel-castejon/'
 		},
 		{
 			name: 'Yakub Mungai',
 			position: 'Treasurer',
-			image: 'e-board/Yakub_Mungai.png'
+			image: 'e-board/Yakub_Mungai.png',
+			linkedin: 'https://www.linkedin.com/in/yakubjmungai/'
 		},
 		{
 			name: 'Kacie Ross',
 			position: 'VP of Marketing',
-			image: 'e-board/Kacie_Ross.png'
+			image: 'e-board/Kacie_Ross.png',
+			linkedin: 'https://www.linkedin.com/in/kacierossuf/'
 		},
 		{
 			name: 'Bryan Hernandez-Sanchez',
 			position: 'VP of Events',
-			image: 'e-board/Bryan_Hernandez-Sanchez.png'
+			image: 'e-board/Bryan_Hernandez-Sanchez.png',
+			linkedin: 'https://www.linkedin.com/in/bryan-hernandez-sanchez/'
 		},
 		{
 			name: 'Yohance de Souza',
 			position: 'Administration Chair',
-			image: 'e-board/Yohance_de_Souza.png'
+			image: 'e-board/Yohance_de_Souza.png',
+			linkedin: 'https://www.linkedin.com/in/yohance-de-souza-217a291b5/'
 		},
 		{
 			name: 'Mya Ramsey',
 			position: 'Physical Marketing Coordinator',
-			image: 'e-board/Mya_Ramsey.png'
+			image: 'e-board/Mya_Ramsey.png',
+			linkedin: 'https://www.linkedin.com/in/mya-ramsey-uf/'
 		},
 		{
 			name: 'Soraya Sardine',
 			position: 'Graphic Design Coordinator',
-			image: 'e-board/Soraya_Sardine.png'
+			image: 'e-board/Soraya_Sardine.png',
+			linkedin: 'https://www.linkedin.com/in/soraya-sardine-64662216a/'
 		},
 		// {
-		//     "name": "Natahja Graddy",
-		//     "position": "Community Events Coordinator",
-		//     "image": "e-board/Natahja_Graddy.png"
+		//      name: 'Natahja Graddy',
+		//      position: 'Community Events Coordinator',
+		//     	image: 'e-board/Natahja_Graddy.png',
+		// 		linkedin: 'https://www.linkedin.com/in/natahja-graddy/'
 		// },
 		{
 			name: 'Yonas Worku',
 			position: 'Career Events Coordinator',
-			image: 'e-board/Yonas_Worku.png'
+			image: 'e-board/Yonas_Worku.png',
+			linkedin: 'https://www.linkedin.com/in/yonasworku/'
 		},
 		{
 			name: 'Matthew DeGuzman',
 			position: 'Technical Events Coordinator',
-			image: 'e-board/Matthew_DeGuzman.png'
+			image: 'e-board/Matthew_DeGuzman.png',
+			linkedin: 'https://www.linkedin.com/in/matthew-deguzman/'
 		},
 		{
 			name: 'Alex Huper',
 			position: 'Academic Programs Coordinator',
-			image: 'e-board/Alex_Huper.png'
+			image: 'e-board/Alex_Huper.png',
+			linkedin: 'https://www.linkedin.com/in/alex-huper/'
 		},
 		{
 			name: 'Josue Vicente',
 			position: 'Academic Events Coordinator',
-			image: 'e-board/Josue_Vicente.png'
+			image: 'e-board/Josue_Vicente.png',
+			linkedin: 'https://www.linkedin.com/in/josue-e-vicente/'
 		},
 		{
 			name: 'Abigail Erefah',
 			position: 'Digital Marketing Coordinator',
-			image: 'e-board/Abigail_Erefah.png'
+			image: 'e-board/Abigail_Erefah.png',
+			linkedin: 'https://www.linkedin.com/in/abigail-erefah/'
 		},
 		{
 			name: 'Dr. Sanethia Thomas',
 			position: 'Faculty Advisor',
-			image: 'e-board/Sanethia_Thomas.png'
+			image: 'e-board/Sanethia_Thomas.png',
+			linkedin: 'https://www.linkedin.com/in/sanethia-thomas-phd-112806/'
 		}
 	];
 
@@ -106,12 +121,12 @@
 	}
 </script>
 
-<div class="bg-body-background-blue">
+<div class="bg-body-background-white">
 	<!-- ColorStack UF intro -->
-	<div class="h-[40rem] laptop:h-auto lg-desktop:max-w-[1920px] mx-auto">
+	<div class="h-[40rem] h-auto laptop:h-auto lg-desktop:max-w-[1920px] mx-auto">
 		<div class="relative flex flex-col items-end laptop:items-start bg-[url('graphics/about-intro.png')] bg-cover bg-no-repeat bg-center h-[25rem] laptop:h-[45rem]">
 			<div class="relative grid grid-cols-1 top-[16rem] laptop:top-0 laptop:left-[3rem] laptop:top-[5rem] z-10 bg-body-background-blue pl-7 pr-4 py-7 laptop:p-12 rounded-l-lg laptop:rounded-lg mb-12 w-11/12 min-w-[310px] h-[380px] laptop:w-[460px] laptop:h-auto">
-				<h1 class="text-white text-lg tablet:text-2xl laptop:text-3xl font-gotham-medium laptop:pb-4">
+				<h1 class="text-white text-lg tablet:text-2xl laptop:text-3xl font-gotham-medium laptop:pb-4 ">
 					ColorStack UF is a team committed to...
 				</h1>
 				<p class="text-white font-archer text-lg tablet:text-xl leading-6 self-start">
@@ -129,8 +144,8 @@
 	</div>
 
 	<!-- About ColorStack National -->
-	<div class="laptop:bg-body-background-white bg-body-background-blue ">
-		<div class="lg-desktop:max-w-[1920px] mx-auto laptop:py-40 py-6 px-8">
+	<div class="mt-60 laptop:mt-0">
+		<div class="laptop:bg-body-background-white bg-body-background-blue lg-desktop:max-w-[1920px] mx-auto laptop:py-40 py-6 px-8">
 			<div class="bg-body-background-blue rounded-lg laptop:p-16">
 				<div class="relative grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 gap-x-12">
 					<img src="graphics/colorstack_students.png" alt="People" class="w-full rounded-lg" />
@@ -170,11 +185,22 @@
 			<div class="grid grid-cols-2 laptop:grid-cols-4 laptop:col-start-2 col-span-5 gap-x-7 gap-y-12">
 				{#each eboard_members as member}
 					<div class="grid grid-cols-1 justify-items-center items-center text-white text-[1.4rem] font-gotham-medium">
-						<img
-							src={member.image}
-							alt="Photo of {member.name}"
-							class="self-start w-48 h-48 tablet:w-64 tablet:h-64 laptop:w-80 laptop:h-80 object-cover rounded-md"
-						/>
+						<div class="relative group w-36 h-36 tablet:w-64 tablet:h-64 laptop:w-80 laptop:h-80">
+							<a href="{member.linkedin}" target="_blank" class="block w-full h-full">
+							  <img
+								src={member.image}
+								alt="Photo of {member.name}"
+								class="w-full h-full object-cover rounded-md group-hover:opacity-50"
+							  />
+							  <div class="absolute inset-0 flex items-center justify-center">
+								<img
+								  src="logos/linkedin.svg"
+								  alt="LinkedIn Logo"
+								  class="opacity-0 group-hover:opacity-75 transition-opacity duration-500 ease-in-out"
+								/>
+							  </div>
+							</a>
+						  </div>						  
 						<h1 class="py-2 text-base text-center laptop:text-2xl">{member.name}</h1>
 						<p class="text-xs text-center laptop:text-base">{member.position}</p>
 					</div>
