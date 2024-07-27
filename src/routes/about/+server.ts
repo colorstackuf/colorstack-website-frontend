@@ -23,7 +23,7 @@ export async function POST({ request }: RequestEvent) {
         });
 
         let mailOptions = {
-            from: `${data.first_name} ${data.last_name} <${data.email}>`,
+            from: `${data.first_name} ${data.last_name}`,
             to: GOOGLE_EMAIL,
             subject: 'Message from ColorStack Contact Form',
             text: 'REPLY TO: ' + data.email + '\n\n' + data.message,

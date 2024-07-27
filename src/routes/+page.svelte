@@ -71,7 +71,7 @@
 			>
 				ColorStack's mission is to increase the number of Black and Latinx Computer Science
 				graduates that go on to start
-				<em class="text-colorstackuf-orange">rewarding</em> techincal careers.
+				<em class="text-colorstackuf-orange">rewarding</em> technical careers.
 			</p>
 			<a
 				target="_blank"
