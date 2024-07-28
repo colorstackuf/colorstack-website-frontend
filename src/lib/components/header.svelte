@@ -3,7 +3,6 @@
 	import { Hamburger } from 'svelte-hamburgers';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-	import { onAbout, onSponsors, onStudents } from '$lib/currentPage';
 
 	export let ariaLabel: string = 'Toggle navigation';
 
@@ -18,15 +17,9 @@
 		document.body.classList.toggle('no-scroll', !open);
 	}
 
-	$onAbout = $page.url.pathname === '/about';
-	$onSponsors = $page.url.pathname === '/sponsors';
-	$onStudents = $page.url.pathname === '/students';
-
-	const handleStyleChange = (page: string) => {
-		$onAbout = page === 'about';
-		$onSponsors = page === 'sponsors';
-		$onStudents = page === 'students';
-	};
+	$: onAbout = $page.url.pathname === '/about';
+	$: onSponsors = $page.url.pathname === '/sponsors';
+	$: onStudents = $page.url.pathname === '/students';
 
 	$: innerWidth = 0;
 	$: {
@@ -55,7 +48,6 @@
 			class="flex-[1] pt-1"
 			on:click={() => {
 				open = false;
-				handleStyleChange('');
 				document.body.classList.toggle('no-scroll', false);
 			}}
 		>
@@ -70,20 +62,17 @@
 		<div class="flex items-center gap-12 h-full">
 			{#if innerWidth >= 1024}
 				<a
-					on:click={() => handleStyleChange('about')}
-					class:on-page={$onAbout}
+					class:on-page={onAbout}
 					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300 pt-1"
 					href="/about">About</a
 				>
 				<a
-					on:click={() => handleStyleChange('sponsors')}
-					class:on-page={$onSponsors}
+					class:on-page={onSponsors}
 					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300 pt-1"
 					href="/sponsors">Sponsors</a
 				>
 				<a
-					on:click={() => handleStyleChange('students')}
-					class:on-page={$onStudents}
+					class:on-page={onStudents}
 					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300 pt-1"
 					href="/students">Students</a
 				>
@@ -107,28 +96,25 @@
 						>
 							<a
 								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
-								class:on-page={$onAbout}
+								class:on-page={onAbout}
 								href="/about"
 								on:click={() => {
-									handleStyleChange('about');
 									toggleMenu();
 								}}>About</a
 							>
 							<a
 								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
 								href="/sponsors"
-								class:on-page={$onSponsors}
+								class:on-page={onSponsors}
 								on:click={() => {
-									handleStyleChange('sponsors');
 									toggleMenu();
 								}}>Sponsors</a
 							>
 							<a
 								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
 								href="/students"
-								class:on-page={$onStudents}
+								class:on-page={onStudents}
 								on:click={() => {
-									handleStyleChange('students');
 									toggleMenu();
 								}}>Students</a
 							>
