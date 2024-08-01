@@ -38,6 +38,7 @@
 		"@fullcalendar/daygrid": "^6.1.14",
 		"@fullcalendar/google-calendar": "^6.1.14",
 		"@splidejs/svelte-splide": "^0.2.9",
+		"dotenv": "^16.4.5",
 		"fullcalendar": "^6.1.14"
 	}
 }

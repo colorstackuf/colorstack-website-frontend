@@ -11,7 +11,7 @@
         const calendar = new Calendar(calendarEl, {
           plugins: [dayGridPlugin, googleCalendarPlugin],
           initialView: 'dayGridMonth',
-          googleCalendarApiKey: 'AIzaSyCaFdgmf7IwAqT2kvqe_mruFI1R-OTqKE8',
+          googleCalendarApiKey: import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY,
           themeSystem: 'standard',
           events: {
             googleCalendarId: '1fb8181864cdf12022687447cf9bcd496982efd6d79567fb3253d875b3c9aba7@group.calendar.google.com'
