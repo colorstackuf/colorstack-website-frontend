@@ -1,4 +1,6 @@
 <script lang="ts">
+	/** Accordion component for displaying collapsible content */
+
 	export let open = false;
 	import { slide } from 'svelte/transition';
 
@@ -9,9 +11,9 @@
 	};
 </script>
 
-<div class="bg-body-background-white border border-white rounded-lg">
+<div class="bg-[#C6D1EF] border border-white rounded-lg">
 	<button
-		class="w-full py-6 px-4 transition-bg-color rounded-lg hover:bg-colorstackuf-orange duration-300"
+		class="w-full py-6 px-4 transition-bg-color rounded-lg bg-body-background-white hover:bg-colorstackuf-orange duration-300"
 		on:click={handleClick}
 	>
 		<div class="flex w-full h-full items-center">
@@ -27,6 +29,8 @@
 			/>
 		</div>
 	</button>
+
+	<!-- Content to display-->
 	{#if open}
 		<div class="p-4" transition:slide>
 			<slot name="details"></slot>

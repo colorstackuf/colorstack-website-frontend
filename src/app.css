@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.no-scroll {
+	overflow: hidden;
+}
+
 @layer base {
 	@font-face {
 		font-family: 'Gotham-Book';
@@ -25,14 +29,6 @@
 		font-weight: 500;
 		font-display: swap;
 		src: url('/fonts/Gotham-Light.otf') format('opentype');
-	}
-
-	@font-face {
-		font-family: 'Gotham-Ultra';
-		font-style: normal;
-		font-weight: 400;
-		font-display: swap;
-		src: url('/fonts/Gotham-Ultra.otf') format('opentype');
 	}
 
 	@font-face {
