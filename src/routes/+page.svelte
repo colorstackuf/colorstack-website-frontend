@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { type carouselImage } from '$lib/types';
-	import Carousel from '$lib/components/carousel.svelte';
-	import Pillar from '$lib/components/pillar.svelte';
-	import Accordion from '$lib/components/accordion.svelte';
-	import Sponsors from '$lib/components/sponsors.svelte';
-	import Instagram from '$lib/components/instagram.svelte';
+	import Carousel from '$lib/components/Carousel.svelte';
+	import Pillar from '$lib/components/Pillar.svelte';
+	import Accordion from '$lib/components/Accordion.svelte';
+	import Sponsors from '$lib/components/sponsors/Sponsors.svelte';
+	import Instagram from '$lib/components/Instagram.svelte';
 
 	const images: carouselImage[] = [
 		{
