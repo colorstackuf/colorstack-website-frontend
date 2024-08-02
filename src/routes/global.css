@@ -24,3 +24,11 @@ body {
 * {
 	font-family: 'Gotham-Medium', sans-serif;
 }
+
+.selected {
+	background-color: #f7f7f7;
+}
+
+.on-page {
+	color: var(--colorstack-uf-orange);
+}

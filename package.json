@@ -37,6 +37,7 @@
 	"dependencies": {
 		"@splidejs/svelte-splide": "^0.2.9",
 		"dotenv": "^16.4.5",
-		"nodemailer": "^6.9.13"
+		"nodemailer": "^6.9.13",
+		"svelte-hamburgers": "^4.2.0"
 	}
 }

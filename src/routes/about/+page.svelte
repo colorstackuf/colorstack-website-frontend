@@ -208,7 +208,9 @@
 			</div>
 		</div>
 	</div>
+</div>
 
+<div class="bg-body-background-blue">
 	<!-- Contact Us -->
 	<div class="bg-body-background-light-blue">
 		<div class="lg-desktop:max-w-[1920px] mx-auto laptop:px-24 laptop:py-36 py-12 px-12 mb-7">

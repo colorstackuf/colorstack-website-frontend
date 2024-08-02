@@ -1,35 +1,41 @@
 <script lang="ts">
 	import { type carouselImage } from '$lib/types';
-	import Carousel from '$lib/components/carousel.svelte';
-	import Pillar from '$lib/components/pillar.svelte';
-	import Accordion from '$lib/components/accordion.svelte';
-	import Sponsors from '$lib/components/sponsors.svelte';
+	import Carousel from '$lib/components/Carousel.svelte';
+	import Pillar from '$lib/components/Pillar.svelte';
+	import Accordion from '$lib/components/Accordion.svelte';
+	import Sponsors from '$lib/components/sponsors/Sponsors.svelte';
+	import Instagram from '$lib/components/Instagram.svelte';
 
 	const images: carouselImage[] = [
 		{
+			id: 'gbm0',
+			src: '/carousel/img0.jpg',
+			alt: 'ColorStack GBM 1'
+		},
+		{
 			id: 'fdl1',
-			src: '/nvidia-fdl/fdl1.jpg',
-			alt: 'Image 1'
+			src: '/carousel/fdl1.jpg',
+			alt: 'Nvidia Fundamentals of Deep learning Workshop'
 		},
 		{
 			id: 'fdl2',
-			src: '/nvidia-fdl/fdl2.jpg',
-			alt: 'Image 2'
+			src: '/carousel/fdl2.jpg',
+			alt: 'Nvidia Fundamentals of Deep learning Workshop'
 		},
 		{
 			id: 'fdl3',
-			src: '/nvidia-fdl/fdl3.jpg',
-			alt: 'Image 3'
+			src: '/carousel/fdl3.jpg',
+			alt: 'Nvidia Fundamentals of Deep learning Workshop'
 		},
 		{
 			id: 'fdl4',
-			src: '/nvidia-fdl/fdl4.jpg',
-			alt: 'Image 4'
+			src: '/carousel/fdl4.jpg',
+			alt: 'Nvidia Fundamentals of Deep learning Workshop'
 		},
 		{
 			id: 'fdl5',
-			src: '/nvidia-fdl/fdl5.jpg',
-			alt: 'Image 5'
+			src: '/carousel/fdl5.jpg',
+			alt: 'Nvidia Fundamentals of Deep learning Workshop'
 		}
 	];
 
@@ -56,7 +62,7 @@
 </script>
 
 <div
-	class="mt-6 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-blue"
+	class="mt-6 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-blue overflow-hidden"
 >
 	<!-- What We Do -->
 	<div
@@ -108,9 +114,10 @@
 	<div
 		class="lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
 	>
-		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16">
+		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-8">
 			Follow our Instagram!
 		</h2>
+		<Instagram />
 	</div>
 
 	<!-- FAQ -->
@@ -120,32 +127,44 @@
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-4">FAQs</h2>
 		<Accordion>
 			<span slot="head">
-				<h3 class="text-black font-gotham-medium text-[1.1rem] tablet:text-[1.2rem]">
+				<h3 class="text-black font-gotham-medium text-[1.1rem] leading-5 tablet:text-[1.2rem]">
 					What does ColorStack do?
 				</h3>
 			</span>
 			<div slot="details">
-				<p class="text-black text-base">Answer</p>
+				<p class="text-black text-base font-archer">
+					Increase the number of Black & Latinx computer science students that start rewarding
+					technical careers.
+				</p>
 			</div>
 		</Accordion>
 		<Accordion>
 			<span slot="head">
-				<h3 class="text-black font-gotham-medium text-[1.1rem] tablet:text-[1.2rem]">
+				<h3 class="text-black font-gotham-medium text-[1.1rem] leading-5 tablet:text-[1.2rem]">
 					Do I have to be Black or Latinx to join?
 				</h3>
 			</span>
 			<div slot="details">
-				<p class="text-black text-base">Answer</p>
+				<p class="text-black text-base font-archer">
+					While you must be Black or Latinx to become a member of the national organization, the
+					chapter is open to everyone that is committed to our mission.
+				</p>
 			</div>
 		</Accordion>
 		<Accordion>
 			<span slot="head">
-				<h3 class="text-black font-gotham-medium text-[1.1rem] tablet:text-[1.2rem]">
+				<h3 class="text-black font-gotham-medium text-[1.1rem] leading-5 tablet:text-[1.2rem]">
 					If I join ColorStack UF am I automatically in ColorStack National?
 				</h3>
 			</span>
 			<div slot="details">
-				<p class="text-black text-base">Answer</p>
+				<p class="text-black text-base font-archer">
+					No, you still need to apply to become a member of the ColorStack national chapter at <a
+						href="https://colorstack.org/"
+						class="decoration-solid decoration-2 decoration-colorstackuf-blue underline underline-offset-4 hover:decoration-colorstackuf-orange transition-color duration-300"
+						target="_blank">www.colorstack.org.</a
+					>
+				</p>
 			</div>
 		</Accordion>
 	</div>
