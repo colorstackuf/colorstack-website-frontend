@@ -7,17 +7,17 @@
 		{
 			title: 'TALENT ACQUISITION',
 			content:
-				'Get your university opportunities in front of the community of Black & Latinx Computer Science students at The University of Florida.'
+				'Get exceptional university opportunities from the community of Black & Latinx students at the University of Florida.'
 		},
 		{
 			title: 'RACIAL EQUITY',
 			content:
-				'Help us further our mission and level the playing field for all Computer Science majors at The University of Florida.'
+				'Help us further our mission and level the playing field for all Computer Science and related majors at the University of Florida.'
 		},
 		{
 			title: 'TALENT DEVELOPMENT',
 			content:
-				'Meet our members where they are to prepare them for success in the classroom, the interview process, and in the workplace.'
+				'Meet our members to simulataneously prepare them for success in the classroom, interview process, and workplace.'
 		}
 	];
 </script>
@@ -25,20 +25,19 @@
 <div
 	class="pt-4 mt-2 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white mb-5"
 >
-        <!-- Sponsors -->
-    <div
-        class="lg-desktop:col-start-2 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
-        >
-        <h2
-            class="text-body-background-blue font-gotham-medium text-[1.7rem] tablet:text-[2rem] mb-10 text-center tablet:text-left"
-        >
-            Our Sponsors
-        </h2>
-        <div class="ml-0 tablet:ml-0 lg:ml-0">
-            <Sponsors />
-        </div>
-    </div>
-
+	<!-- Sponsors -->
+	<div
+		class="lg-desktop:col-start-2 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
+	>
+		<h2
+			class="text-body-background-blue font-gotham-medium text-[1.7rem] tablet:text-[2rem] mb-10 text-center tablet:text-left"
+		>
+			Our Sponsors
+		</h2>
+		<div class="ml-0 tablet:ml-0 lg:ml-0">
+			<Sponsors />
+		</div>
+	</div>
 
 	<!-- Sponsored Events -->
 		<div
@@ -96,7 +95,6 @@
 </div>
 
 	<!-- Our LinkedIn -->
-
 </div>
 
 <style>
@@ -104,3 +102,4 @@
 		display: none;
 	}
 </style>
+
