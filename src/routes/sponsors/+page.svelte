@@ -94,9 +94,3 @@
 
 	<!-- Our LinkedIn -->
 </div>
-
-<style>
-	.no-scrollbar::-webkit-scrollbar {
-		display: none;
-	}
-</style>
