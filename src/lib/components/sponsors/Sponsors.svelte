@@ -47,7 +47,7 @@
 </script>
 
 <!-- Sponsors -->
-<div class="relative flex flex-col gap-12">
+<div class="relative flex flex-col gap-12 bg-body-background-blue">
 	<!-- Platinum Sponsors -->
 	<SponsorContainer title="Platinum">
 		<span slot="icon">
