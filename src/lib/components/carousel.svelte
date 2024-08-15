@@ -126,7 +126,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.carousel {
 		scroll-snap-type: x mandatory;
 		-ms-overflow-style: none;

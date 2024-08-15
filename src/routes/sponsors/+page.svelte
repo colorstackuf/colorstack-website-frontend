@@ -2,6 +2,9 @@
 	import Sponsors from '$lib/components/sponsors/Sponsors.svelte';
 	import BloombergImages from '$lib/components/Bloomberg.svelte';
 	import NvidiaImages from '$lib/components/Nvidia.svelte';
+	import { onMount } from 'svelte';
+	import { setAnimations } from '$lib/utils';
+	onMount(setAnimations);
 
 	let descriptions = [
 		{
@@ -64,7 +67,7 @@
 	>
 		<div class="max-w-page-width w-full text-center">
 			<h2
-				class="font-gotham-medium text-font-color-dark-blue text-center text-[1.5rem] tablet:text-4xl mb-20"
+				class="slides-in font-gotham-medium text-font-color-dark-blue text-center text-[1.5rem] tablet:text-4xl mb-20"
 			>
 				Why should you support ColorStack UF?
 			</h2>
@@ -72,7 +75,7 @@
 				class="max-w-page-width px-2 grid grid-cols-1 tablet:grid-cols-3 gap-[70px] tablet:gap-[40px]"
 			>
 				{#each descriptions as { title, content }}
-					<div class="flex flex-col items-center">
+					<div class="slides-in flex flex-col items-center">
 						<h3 class="font-gotham-medium text-xl tablet:text-2xl text-font-color-dark-blue mb-4">
 							{title}
 						</h3>
@@ -84,7 +87,7 @@
 				<a
 					target="_blank"
 					href="https://docs.google.com/forms/d/e/1FAIpQLSdP6MhOXXjmgDYIJHjqef6MQSPa9xnBdr1SZzhVvqYJvksYMA/viewform"
-					class="bg-body-background-blue text-body-background-light-blue transition-bg-color transition-color hover:bg-colorstackuf-orange hover:text-body-background-blue duration-300 py-4 px-7 rounded-3xl font-gotham-medium"
+					class="slides-in bg-body-background-blue text-body-background-light-blue transition-bg-color transition-color hover:bg-colorstackuf-orange hover:text-body-background-blue duration-300 py-4 px-7 rounded-3xl font-gotham-medium"
 				>
 					Support Us
 				</a>
@@ -94,3 +97,21 @@
 
 	<!-- Our LinkedIn -->
 </div>
+
+<style lang="postcss">
+	@media (prefers-reduced-motion: no-preference) {
+		.slides-in {
+			@apply opacity-0 translate-y-10 transition-all duration-500;
+		}
+
+		/*
+          If Svelte doesn't see the `.slides-in--visible` class in the DOM, it
+          will attempt to remove the styles, breaking our animations.
+          To prevent this, we use `:global` to force Svelte to keep the styles.
+          https://svelte.dev/docs/faq#can-i-tell-svelte-not-to-remove-my-unused-styles
+         */
+		:global(.slides-in.slides-in--visible) {
+			@apply opacity-100 translate-y-0;
+		}
+	}
+</style>

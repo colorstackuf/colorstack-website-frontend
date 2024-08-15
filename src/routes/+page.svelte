@@ -1,10 +1,15 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import type { PageServerData } from './$types';
 	import { type carouselImage } from '$lib/types';
 	import Carousel from '$lib/components/Carousel.svelte';
 	import Pillar from '$lib/components/Pillar.svelte';
 	import Accordion from '$lib/components/Accordion.svelte';
 	import Sponsors from '$lib/components/sponsors/Sponsors.svelte';
 	import Instagram from '$lib/components/Instagram.svelte';
+	import { setAnimations } from '$lib/utils';
+
+	export let data: PageServerData;
 
 	const images: carouselImage[] = [
 		{
@@ -59,17 +64,19 @@
 			icon: '/pillars/career.svg'
 		}
 	];
+
+	onMount(setAnimations);
 </script>
 
 <div
 	class="mt-6 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-blue overflow-hidden"
 >
 	<!-- What We Do -->
-	<div
+	<section
 		class="grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 mt-12 laptop:mt-0 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:max-h-[600px] laptop:min-h-[550px] laptop:justify-items-end min-[1150px]:px-[50px] desktop:px-[30px]"
 	>
 		<div
-			class="flex flex-col justify-center laptop:justify-normal laptop:mt-20 desktop:mt-28 items-center laptop:justify-self-center"
+			class="slides-in flex flex-col justify-center laptop:justify-normal laptop:mt-20 desktop:mt-28 items-center laptop:justify-self-center"
 		>
 			<h1 class="text-colorstackuf-blue text-[1.4rem] font-gotham-medium">WHAT WE DO</h1>
 			<p
@@ -89,10 +96,10 @@
 		</div>
 
 		<Carousel {images} />
-	</div>
+	</section>
 
 	<!-- Pillars -->
-	<div
+	<section
 		class="tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-white py-20 tablet:py-36 notebook:py-40 px-mobile-padding-x tablet:px-tablet-padding-x translate-y-[-110px] tablet:translate-y-[-130px] laptop:flex laptop:justify-center laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
 	>
 		<div class="max-w-page-width grid grid-cols-1 tablet:grid-cols-3 gap-[70px] tablet:gap-[40px]">
@@ -100,29 +107,29 @@
 				<Pillar {...pillar} />
 			{/each}
 		</div>
-	</div>
+	</section>
 
 	<!-- Sponsors -->
-	<div
+	<section
 		class="lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-8">Our Sponsors</h2>
 		<Sponsors />
-	</div>
+	</section>
 
 	<!-- Follow Instagram -->
-	<div
-		class="lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
+	<section
+		class="slides-in lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-8">
 			Follow our Instagram!
 		</h2>
-		<Instagram />
-	</div>
+		<Instagram data={data.instagramData} />
+	</section>
 
 	<!-- FAQ -->
-	<div
-		class="lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px] desktop:mb-24"
+	<section
+		class="slides-in lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px] desktop:mb-24"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-4">FAQs</h2>
 		<Accordion>
@@ -167,5 +174,23 @@
 				</p>
 			</div>
 		</Accordion>
-	</div>
+	</section>
 </div>
+
+<style lang="postcss">
+	@media (prefers-reduced-motion: no-preference) {
+		.slides-in {
+			@apply opacity-0 translate-y-10 transition-all duration-500;
+		}
+
+		/*
+          If Svelte doesn't see the `.slides-in--visible` class in the DOM, it
+          will attempt to remove the styles, breaking our animations.
+          To prevent this, we use `:global` to force Svelte to keep the styles.
+          https://svelte.dev/docs/faq#can-i-tell-svelte-not-to-remove-my-unused-styles
+         */
+		:global(.slides-in.slides-in--visible) {
+			@apply opacity-100 translate-y-0;
+		}
+	}
+</style>

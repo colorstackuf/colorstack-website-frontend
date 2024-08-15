@@ -40,5 +40,5 @@ export default {
 			'lg-desktop': '1536px'
 		}
 	},
-	plugins: [require('tailwind-scrollbar-hide')]
+	plugins: []
 };
