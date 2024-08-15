@@ -4,6 +4,10 @@
 	import '../app.css';
 	import './reset.css';
 	import './global.css';
+	import { onMount } from 'svelte';
+	import { setAnimations } from '$lib/utils';
+
+	onMount(setAnimations);
 </script>
 
 <main class="grid grid-rows-auto">
