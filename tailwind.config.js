@@ -29,7 +29,8 @@ export default {
 			'gotham-book': ['Gotham-Book', 'sans-serif'],
 			'gotham-medium': ['Gotham-Medium', 'sans-serif'],
 			archer: ['Archer-Medium', 'sans-serif'],
-			'archer-book': ['Archer-Book', 'sans-serif']
+			'archer-book': ['Archer-Book', 'sans-serif'],
+			'archer-light': ['Archer-Light', 'sans-serif']
 		},
 		screens: {
 			tablet: '640px',
