@@ -11,7 +11,7 @@
 </script>
 
 <!-- Bloomberg Images -->
-<div class="flex overflow-x-auto py-5 no-scrollbar space-x-2.5">
+<div class="flex py-5 space-x-2.5 overflow-auto no-scrollbar">
 	{#each bloombergImages as image}
 		<div class="flex-none">
 			<img src={image.src} alt={image.alt} class="h-32 tablet:h-64 object-cover rounded-lg" />
