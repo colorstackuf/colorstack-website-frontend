@@ -29,7 +29,7 @@
 	class="pt-20 mt-2 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white mb-5"
 >
 	<!-- Sponsors -->
-	<div
+	<section
 		class="lg-desktop:col-start-2 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
 	>
 		<h2
@@ -40,10 +40,10 @@
 		<div class="ml-0 tablet:ml-0 lg:ml-0 bg-body-background-blue p-16 rounded-lg">
 			<Sponsors />
 		</div>
-	</div>
+	</section>
 
 	<!-- Sponsored Events -->
-	<div
+	<section
 		class="lg-desktop:col-start-2 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
 	>
 		<h2
@@ -59,10 +59,10 @@
 			Nvidia x Colorstack UF
 		</h2>
 		<NvidiaImages />
-	</div>
+	</section>
 
 	<!-- Why Support Colorstack UF -->
-	<div
+	<section
 		class="tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-light-blue py-10 tablet:py-24 px-mobile-padding-x tablet:px-tablet-padding-x laptop:flex laptop:justify-center laptop:px-laptop-padding-x pb-20"
 	>
 		<div class="max-w-page-width w-full text-center">
@@ -93,7 +93,7 @@
 				</a>
 			</div>
 		</div>
-	</div>
+	</section>
 
 	<!-- Our LinkedIn -->
 </div>
