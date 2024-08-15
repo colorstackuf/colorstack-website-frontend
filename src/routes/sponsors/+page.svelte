@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Sponsors from '$lib/components/sponsors/Sponsors.svelte';
-	import BloombergImages from '$lib/components/bloomberg.svelte';
-	import NvidiaImages from '$lib/components/nvidia.svelte';
+	import BloombergImages from '$lib/components/Bloomberg.svelte';
+	import NvidiaImages from '$lib/components/Nvidia.svelte';
 
 	let descriptions = [
 		{
