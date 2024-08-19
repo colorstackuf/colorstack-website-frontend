@@ -34,23 +34,13 @@ body {
 	color: var(--colorstack-uf-orange);
 }
 
-/* Import FullCalendar styles */
-@import 'https://unpkg.com/@fullcalendar/core@6.1.14/main.css';
-@import 'https://unpkg.com/@fullcalendar/daygrid@6.1.14/main.css';
-
-.fc .fc-prev-button,
-.fc .fc-next-button {
-  background-color: var(--body-background-blue) !important;
-  color: white !important;
-  border: none;
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
 }
 
-/* Hover state */
-.fc .fc-prev-button:hover,
-.fc .fc-next-button:hover {
-  background-color: var(--colorstack-uf-blue) !important; 
-  color: white !important;
-  border: none;
+.no-scrollbar {
+	-ms-overflow-style: none;
+	/* Internet Explorer 10+ */
+	scrollbar-width: none;
+	/* Firefox */
 }
-
-
