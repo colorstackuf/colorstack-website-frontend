@@ -3,9 +3,12 @@
     import { Calendar } from '@fullcalendar/core';
     import dayGridPlugin from '@fullcalendar/daygrid';
     import googleCalendarPlugin from '@fullcalendar/google-calendar';
+
+    
   
     onMount(() => {
       const calendarEl = document.getElementById('calendar');
+      console.log(import.meta.env.VITE_GOOGLE_CALENDAR_API_KEY);
   
       if (calendarEl) {
         const calendar = new Calendar(calendarEl, {
@@ -31,14 +34,6 @@
     });
   </script>
 
-<style>
-    /* Import FullCalendar styles */
-    @import 'https://unpkg.com/@fullcalendar/core@6.1.14/main.css';
-    @import 'https://unpkg.com/@fullcalendar/daygrid@6.1.14/main.css';
-</style>
-
-
-
   <div class="mt-6 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white">
     <div>
     </div>
@@ -58,7 +53,7 @@
             Join us and explore the multitude of opportunities to grow and excel in your academic and professional journey.
           </p>
           <a href="https://calendar.google.com/calendar/u/0/r?cid=MWZiODE4MTg2NGNkZjEyMDIyNjg3NDQ3Y2Y5YmNkNDk2OTgyZWZkNmQ3OTU2N2ZiMzI1M2Q4NzViM2M5YWJhN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener noreferrer">
-            <button class="bg-colorstackuf-orange text-black text-xl font-gotham hover:bg-colorstackuf-blue w-[262px] h-[52px] laptop:w-[262px] laptop:h-[52px] tablet:h-[48px] tablet:w-[262px] laptop:left-[65px] laptop:gap-0 rounded-[24px]">
+            <button class="bg-colorstackuf-orange text-black text-xl font-gotham hover:bg-colorstackuf-blue hover:text-white transition duration-300 w-[262px] h-[52px] laptop:w-[262px] laptop:h-[52px] tablet:h-[48px] tablet:w-[262px] laptop:left-[65px] laptop:gap-0 rounded-[24px]">
               Subscribe to Calendar
             </button>
           </a>    
