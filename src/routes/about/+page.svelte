@@ -3,22 +3,22 @@
 
 	let eboard_members = [
 		{
-			name: 'Carson Johnson',
+			name: 'Mya Ramsey',
 			position: 'President',
-			image: 'e-board/Carson_Johnson.png',
-			linkedin: 'https://www.linkedin.com/in/carson74johnson/'
-		},
-		{
-			name: 'Gabriel Castejon',
-			position: 'Vice President',
-			image: 'e-board/Gabriel_Castejon.png',
-			linkedin: 'https://www.linkedin.com/in/gabriel-castejon/'
+			image: 'e-board/Mya_Ramsey.png',
+			linkedin: 'https://www.linkedin.com/in/mya-ramsey-uf/'
 		},
 		{
 			name: 'Yakub Mungai',
-			position: 'Treasurer',
+			position: 'Vice Presdient',
 			image: 'e-board/Yakub_Mungai.png',
 			linkedin: 'https://www.linkedin.com/in/yakubjmungai/'
+		},
+		{
+			name: 'Bryan Mbaji',
+			position: 'Treasurer',
+			image: 'e-board/Bryan_Mbaji.png',
+			linkedin: 'https://www.linkedin.com/in/brian-mbaji/'
 		},
 		{
 			name: 'Kacie Ross',
@@ -27,22 +27,10 @@
 			linkedin: 'https://www.linkedin.com/in/kacierossuf/'
 		},
 		{
-			name: 'Bryan Hernandez-Sanchez',
-			position: 'VP of Events',
-			image: 'e-board/Bryan_Hernandez-Sanchez.png',
-			linkedin: 'https://www.linkedin.com/in/bryan-hernandez-sanchez/'
-		},
-		{
 			name: 'Yohance de Souza',
 			position: 'Administration Chair',
 			image: 'e-board/Yohance_de_Souza.png',
 			linkedin: 'https://www.linkedin.com/in/yohance-de-souza-217a291b5/'
-		},
-		{
-			name: 'Mya Ramsey',
-			position: 'Physical Marketing Coordinator',
-			image: 'e-board/Mya_Ramsey.png',
-			linkedin: 'https://www.linkedin.com/in/mya-ramsey-uf/'
 		},
 		{
 			name: 'Soraya Sardine',
@@ -52,7 +40,7 @@
 		},
 		// {
 		//      name: 'Natahja Graddy',
-		//      position: 'Community Events Coordinator',
+		//      position: 'VP of Events',
 		//     	image: 'e-board/Natahja_Graddy.png',
 		// 		linkedin: 'https://www.linkedin.com/in/natahja-graddy/'
 		// },
@@ -91,7 +79,13 @@
 			position: 'Faculty Advisor',
 			image: 'e-board/Sanethia_Thomas.png',
 			linkedin: 'https://www.linkedin.com/in/sanethia-thomas-phd-112806/'
-		}
+		},
+		{
+			name: 'Carson Johnson',
+			position: 'Founding President',
+			image: 'e-board/Carson_Johnson.png',
+			linkedin: 'https://www.linkedin.com/in/carson74johnson/'
+		},
 	];
 
 	let first_name = '';
@@ -126,10 +120,10 @@
 	<div class="h-[40rem] h-auto laptop:h-auto lg-desktop:max-w-[1920px] mx-auto">
 		<div class="relative flex flex-col items-end laptop:items-start bg-[url('graphics/about-intro.png')] bg-cover bg-no-repeat bg-center h-[25rem] laptop:h-[45rem]">
 			<div class="relative grid grid-cols-1 top-[16rem] laptop:top-0 laptop:left-[3rem] laptop:top-[5rem] z-10 bg-body-background-blue pl-7 pr-4 py-7 laptop:p-12 rounded-l-lg laptop:rounded-lg mb-12 w-11/12 min-w-[310px] h-[380px] laptop:w-[460px] laptop:h-auto">
-				<h1 class="text-white text-lg tablet:text-2xl laptop:text-3xl font-gotham-medium laptop:pb-4 ">
+				<h1 class="text-white text-lg tablet:text-2xl laptop:text-3xl lg-desktop:text-4xl font-gotham-medium laptop:pb-4 ">
 					ColorStack UF is a team committed to...
 				</h1>
-				<p class="text-white font-archer text-lg tablet:text-xl leading-6 self-start">
+				<p class="text-white font-archer text-lg tablet:text-xl leading-6 self-start lg-desktop:text-2xl">
 					Investing in the futures of those left behind every day. We’re a tech student organization
 					cultivating the strongest campus community of its kind to deliver community building,
 					academic support, and career development opportunities.
@@ -146,22 +140,22 @@
 	<!-- About ColorStack National -->
 	<div class="mt-60 laptop:mt-0">
 		<div class="laptop:bg-body-background-white bg-body-background-blue lg-desktop:max-w-[1920px] mx-auto laptop:py-40 py-6 px-8">
-			<div class="bg-body-background-blue rounded-lg laptop:p-16">
+			<div class="bg-body-background-blue rounded-lg laptop:p-12 desktop:p-16">
 				<div class="relative grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 gap-x-12">
 					<img src="graphics/colorstack_students.png" alt="People" class="w-full rounded-lg" />
 
-					<div class="flex flex-col items-center text-center">
-						<h1 class="text-white text-xl laptop:text-4xl pt-8 font-gotham-medium pb-4 laptop:pb-12">
+					<div class="flex flex-col items-center text-center laptop:max-h-72">
+						<h1 class="text-white text-xl laptop:text-2xl desktop:text-4xl desktop:pt-8 pt-4 font-gotham-medium pb-4 desktop:pb-12">
 							About ColorStack National
 						</h1>
-						<p class="text-white font-archer text-lg">
+						<p class="text-white font-archer text-base desktop:text-lg lg-desktop:text-2xl">
 							The ColorStack Family is our community of 10,000+ Black and Latinx Computer Science
 							students from 900+ schools nationwide. We’re committed to providing community building,
 							academic support, and career development year-round through our active Slack channel,
 							monthly Fam Fridays, and partnerships with 70+ top tech companies.
 						</p>
 						<a href="https://app.colorstack.io/apply" target="_blank">
-							<button class="text-black text-center bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-4 px-7 rounded-3xl mt-8 laptop:mt-16 font-gotham-medium">
+							<button class="text-black text-center bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-4 px-7 rounded-3xl mt-8 laptop:mt-12 font-gotham-medium lg-desktop:text-2xl">
 								Become a National Member
 							</button>
 						</a>
@@ -175,17 +169,17 @@
 	<div class="bg-body-background-blue">
 		<div class="lg-desktop:max-w-[1920px] mx-auto py-12 laptop:px-12 px-6">
 			<div class="flex flex-col justify-center items-center font-gotham-medium pb-12">
-				<h1 class="text-white text-[2rem] text-center">
+				<h1 class="text-white text-[2rem] text-center lg-desktop:[3rem]">
 					Meet the E-Board
 				</h1>
-				<p class="text-white text-center pt-3">
-					2023-2024
+				<p class="text-white text-center pt-3 lg-desktop:text-2xl">
+					2024-2025
 				</p>
 			</div>
-			<div class="grid grid-cols-2 laptop:grid-cols-4 laptop:col-start-2 col-span-5 gap-x-7 gap-y-12">
+			<div class="grid grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4 gap-x-10 gap-y-12">
 				{#each eboard_members as member}
 					<div class="grid grid-cols-1 justify-items-center items-center text-white text-[1.4rem] font-gotham-medium">
-						<div class="relative group w-36 h-36 tablet:w-64 tablet:h-64 laptop:w-80 laptop:h-80">
+						<div class="relative group w-[32vw] h-[32vw] max-w-72 max-h-72">
 							<a href="{member.linkedin}" target="_blank" class="block w-full h-full">
 							  <img
 								src={member.image}
@@ -201,8 +195,8 @@
 							  </div>
 							</a>
 						  </div>						  
-						<h1 class="py-2 text-base text-center laptop:text-2xl">{member.name}</h1>
-						<p class="text-xs text-center laptop:text-base">{member.position}</p>
+						<h1 class="py-3 desktop:py-5 text-base text-center laptop:text-2xl lg-desktop:text-3xl">{member.name}</h1>
+						<p class="text-xs desktop:text-lg lg-desktop:text-xl text-center laptop:text-base">{member.position}</p>
 					</div>
 				{/each}
 			</div>
@@ -214,21 +208,21 @@
 	<!-- Contact Us -->
 	<div class="bg-body-background-light-blue">
 		<div class="lg-desktop:max-w-[1920px] mx-auto laptop:px-24 laptop:py-36 py-12 px-12 mb-7">
-			<div class="grid grid-cols-1 laptop:grid-cols-2 laptop:cols-start-2">
+			<div class="grid grid-cols-1 laptop:grid-cols-2 laptop:cols-start-2 gap-12">
 				<div class="text-black">
-					<h1 class="text-3xl pb-8 font-gotham-medium">
+					<h1 class="text-3xl lg-desktop:text-5xl pb-8 font-gotham-medium">
 						Contact Us
 					</h1>
-					<p class="text-2xl font-archer">
+					<p class="text-2xl lg-desktop:text-4xl font-archer">
 						If you have any questions or concerns don't hesitate to contact us!
 					</p>
 				</div>
 
-				<div class="justify-center items-center w-full font-archer">
+				<div class="justify-center items-center w-full font-archer lg-desktop:text-2xl">
 					<input
 						type="text"
 						placeholder="First Name"
-						class="w-full h-12 mt-4 rounded-md px-3 text-[#767676]"
+						class="w-full h-12 mt-4 rounded-md px-3"
 						bind:value={first_name}
 					/>
 					<input

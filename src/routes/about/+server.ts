@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestEvent } from '@sveltejs/kit';
 import nodemailer from 'nodemailer';
-import { GOOGLE_EMAIL, GOOGLE_PASSWORD } from '$lib/env';
+import { GOOGLE_EMAIL, GOOGLE_PASSWORD } from '$env/static/private';
 
 interface FormData {
     first_name: string;
@@ -14,7 +14,7 @@ export async function POST({ request }: RequestEvent) {
     try {
         const data: FormData = await request.json();
 
-        let transporter = nodemailer.createTransport({
+        const transporter = nodemailer.createTransport({
             service: 'Gmail',
             auth: {
                 user: GOOGLE_EMAIL,
@@ -22,7 +22,7 @@ export async function POST({ request }: RequestEvent) {
             }
         });
 
-        let mailOptions = {
+        const mailOptions = {
             from: `${data.first_name} ${data.last_name}`,
             to: GOOGLE_EMAIL,
             subject: 'Message from ColorStack Contact Form',
