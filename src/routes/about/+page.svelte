@@ -145,10 +145,10 @@
 					<img src="graphics/colorstack_students.png" alt="People" class="w-full rounded-lg" />
 
 					<div class="flex flex-col items-center text-center laptop:max-h-72">
-						<h1 class="text-white text-xl laptop:text-2xl desktop:text-4xl desktop:pt-8 pt-4 font-gotham-medium pb-4 desktop:pb-12">
+						<h1 class="text-white text-2xl desktop:text-4xl desktop:pt-8 pt-4 font-gotham-medium pb-4 desktop:pb-12">
 							About ColorStack National
 						</h1>
-						<p class="text-white font-archer text-base desktop:text-lg lg-desktop:text-2xl">
+						<p class="text-white font-archer text-sm laptop:text-base desktop:text-lg lg-desktop:text-2xl">
 							The ColorStack Family is our community of 10,000+ Black and Latinx Computer Science
 							students from 900+ schools nationwide. We’re committed to providing community building,
 							academic support, and career development year-round through our active Slack channel,
@@ -167,7 +167,7 @@
 
 	<!-- Eboard Grid -->
 	<div class="bg-body-background-blue">
-		<div class="lg-desktop:max-w-[1920px] mx-auto py-12 laptop:px-12 px-6">
+		<div class="lg-desktop:max-w-[1920px] py-12">
 			<div class="flex flex-col justify-center items-center font-gotham-medium pb-12">
 				<h1 class="text-white text-[2rem] text-center lg-desktop:[3rem]">
 					Meet the E-Board
@@ -176,15 +176,15 @@
 					2024-2025
 				</p>
 			</div>
-			<div class="grid grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4 gap-x-10 gap-y-12">
+			<div class="grid grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-4 gap-y-12 laptop:px-12 px-6">
 				{#each eboard_members as member}
-					<div class="grid grid-cols-1 justify-items-center items-center text-white text-[1.4rem] font-gotham-medium">
-						<div class="relative group w-[32vw] h-[32vw] max-w-72 max-h-72">
+					<div class="grid grid-cols-1 justify-items-center text-white text-[1.4rem] font-gotham-medium">
+						<div class="w-[35vw] h-[35vw] max-w-72 max-h-72">
 							<a href="{member.linkedin}" target="_blank" class="block w-full h-full">
 							  <img
 								src={member.image}
 								alt="Photo of {member.name}"
-								class="w-full h-full object-cover rounded-md group-hover:opacity-50"
+								class="w-full h-full object-cover rounded-md group-hover:opacity-50 items-start"
 							  />
 							  <div class="absolute inset-0 flex items-center justify-center">
 								<img
@@ -195,7 +195,7 @@
 							  </div>
 							</a>
 						  </div>						  
-						<h1 class="py-3 desktop:py-5 text-base text-center laptop:text-2xl lg-desktop:text-3xl">{member.name}</h1>
+						<h1 class="py-3 desktop:py-5 text-center text-xl tablet:text-2xl lg-desktop:text-3xl">{member.name}</h1>
 						<p class="text-xs desktop:text-lg lg-desktop:text-xl text-center laptop:text-base">{member.position}</p>
 					</div>
 				{/each}
