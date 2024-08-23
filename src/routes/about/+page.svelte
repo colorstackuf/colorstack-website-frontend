@@ -190,8 +190,10 @@
 		<div
 			class="slides-in w-full max-w-[1536px] flex flex-col justify-center font-gotham-medium py-12 gap-y-4 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
 		>
-			<h1 class="text-white text-[2rem] text-center lg-desktop:[3rem]">Meet the E-Board</h1>
-			<p class="text-white text-center pb-4 lg-desktop:text-2xl">2024-2025</p>
+			<h1 class="text-white text-[2rem] text-center laptop:text-[3rem] desktop:[4rem]">
+				Meet the E-Board
+			</h1>
+			<p class="text-white text-center pb-4 text-lg laptop:text-2xl">2024-2025</p>
 
 			<div
 				class="grid grid-cols-2 tablet:grid-cols-3 desktop:grid-cols-4 gap-x-16 gap-y-6 tablet:gap-y-10 px-6"
@@ -222,12 +224,12 @@
 						</div>
 
 						<h1
-							class="text-center text-[3vw] tablet:text-[2.2vw] desktop:text-[min(1.8vw,2rem)] leading-6 tablet:leading-8 desktop:leading-10"
+							class="text-center text-[3vw] tablet:text-[2.2vw] desktop:text-[min(1.8vw,1.8rem)] leading-6 tablet:leading-8 desktop:leading-10"
 						>
 							{member.name}
 						</h1>
 						<p
-							class="font-gotham-light text-center text-[1.8vw] min-[360px]:text-[1.9vw] tablet:text-[min(1.37vw,0.9rem)] desktop:text-[min(1.125vw,1.3rem)]"
+							class="font-gotham-light text-center text-[1.8vw] min-[360px]:text-[1.9vw] tablet:text-[min(1.37vw,0.9rem)] desktop:text-[min(1.125vw,1.2rem)]"
 						>
 							{member.position}
 						</p>
