@@ -121,7 +121,7 @@
 							<a
 								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
 								href="https://linktr.ee/colorstackuf"
-								target="_blank">Get Involved</a
+								target="_blank">Become a Member</a
 							>
 						</div>
 					{/if}
