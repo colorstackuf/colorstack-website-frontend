@@ -42,10 +42,10 @@
 		<!-- Get Involved Section -->
 		<section class="mt-6 flex flex-col items-center laptop:items-start notebook:pr-16 tablet:mx-0">
 			<div
-				class="bg-body-background-blue grid grid-cols-1 gap-6 p-8 min-[500px]:p-12 notebook:py-12 notebook:px-20 rounded-xl notebook:rounded-l-none lg-desktop:rounded-l-xl max-w-[700px] notebook:max-w-[1041px] w-full h-auto mt-16"
+				class="slides-in bg-body-background-blue grid grid-cols-1 gap-6 p-8 min-[500px]:p-12 notebook:py-12 notebook:px-20 rounded-xl notebook:rounded-l-none lg-desktop:rounded-l-xl max-w-[700px] notebook:max-w-[1041px] w-full h-auto mt-16"
 			>
-				<h1 class="slides-in text-white text-3xl tablet:text-4xl font-gotham">Get Involved</h1>
-				<p class="slides-in text-white text-lg leading-6 font-archer-light">
+				<h1 class="text-white text-3xl tablet:text-4xl font-gotham">Get Involved</h1>
+				<p class="text-white text-lg leading-6 font-archer-light">
 					The UF ColorStack chapter is a vibrant community of over 170 Black and Latinx students
 					majoring in computer science and related fields. Through year-round opportunities for
 					community building, academic support, and career development, our members exchange
@@ -54,7 +54,7 @@
 					search support, giving members a competitive edge in the industry.
 				</p>
 				<button
-					class="slides-in transition-color duration-300 bg-colorstackuf-orange hover:bg-colorstackuf-blue text-black hover:text-white text-xl font-gotham-medium hover:bg-colorstackuf-blue py-2 px-10 rounded-[24px] w-fit"
+					class="transition-color duration-300 bg-colorstackuf-orange hover:bg-colorstackuf-blue text-black hover:text-white text-xl font-gotham-medium hover:bg-colorstackuf-blue py-2 px-10 rounded-[24px] w-fit"
 				>
 					<a
 						href="https://calendar.google.com/calendar/u/0/r?cid=MWZiODE4MTg2NGNkZjEyMDIyNjg3NDQ3Y2Y5YmNkNDk2OTgyZWZkNmQ3OTU2N2ZiMzI1M2Q4NzViM2M5YWJhN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
