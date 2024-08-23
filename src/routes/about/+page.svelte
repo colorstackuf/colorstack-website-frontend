@@ -117,15 +117,15 @@
 
 <div class="relative bg-body-background-white">
 	<!-- ColorStack UF intro -->
-	<section class="h-[40rem] h-auto laptop:h-auto lg-desktop:max-w-[1920px] mx-auto">
+	<section class="lg-desktop:max-w-[1920px] mx-auto">
 		<div
 			class="relative flex flex-col items-end laptop:items-start bg-[url('graphics/about-intro.png')] bg-cover bg-no-repeat bg-center h-[25rem] laptop:h-[45rem]"
 		>
 			<div
-				class="relative grid grid-cols-1 top-[16rem] laptop:top-0 laptop:left-[3rem] laptop:top-[5rem] z-10 bg-body-background-blue pl-7 pr-4 py-7 laptop:p-12 rounded-l-lg laptop:rounded-lg mb-12 w-11/12 min-w-[310px] h-[380px] laptop:w-[460px] laptop:h-auto"
+				class="relative grid grid-cols-1 top-[16rem] laptop:top-0 laptop:left-[3rem] laptop:top-[5rem] z-10 bg-body-background-blue pl-7 pr-4 py-7 laptop:p-12 rounded-l-lg laptop:rounded-lg mb-12 w-11/12 min-w-[310px] laptop:w-[460px]"
 			>
 				<h1
-					class="text-white text-lg tablet:text-2xl laptop:text-3xl lg-desktop:text-4xl font-gotham-medium laptop:pb-4"
+					class="text-white text-lg tablet:text-2xl laptop:text-3xl lg-desktop:text-4xl font-gotham-medium pb-4 laptop:pb-8"
 				>
 					ColorStack UF is a team committed to...
 				</h1>
