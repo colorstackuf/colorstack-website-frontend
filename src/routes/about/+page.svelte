@@ -115,7 +115,7 @@
 	}
 </script>
 
-<div class="bg-body-background-white">
+<div class="relative bg-body-background-white">
 	<!-- ColorStack UF intro -->
 	<section class="h-[40rem] h-auto laptop:h-auto lg-desktop:max-w-[1920px] mx-auto">
 		<div
@@ -184,7 +184,7 @@
 	</section>
 
 	<!-- Eboard -->
-	<section class="bg-body-background-blue flex flex-col items-center">
+	<section class="relative top-[-1px] bg-body-background-blue flex flex-col items-center">
 		<div class="w-full max-w-[1920px] flex flex-col justify-center font-gotham-medium py-12 gap-y-4 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x">
 				<h1 class="text-white text-[2rem] text-center lg-desktop:[3rem]">Meet the E-Board</h1>
 				<p class="text-white text-center pb-4 lg-desktop:text-2xl">2024-2025</p>
