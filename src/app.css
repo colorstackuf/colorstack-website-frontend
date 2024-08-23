@@ -20,7 +20,7 @@
 		font-style: normal;
 		font-weight: 400;
 		font-display: swap;
-		src: url('/fonts/Gotham-Medium.otf') format('opentype');
+		src: url('/fonts/GothamMedium.otf') format('opentype');
 	}
 
 	@font-face {
@@ -28,7 +28,7 @@
 		font-style: normal;
 		font-weight: 500;
 		font-display: swap;
-		src: url('/fonts/Gotham-Light.otf') format('opentype');
+		src: url('/fonts/GothamLight.otf') format('opentype');
 	}
 
 	@font-face {
@@ -36,7 +36,7 @@
 		font-style: normal;
 		font-weight: 400;
 		font-display: swap;
-		src: url('/fonts/Archer_Medium.ttf') format('TrueType');
+		src: url('/fonts/ArcherMedium.ttf') format('TrueType');
 	}
 
 	@font-face {
@@ -44,6 +44,24 @@
 		font-style: normal;
 		font-weight: 400;
 		font-display: swap;
-		src: url('/fonts/ArcherBookPro.otf') format('opentype');
+		src: url('/fonts/ArcherBook.otf') format('opentype');
+	}
+
+	@font-face {
+		font-family: 'Archer-Light';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts/ArcherLight.otf') format('opentype');
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.slides-in {
+			@apply opacity-0 translate-y-10 transition-all duration-500;
+		}
+
+		.slides-in.slides-in--visible {
+			@apply opacity-100 translate-y-0;
+		}
 	}
 }

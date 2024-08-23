@@ -35,6 +35,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fullcalendar/core": "^6.1.14",
+		"@fullcalendar/daygrid": "^6.1.14",
+		"@fullcalendar/google-calendar": "^6.1.14",
 		"@splidejs/svelte-splide": "^0.2.9",
 		"dotenv": "^16.4.5",
 		"nodemailer": "^6.9.13",
