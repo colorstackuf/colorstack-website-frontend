@@ -148,39 +148,34 @@
 	</section>
 
 	<!-- About ColorStack National -->
-	<section class="mt-60 laptop:mt-0">
-		<div
-			class="laptop:bg-body-background-white bg-body-background-blue max-w-[1920px] mx-auto laptop:py-40 py-6 px-8"
-		>
-			<div class="bg-body-background-blue rounded-lg laptop:p-12 desktop:p-16">
-				<div class="relative grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 gap-x-12">
+	<section class="mt-60 laptop:mt-0 laptop:bg-body-background-white bg-body-background-blue max-w-[1920px] mx-auto laptop:py-40 py-6 px-8">
+			<div class="bg-body-background-blue laptop:rounded-lg laptop:p-12 desktop:p-16 grid grid-cols-1 laptop:grid-cols-2 gap-x-12">
 					<img src="graphics/colorstack_students.png" alt="People" class="w-full rounded-lg" />
 
-					<div class="flex flex-col items-center text-center laptop:max-h-72">
+					<div class="flex flex-col items-center self-center gap-y-4 desktop:gap-y-8">
 						<h1
-							class="text-white text-2xl desktop:text-4xl desktop:pt-8 pt-4 font-gotham-medium pb-4 desktop:pb-12"
+							class="text-white text-2xl desktop:text-4xl desktop:pt-8 pt-6 font-gotham-medium"
 						>
 							About ColorStack National
 						</h1>
 						<p
-							class="text-white font-archer-light text-sm laptop:text-base desktop:text-lg lg-desktop:text-2xl"
+							class="text-white text-center font-archer-light text-sm laptop:text-base desktop:text-lg lg-desktop:text-2xl mb-4 w-full max-w-[580px] laptop:max-w-[750px]"
 						>
 							The ColorStack Family is our community of 10,000+ Black and Latinx Computer Science
 							students from 900+ schools nationwide. We’re committed to providing community
 							building, academic support, and career development year-round through our active Slack
 							channel, monthly Fam Fridays, and partnerships with 70+ top tech companies.
 						</p>
-						<a href="https://app.colorstack.io/apply" target="_blank">
 							<button
-								class="text-black text-center bg-colorstackuf-orange transition-bg-color transition-color hover:bg-colorstackuf-blue hover:text-white duration-300 py-4 px-7 rounded-3xl mt-8 laptop:mt-12 font-gotham-medium lg-desktop:text-2xl"
-							>
-								Become a National Member
+								class="bg-colorstackuf-orange transition-all hover:bg-colorstackuf-blue hover:text-white duration-300 py-3 desktop:py-4 px-7 rounded-full font-gotham-medium text-black text-center text-xs desktop:text-base"
+>
+							<a href="https://app.colorstack.io/apply" target="_blank">
+								
+									Become a National Member
+							</a>
 							</button>
-						</a>
 					</div>
-				</div>
 			</div>
-		</div>
 	</section>
 
 	<!-- Eboard -->
