@@ -38,6 +38,10 @@
 		{
 			name: 'Cisco',
 			src: '/sponsors/cisco.png'
+		},
+		{
+			name: 'SEO',
+			src: '/sponsors/seo.png'
 		}
 	];
 
