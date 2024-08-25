@@ -226,6 +226,7 @@
 
 	<!-- Eboard -->
 	<section
+		id="eboard"
 		class="relative top-[-1px] bg-body-background-blue flex flex-col items-center pt-16 laptop:pt-0 padding"
 	>
 		<div
@@ -285,7 +286,7 @@
 	</section>
 </div>
 
-<section class="bg-body-background-light-blue">
+<section id="contact-us" class="bg-body-background-light-blue">
 	<!-- Contact Us -->
 	<div
 		class="slides-in lg-desktop:max-w-[1536px] mx-auto laptop:px-24 laptop:py-36 py-12 px-12 mb-7"
