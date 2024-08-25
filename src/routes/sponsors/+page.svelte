@@ -25,6 +25,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>ColorStack UF | Sponsors</title>
+</svelte:head>
+
 <div
 	class="pt-20 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white mb-5"
 >

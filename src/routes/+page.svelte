@@ -68,6 +68,10 @@
 	onMount(setAnimations);
 </script>
 
+<svelte:head>
+	<title>ColorStack UF | Home</title>
+</svelte:head>
+
 <div
 	class="mt-6 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-blue overflow-hidden"
 >

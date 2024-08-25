@@ -158,6 +158,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>ColorStack UF | About</title>
+</svelte:head>
+
 <div class="relative bg-body-background-white">
 	<!-- ColorStack UF intro -->
 	<section class="lg-desktop:max-w-[1536px] mx-auto">
