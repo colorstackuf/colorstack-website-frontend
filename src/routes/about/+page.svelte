@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { setAnimations } from '$lib/utils';
+	import type { ContactData } from '$lib/types';
+	import { validEmail, setAnimations } from '$lib/utils';
 	onMount(setAnimations);
 
 	const eboard_members = [
@@ -90,29 +91,69 @@
 		}
 	];
 
-	let first_name = '';
-	let last_name = '';
-	let email = '';
-	let message = '';
+	const contactData: ContactData = {
+		firstName: '',
+		lastName: '',
+		email: '',
+		message: ''
+	};
 
+	const contactErrors = {
+		firstName: '',
+		lastName: '',
+		email: '',
+		message: ''
+	};
+
+	const validateForm = () => {
+		let valid = true;
+		if (!contactData.firstName) {
+			valid = false;
+			contactErrors.firstName = 'First name is required';
+		} else {
+			contactErrors.firstName = '';
+		}
+
+		if (!validEmail(contactData.email)) {
+			valid = false;
+			contactErrors.email = 'Invalid email';
+		} else {
+			contactErrors.email = '';
+		}
+
+		if (contactData.message.trim() === '') {
+			valid = false;
+			contactErrors.message = 'Message is required';
+		} else {
+			contactErrors.message = '';
+		}
+
+		return valid;
+	};
 	async function submitForm() {
+		if (!validateForm()) {
+			return;
+		}
+
 		const response = await fetch('/api/email', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify({
-				first_name,
-				last_name,
-				email,
-				message
-			})
+			body: JSON.stringify(contactData)
 		});
 
 		if (response.ok) {
 			alert('Email sent successfully');
 		} else {
-			alert('Failed to send email');
+			response
+				.json()
+				.then((data) => {
+					alert(data.message);
+				})
+				.catch(() => {
+					alert('An error occurred');
+				});
 		}
 	}
 </script>
@@ -257,30 +298,51 @@
 				</p>
 			</div>
 
-			<div class="justify-center items-center w-full font-archer lg-desktop:text-2xl">
-				<input
-					type="text"
-					placeholder="First Name"
-					class="w-full h-12 mt-4 rounded-md px-3"
-					bind:value={first_name}
-				/>
+			<div class="flex flex-col gap-4 justify-center w-full font-archer lg-desktop:text-2xl">
+				<div>
+					<input
+						type="text"
+						placeholder="First Name"
+						class="w-full h-12 rounded-md px-3"
+						style={contactErrors.firstName && 'border: 2px solid red'}
+						bind:value={contactData.firstName}
+						on:change={() => (contactErrors.firstName = '')}
+					/>
+					{#if contactErrors.firstName}
+						<p class="text-red-800 text-sm">First Name is required</p>
+					{/if}
+				</div>
 				<input
 					type="text"
 					placeholder="Last Name"
-					class="w-full h-12 mt-4 rounded-md px-3"
-					bind:value={last_name}
+					class="w-full h-12 rounded-md px-3"
+					bind:value={contactData.lastName}
 				/>
-				<input
-					type="text"
-					placeholder="Email Address"
-					class="w-full h-12 mt-4 rounded-md px-3"
-					bind:value={email}
-				/>
-				<textarea
-					placeholder="Message"
-					class="w-full h-48 mt-4 rounded-md px-3 py-3"
-					bind:value={message}
-				/>
+				<div>
+					<input
+						type="text"
+						placeholder="Email Address"
+						class="w-full h-12 rounded-md px-3"
+						style={contactErrors.email && 'border: 2px solid red'}
+						bind:value={contactData.email}
+						on:change={() => (contactErrors.email = '')}
+					/>
+					{#if contactErrors.email}
+						<p class="text-red-800 text-sm">Invalid Email</p>
+					{/if}
+				</div>
+				<div>
+					<textarea
+						placeholder="Message"
+						class="w-full h-48 rounded-md p-3 resize-none align-bottom"
+						style={contactErrors.message && 'border: 2px solid red'}
+						bind:value={contactData.message}
+						on:change={() => (contactErrors.message = '')}
+					/>
+					{#if contactErrors.message}
+						<p class="text-red-800 text-sm">Message is required</p>
+					{/if}
+				</div>
 				<button
 					class="w-full text-white bg-body-background-blue transition-bg-color transition-color hover:bg-colorstackuf-orange hover:text-black duration-300 py-4 px-7 rounded-md mt-4 font-gotham-medium"
 					on:click={submitForm}

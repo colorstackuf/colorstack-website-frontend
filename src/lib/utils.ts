@@ -15,3 +15,5 @@ export function setAnimations() {
 		observer.observe(elem);
 	});
 }
+
+export const validEmail = (email: string) => /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);

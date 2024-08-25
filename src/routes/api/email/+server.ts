@@ -2,17 +2,21 @@ import { json } from '@sveltejs/kit';
 import type { RequestEvent } from '@sveltejs/kit';
 import nodemailer from 'nodemailer';
 import { GOOGLE_EMAIL, GOOGLE_PASSWORD } from '$env/static/private';
+import type { ContactData } from '$lib/types';
+import { validEmail } from '$lib/utils';
 
-interface FormData {
-	first_name: string;
-	last_name: string;
-	email: string;
-	message: string;
-}
 
 export async function POST({ request }: RequestEvent) {
 	try {
-		const data: FormData = await request.json();
+		const data: ContactData = await request.json();
+
+		if (!data.firstName) return json({ message: 'First name is required!' }, { status: 400 });
+		if (!data.email) return json({ message: 'Email is required!' }, { status: 400 });
+		if (!data.message || data.message.trim() === '') return json({ message: 'A message is required!' }, { status: 400 });
+
+		if (!validEmail(data.email)) {
+			return json({ message: 'Invalid email address!' }, { status: 400 });
+		}
 
 		const transporter = nodemailer.createTransport({
 			service: 'Gmail',
@@ -23,7 +27,7 @@ export async function POST({ request }: RequestEvent) {
 		});
 
 		const mailOptions = {
-			from: `${data.first_name} ${data.last_name}`,
+			from: `${data.firstName} ${data.lastName}`,
 			to: GOOGLE_EMAIL,
 			subject: 'Message from ColorStack Contact Form',
 			text: 'REPLY TO: ' + data.email + '\n\n' + data.message
