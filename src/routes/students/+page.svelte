@@ -33,6 +33,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>ColorStack UF | Students</title>
+</svelte:head>
+
 <div
 	class="justify-center grid grid-cols-1 lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white"
 >
