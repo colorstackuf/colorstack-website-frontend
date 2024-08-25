@@ -96,7 +96,7 @@
 	let message = '';
 
 	async function submitForm() {
-		const response = await fetch('/about', {
+		const response = await fetch('/api/email', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
