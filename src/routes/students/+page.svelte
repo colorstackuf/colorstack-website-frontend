@@ -77,21 +77,3 @@
 		</section>
 	</div>
 </div>
-
-<style lang="postcss">
-	@media (prefers-reduced-motion: no-preference) {
-		.slides-in {
-			@apply opacity-0 translate-y-10 transition-all duration-500;
-		}
-
-		/*
-          If Svelte doesn't see the `.slides-in--visible` class in the DOM, it
-          will attempt to remove the styles, breaking our animations.
-          To prevent this, we use `:global` to force Svelte to keep the styles.
-          https://svelte.dev/docs/faq#can-i-tell-svelte-not-to-remove-my-unused-styles
-         */
-		:global(.slides-in.slides-in--visible) {
-			@apply opacity-100 translate-y-0;
-		}
-	}
-</style>
