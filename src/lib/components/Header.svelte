@@ -38,9 +38,7 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<header
-	class="h-[80px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x h-[5rem] flex flex-col items-center justify-center font-gotham-book mt-4"
->
+<header class="padding h-[5rem] flex flex-col items-center font-gotham-book my-3">
 	<div class="w-full max-w-page-width h-full flex items-center">
 		<!-- Logo and Title -->
 		<a
@@ -66,20 +64,6 @@
 				</p>
 			</div>
 		</a>
-		<!-- <a -->
-		<!-- 	href="/" -->
-		<!-- 	class="flex-[1] pt-1" -->
-		<!-- on:click={() => { -->
-		<!-- 	open = false; -->
-		<!-- 	document.body.classList.toggle('no-scroll', false); -->
-		<!-- }} -->
-		<!-- > -->
-		<!-- 	<img -->
-		<!-- 		class="object-contain w-[20rem]" -->
-		<!-- 		src="/logos/colorstack-logo-title.png" -->
-		<!-- 		alt="Colorstack logo and title" -->
-		<!-- 	/> -->
-		<!-- </a> -->
 
 		<!-- Navigation Section -->
 		<div class="flex items-center gap-12 h-full">

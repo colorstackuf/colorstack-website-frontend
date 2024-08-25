@@ -34,7 +34,7 @@
 </script>
 
 <div
-	class="mt-6 justify-center grid grid-cols-1 lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white"
+	class="justify-center grid grid-cols-1 lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white"
 >
 	<div />
 
