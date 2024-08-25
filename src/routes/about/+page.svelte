@@ -205,22 +205,26 @@
 					>
 						<!-- Image -->
 						<div
-							class="w-[44vw] h-[44vw] tablet:w-[27vw] desktop:w-[20vw] max-w-[500px] desktop:max-w-[300px] tablet:h-[27vw] desktop:h-[20vw] max-h-[500px] desktop:max-h-[300px] mb-2 notebook:mb-4"
+							class="relative w-[44vw] h-[44vw] tablet:w-[27vw] desktop:w-[20vw] max-w-[500px] desktop:max-w-[300px] tablet:h-[27vw] desktop:h-[20vw] max-h-[500px] desktop:max-h-[300px] mb-2 notebook:mb-4"
 						>
-							<a href={member.linkedin} target="_blank" class="block w-full h-full">
-								<img
-									src={member.image}
-									alt="Photo of {member.name}"
-									class="w-full h-full object-cover rounded-lg laptop:rounded-xl group-hover:opacity-50 items-start"
-								/>
-								<!-- 	<div class="absolute inset-0 flex items-center justify-center"> -->
-								<!-- 		<img -->
-								<!-- 			src="logos/linkedin.svg" -->
-								<!-- 			alt="LinkedIn Logo" -->
-								<!-- 			class="opacity-0 group-hover:opacity-75 transition-opacity duration-500 ease-in-out" -->
-								<!-- 		/> -->
-								<!-- 	</div> -->
-							</a>
+							<div
+								class="group block w-full h-full transition-all duration-300 hover:bg-neutral-950/70 absolute grid grid-cols-1 justify-items-center items-center"
+							>
+								<a href={member.linkedin} target="_blank">
+									<img
+										src="/logos/linkedin.svg"
+										alt="LinkedIn"
+										width={40}
+										height={40}
+										class="opacity-0 group-hover:opacity-100 transition-all duration-300"
+									/>
+								</a>
+							</div>
+							<img
+								src={member.image}
+								alt="Photo of {member.name}"
+								class="w-full h-full object-cover rounded-lg laptop:rounded-xl items-start"
+							/>
 						</div>
 
 						<h1
