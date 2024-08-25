@@ -10,7 +10,7 @@
 		{
 			title: 'TALENT ACQUISITION',
 			content:
-				'Get exceptional university opportunities from the community of Black & Latinx students at the University of Florida.'
+				'Get exceptional university opportunities from the strongest community of Black & Latinx students at the University of Florida.'
 		},
 		{
 			title: 'RACIAL EQUITY',
