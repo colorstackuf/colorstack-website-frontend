@@ -41,6 +41,13 @@ export type Post = {
 	colorPalette: ColorPalette;
 };
 
+export interface FormData {
+	firstName: string;
+	lastName: string;
+	email: string;
+	message: string;
+}
+
 export type InstagramData = {
 	username: string;
 	biography: string;
