@@ -29,9 +29,7 @@
 	class="pt-20 mt-2 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white mb-5"
 >
 	<!-- Sponsors -->
-	<section
-		class="lg-desktop:col-start-2 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
-	>
+	<section class="lg-desktop:col-start-2 padding">
 		<h2
 			class="text-body-background-blue font-gotham-medium text-[1.7rem] tablet:text-[2rem] mb-10 text-center tablet:text-left"
 		>
@@ -43,9 +41,7 @@
 	</section>
 
 	<!-- Sponsored Events -->
-	<section
-		class="lg-desktop:col-start-2 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
-	>
+	<section class="lg-desktop:col-start-2 padding">
 		<h2
 			class="text-body-background-blue font-gotham-medium text-[1.5rem] tablet:text-[2rem] mt-20 mb-10 text-center tablet:text-left"
 		>
@@ -63,9 +59,9 @@
 
 	<!-- Why Support Colorstack UF -->
 	<section
-		class="tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-light-blue py-10 tablet:py-24 px-mobile-padding-x tablet:px-tablet-padding-x laptop:flex laptop:justify-center laptop:px-laptop-padding-x pb-20"
+		class="tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-light-blue py-10 tablet:py-24 laptop:flex laptop:justify-center pb-20"
 	>
-		<div class="max-w-page-width w-full text-center">
+		<div class="max-w-page-width w-full text-center padding">
 			<h2
 				class="slides-in font-gotham-medium text-font-color-dark-blue text-center text-[1.5rem] tablet:text-4xl mb-20"
 			>

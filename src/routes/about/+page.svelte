@@ -192,7 +192,7 @@
 
 	<!-- About ColorStack National -->
 	<section
-		class="mt-60 laptop:mt-0 laptop:bg-body-background-white bg-body-background-blue max-w-[1536px] mx-auto laptop:py-40 py-6 px-8"
+		class="mt-60 laptop:mt-0 laptop:bg-body-background-white bg-body-background-blue max-w-[1536px] mx-auto laptop:py-40 py-6 padding"
 	>
 		<div
 			class="slides-in bg-body-background-blue laptop:rounded-lg laptop:p-12 desktop:p-16 grid grid-cols-1 laptop:grid-cols-2 gap-x-12"
@@ -226,10 +226,10 @@
 
 	<!-- Eboard -->
 	<section
-		class="relative top-[-1px] bg-body-background-blue flex flex-col items-center pt-16 laptop:pt-0"
+		class="relative top-[-1px] bg-body-background-blue flex flex-col items-center pt-16 laptop:pt-0 padding"
 	>
 		<div
-			class="slides-in w-full max-w-[1536px] flex flex-col justify-center font-gotham-medium py-12 gap-y-4 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
+			class="slides-in w-full max-w-[1536px] flex flex-col justify-center font-gotham-medium py-12 gap-y-4"
 		>
 			<h1 class="text-white text-[2rem] text-center laptop:text-[3rem] desktop:[4rem]">
 				Meet the E-Board
@@ -237,7 +237,7 @@
 			<p class="text-white text-center pb-4 text-lg laptop:text-2xl">2024-2025</p>
 
 			<div
-				class="grid grid-cols-2 tablet:grid-cols-3 desktop:grid-cols-4 gap-x-16 gap-y-6 tablet:gap-y-10 px-6"
+				class="grid grid-cols-2 tablet:grid-cols-3 desktop:grid-cols-4 gap-x-6 tablet:gap-x-16 gap-y-6 px-4"
 			>
 				{#each eboard_members as member}
 					<!-- Member -->
@@ -246,7 +246,7 @@
 					>
 						<!-- Image -->
 						<div
-							class="relative w-[44vw] h-[44vw] tablet:w-[27vw] desktop:w-[20vw] max-w-[500px] desktop:max-w-[300px] tablet:h-[27vw] desktop:h-[20vw] max-h-[500px] desktop:max-h-[300px] mb-2 notebook:mb-4"
+							class="relative w-[42vw] h-[42vw] tablet:w-[27vw] tablet:h-[27vw] desktop:w-[20vw] max-w-[500px] desktop:max-w-[300px] tablet:h-[27vw] desktop:h-[20vw] max-h-[500px] desktop:max-h-[300px] mb-2 notebook:mb-4"
 						>
 							<div
 								class="group block w-full h-full transition-all duration-300 hover:bg-neutral-950/70 absolute grid grid-cols-1 justify-items-center items-center"
@@ -298,7 +298,10 @@
 				</p>
 			</div>
 
-			<div class="flex flex-col gap-4 justify-center w-full font-archer lg-desktop:text-2xl">
+			<form
+				class="flex flex-col gap-4 justify-center w-full font-archer lg-desktop:text-2xl"
+				on:submit|preventDefault={submitForm}
+			>
 				<div>
 					<input
 						type="text"
@@ -345,11 +348,10 @@
 				</div>
 				<button
 					class="w-full text-white bg-body-background-blue transition-bg-color transition-color hover:bg-colorstackuf-orange hover:text-black duration-300 py-4 px-7 rounded-md mt-4 font-gotham-medium"
-					on:click={submitForm}
 				>
 					Submit
 				</button>
-			</div>
+			</form>
 		</div>
 	</div>
 </section>

@@ -42,7 +42,7 @@
 		<!-- Get Involved Section -->
 		<section class="mt-6 flex flex-col items-center laptop:items-start notebook:pr-16 tablet:mx-0">
 			<div
-				class="slides-in bg-body-background-blue grid grid-cols-1 gap-6 p-8 min-[500px]:p-12 notebook:py-12 notebook:px-20 rounded-xl notebook:rounded-l-none lg-desktop:rounded-l-xl max-w-[700px] notebook:max-w-[1041px] w-full h-auto mt-16"
+				class="slides-in bg-body-background-blue grid grid-cols-1 gap-6 p-8 min-[500px]:p-12 notebook:px-tablet-padding-x laptop:px-laptop-padding-x rounded-xl notebook:rounded-l-none lg-desktop:rounded-l-xl max-w-[700px] notebook:max-w-[1041px] w-full h-auto mt-16"
 			>
 				<h1 class="text-white text-3xl tablet:text-4xl font-gotham">Get Involved</h1>
 				<p class="text-white text-lg leading-6 font-archer-light">
@@ -68,8 +68,8 @@
 		</section>
 
 		<!-- Calendar Section -->
-		<section class="relative bg-body-background-white p-2 rounded-md grid grid-cols-1 mb-2 mt-16">
-			<h2 class="text-black text-4xl font-gotham mb-4">Event Calendar</h2>
+		<section class="relative bg-body-background-white rounded-md grid grid-cols-1 mb-2 mt-16">
+			<h2 class="notebook:padding text-black text-4xl font-gotham mb-4">Event Calendar</h2>
 			<div
 				id="calendar"
 				class="slides-in justify-self-center w-[76vw] max-w-[1200px] max-h-[60vw] bg-gray-100 rounded-lg shadow-md"

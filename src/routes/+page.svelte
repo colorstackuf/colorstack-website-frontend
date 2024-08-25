@@ -73,7 +73,7 @@
 >
 	<!-- What We Do -->
 	<section
-		class="grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 mt-12 laptop:mt-0 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:max-h-[600px] laptop:min-h-[550px] laptop:justify-items-end min-[1150px]:px-[50px] desktop:px-[30px]"
+		class="grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 mt-12 laptop:mt-0 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] laptop:max-h-[600px] laptop:min-h-[550px] laptop:justify-items-end padding min-[1150px]:px-[50px] desktop:px-[30px]"
 	>
 		<div
 			class="slides-in flex flex-col justify-center laptop:justify-normal laptop:mt-20 desktop:mt-28 items-center laptop:justify-self-center"
@@ -100,7 +100,7 @@
 
 	<!-- Pillars -->
 	<section
-		class="tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-white py-20 tablet:py-36 notebook:py-40 px-mobile-padding-x tablet:px-tablet-padding-x translate-y-[-110px] tablet:translate-y-[-130px] laptop:flex laptop:justify-center laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
+		class="padding tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-white py-20 tablet:py-36 notebook:py-40 translate-y-[-110px] tablet:translate-y-[-130px] laptop:flex laptop:justify-center desktop:translate-y-[-40px]"
 	>
 		<div class="max-w-page-width grid grid-cols-1 tablet:grid-cols-3 gap-[70px] tablet:gap-[40px]">
 			{#each pillars as pillar}
@@ -111,7 +111,7 @@
 
 	<!-- Sponsors -->
 	<section
-		class="lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
+		class="padding lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] desktop:translate-y-[-40px]"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-8">Our Sponsors</h2>
 		<Sponsors />
@@ -119,7 +119,7 @@
 
 	<!-- Follow Instagram -->
 	<section
-		class="slides-in lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
+		class="padding slides-in lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] desktop:translate-y-[-40px]"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-8">
 			Follow our Instagram!
@@ -129,7 +129,7 @@
 
 	<!-- FAQ -->
 	<section
-		class="slides-in lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px] desktop:mb-24"
+		class="padding slides-in lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 desktop:translate-y-[-40px] desktop:mb-24"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-4">FAQs</h2>
 		<Accordion>
