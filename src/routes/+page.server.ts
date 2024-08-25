@@ -7,7 +7,6 @@ export const load = async () => {
 	try {
 		const resp = await fetch(url);
 		instagramData = await resp.json();
-		console.log(instagramData);
 	} catch (e) {
 		console.error(e);
 	}
