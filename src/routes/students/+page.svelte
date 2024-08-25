@@ -68,11 +68,11 @@
 		</section>
 
 		<!-- Calendar Section -->
-		<section class="relative bg-body-background-white rounded-md grid grid-cols-1 mb-2 mt-16">
+		<section class="relative bg-body-background-white rounded-md grid grid-cols-1 mb-8 mt-16">
 			<h2 class="notebook:padding text-black text-4xl font-gotham mb-4">Event Calendar</h2>
 			<div
 				id="calendar"
-				class="slides-in justify-self-center w-[76vw] max-w-[1200px] max-h-[60vw] bg-gray-100 rounded-lg shadow-md"
+				class="slides-in justify-self-center w-[76vw] h-[76vw] max-w-[900px] max-h-[900px] bg-gray-100 rounded-lg shadow-md p-4"
 			></div>
 		</section>
 	</div>

@@ -44,3 +44,15 @@ body {
 	scrollbar-width: none;
 	/* Firefox */
 }
+
+.fc .fc-toolbar-title {
+	font-family: 'Gotham-Medium', sans-serif;
+	font-size: 1.5rem;
+}
+
+@media (max-width: 640px) {
+	.fc .fc-toolbar-title {
+		font-family: 'Gotham-Medium', sans-serif;
+		font-size: 1rem;
+	}
+}
