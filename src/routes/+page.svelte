@@ -13,34 +13,34 @@
 
 	const images: carouselImage[] = [
 		{
-			id: 'gbm0',
-			src: '/nvidia-fdl/img0.jpg',
-			alt: 'ColorStack GBM 1'
+			id: 'img0',
+			src: '/carousel/img0.jpeg',
+			alt: 'ColorStack Image'
 		},
 		{
-			id: 'fdl1',
-			src: '/nvidia-fdl/fdl1.jpg',
-			alt: 'Nvidia Fundamentals of Deep learning Workshop'
+			id: 'img1',
+			src: '/carousel/img1.jpeg',
+			alt: 'ColorStack Image'
 		},
 		{
-			id: 'fdl2',
-			src: '/nvidia-fdl/fdl2.jpg',
-			alt: 'Nvidia Fundamentals of Deep learning Workshop'
+			id: 'img2',
+			src: '/carousel/img2.jpeg',
+			alt: 'ColorStack Image'
 		},
 		{
-			id: 'fdl3',
-			src: '/nvidia-fdl/fdl3.jpg',
-			alt: 'Nvidia Fundamentals of Deep learning Workshop'
+			id: 'img3',
+			src: '/carousel/img3.jpeg',
+			alt: 'ColorStack Image'
 		},
 		{
-			id: 'fdl4',
-			src: '/nvidia-fdl/fdl4.jpg',
-			alt: 'Nvidia Fundamentals of Deep learning Workshop'
+			id: 'img4',
+			src: '/carousel/img4.jpeg',
+			alt: 'ColorStack Image'
 		},
 		{
-			id: 'fdl5',
-			src: '/nvidia-fdl/fdl5.jpg',
-			alt: 'Nvidia Fundamentals of Deep learning Workshop'
+			id: 'img5',
+			src: '/carousel/img5.jpeg',
+			alt: 'ColorStack Image'
 		}
 	];
 
