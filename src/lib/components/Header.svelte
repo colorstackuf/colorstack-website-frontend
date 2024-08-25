@@ -38,25 +38,48 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<div
+<header
 	class="h-[80px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x h-[5rem] flex flex-col items-center justify-center font-gotham-book mt-4"
 >
 	<div class="w-full max-w-page-width h-full flex items-center">
 		<!-- Logo and Title -->
 		<a
 			href="/"
-			class="flex-[1] pt-1"
+			class="w-fit h-fit grow pt-1"
 			on:click={() => {
 				open = false;
 				document.body.classList.toggle('no-scroll', false);
 			}}
 		>
-			<img
-				class="object-contain w-[20rem]"
-				src="/logos/colorstack-logo-title.svg"
-				alt="Colorstack logo and title"
-			/>
+			<div class="grid grid-cols-1 w-fit gap-1.5">
+				{#if innerWidth >= 1280}
+					<img src="/logos/colorstack.png" alt="ColorStack" width={280} height={69} />
+				{:else if innerWidth >= 768}
+					<img src="/logos/colorstack.png" alt="ColorStack" width={230} height={39} />
+				{:else}
+					<img src="/logos/colorstack.png" alt="ColorStack" width={200} height={9} />
+				{/if}
+				<p
+					class="justify-self-end text-colorstackuf-orange text-[0.73rem] notebook:text-[0.83rem] desktop:text-base"
+				>
+					At University of Florida
+				</p>
+			</div>
 		</a>
+		<!-- <a -->
+		<!-- 	href="/" -->
+		<!-- 	class="flex-[1] pt-1" -->
+		<!-- on:click={() => { -->
+		<!-- 	open = false; -->
+		<!-- 	document.body.classList.toggle('no-scroll', false); -->
+		<!-- }} -->
+		<!-- > -->
+		<!-- 	<img -->
+		<!-- 		class="object-contain w-[20rem]" -->
+		<!-- 		src="/logos/colorstack-logo-title.png" -->
+		<!-- 		alt="Colorstack logo and title" -->
+		<!-- 	/> -->
+		<!-- </a> -->
 
 		<!-- Navigation Section -->
 		<div class="flex items-center gap-12 h-full">
@@ -137,7 +160,7 @@
 			{/if}
 		</div>
 	</div>
-</div>
+</header>
 
 <style>
 	.nav-btn {
