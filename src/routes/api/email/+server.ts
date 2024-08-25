@@ -5,14 +5,14 @@ import { GOOGLE_EMAIL, GOOGLE_PASSWORD } from '$env/static/private';
 import type { ContactData } from '$lib/types';
 import { validEmail } from '$lib/utils';
 
-
 export async function POST({ request }: RequestEvent) {
 	try {
 		const data: ContactData = await request.json();
 
 		if (!data.firstName) return json({ message: 'First name is required!' }, { status: 400 });
 		if (!data.email) return json({ message: 'Email is required!' }, { status: 400 });
-		if (!data.message || data.message.trim() === '') return json({ message: 'A message is required!' }, { status: 400 });
+		if (!data.message || data.message.trim() === '')
+			return json({ message: 'A message is required!' }, { status: 400 });
 
 		if (!validEmail(data.email)) {
 			return json({ message: 'Invalid email address!' }, { status: 400 });
