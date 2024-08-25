@@ -35,7 +35,9 @@
 		>
 			Our Sponsors
 		</h2>
-		<div class="ml-0 tablet:ml-0 lg:ml-0 bg-body-background-blue p-16 rounded-lg">
+		<div
+			class="ml-0 tablet:ml-0 lg:ml-0 bg-body-background-blue p-8 tablet:p-12 laptop:p-16 rounded-lg"
+		>
 			<Sponsors />
 		</div>
 	</section>
