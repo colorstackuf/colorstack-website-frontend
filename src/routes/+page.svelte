@@ -13,34 +13,34 @@
 
 	const images: carouselImage[] = [
 		{
-			id: 'gbm0',
-			src: '/nvidia-fdl/img0.jpg',
-			alt: 'ColorStack GBM 1'
+			id: 'img0',
+			src: '/carousel/img0.jpeg',
+			alt: 'ColorStack Image'
 		},
 		{
-			id: 'fdl1',
-			src: '/nvidia-fdl/fdl1.jpg',
-			alt: 'Nvidia Fundamentals of Deep learning Workshop'
+			id: 'img1',
+			src: '/carousel/img1.jpeg',
+			alt: 'ColorStack Image'
 		},
 		{
-			id: 'fdl2',
-			src: '/nvidia-fdl/fdl2.jpg',
-			alt: 'Nvidia Fundamentals of Deep learning Workshop'
+			id: 'img2',
+			src: '/carousel/img2.jpeg',
+			alt: 'ColorStack Image'
 		},
 		{
-			id: 'fdl3',
-			src: '/nvidia-fdl/fdl3.jpg',
-			alt: 'Nvidia Fundamentals of Deep learning Workshop'
+			id: 'img3',
+			src: '/carousel/img3.jpeg',
+			alt: 'ColorStack Image'
 		},
 		{
-			id: 'fdl4',
-			src: '/nvidia-fdl/fdl4.jpg',
-			alt: 'Nvidia Fundamentals of Deep learning Workshop'
+			id: 'img4',
+			src: '/carousel/img4.jpeg',
+			alt: 'ColorStack Image'
 		},
 		{
-			id: 'fdl5',
-			src: '/nvidia-fdl/fdl5.jpg',
-			alt: 'Nvidia Fundamentals of Deep learning Workshop'
+			id: 'img5',
+			src: '/carousel/img5.jpeg',
+			alt: 'ColorStack Image'
 		}
 	];
 
@@ -73,7 +73,7 @@
 >
 	<!-- What We Do -->
 	<section
-		class="grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 mt-12 laptop:mt-0 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:max-h-[600px] laptop:min-h-[550px] laptop:justify-items-end min-[1150px]:px-[50px] desktop:px-[30px]"
+		class="grid grid-cols-1 laptop:col-start-2 laptop:grid-cols-2 mt-12 laptop:mt-0 gap-[60px] tablet:gap-[70px] laptop:gap-[20px] laptop:max-h-[600px] laptop:min-h-[550px] laptop:justify-items-end padding min-[1150px]:px-[50px] desktop:px-[30px]"
 	>
 		<div
 			class="slides-in flex flex-col justify-center laptop:justify-normal laptop:mt-20 desktop:mt-28 items-center laptop:justify-self-center"
@@ -100,7 +100,7 @@
 
 	<!-- Pillars -->
 	<section
-		class="tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-white py-20 tablet:py-36 notebook:py-40 px-mobile-padding-x tablet:px-tablet-padding-x translate-y-[-110px] tablet:translate-y-[-130px] laptop:flex laptop:justify-center laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
+		class="padding tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-white py-20 tablet:py-36 notebook:py-40 translate-y-[-110px] tablet:translate-y-[-130px] laptop:flex laptop:justify-center desktop:translate-y-[-40px]"
 	>
 		<div class="max-w-page-width grid grid-cols-1 tablet:grid-cols-3 gap-[70px] tablet:gap-[40px]">
 			{#each pillars as pillar}
@@ -111,7 +111,7 @@
 
 	<!-- Sponsors -->
 	<section
-		class="lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
+		class="padding lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] desktop:translate-y-[-40px]"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-8">Our Sponsors</h2>
 		<Sponsors />
@@ -119,7 +119,7 @@
 
 	<!-- Follow Instagram -->
 	<section
-		class="slides-in lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px]"
+		class="padding slides-in lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] desktop:translate-y-[-40px]"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-8">
 			Follow our Instagram!
@@ -129,7 +129,7 @@
 
 	<!-- FAQ -->
 	<section
-		class="slides-in lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x desktop:translate-y-[-40px] desktop:mb-24"
+		class="padding slides-in lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 desktop:translate-y-[-40px] desktop:mb-24"
 	>
 		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-4">FAQs</h2>
 		<Accordion>
@@ -176,21 +176,3 @@
 		</Accordion>
 	</section>
 </div>
-
-<style lang="postcss">
-	@media (prefers-reduced-motion: no-preference) {
-		.slides-in {
-			@apply opacity-0 translate-y-10 transition-all duration-500;
-		}
-
-		/*
-          If Svelte doesn't see the `.slides-in--visible` class in the DOM, it
-          will attempt to remove the styles, breaking our animations.
-          To prevent this, we use `:global` to force Svelte to keep the styles.
-          https://svelte.dev/docs/faq#can-i-tell-svelte-not-to-remove-my-unused-styles
-         */
-		:global(.slides-in.slides-in--visible) {
-			@apply opacity-100 translate-y-0;
-		}
-	}
-</style>

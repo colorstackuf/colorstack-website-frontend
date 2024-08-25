@@ -6,15 +6,15 @@
 
 	export let ariaLabel: string = 'Toggle navigation';
 
-	let open: boolean = false;
+	let burgerOpen: boolean = false;
 
 	function toggleMenu() {
-		open = !open;
-		document.body.classList.toggle('no-scroll', open);
+		burgerOpen = !burgerOpen;
+		document.body.classList.toggle('no-scroll', burgerOpen);
 	}
 
 	function toggleBurger() {
-		document.body.classList.toggle('no-scroll', !open);
+		document.body.classList.toggle('no-scroll', !burgerOpen);
 	}
 
 	$: onAbout = $page.url.pathname === '/about';
@@ -25,7 +25,7 @@
 	$: {
 		// Close the menu when the screen is resized to desktop
 		if (innerWidth >= 1024) {
-			open = false;
+			burgerOpen = false;
 			document.body.classList.toggle('no-scroll', false);
 		}
 	}
@@ -38,24 +38,37 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<div
-	class="h-[80px] px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x h-[5rem] flex flex-col items-center justify-center font-gotham-book mt-4"
+{#if burgerOpen}
+	<div class="absolute top-[86px] inset-0 w-full h-full bg-black bg-opacity-90 z-20" />
+{/if}
+
+<header
+	class="fixed z-20 w-full padding flex flex-col items-center font-gotham-book h-[95px] py-3 bg-body-background-blue"
 >
 	<div class="w-full max-w-page-width h-full flex items-center">
 		<!-- Logo and Title -->
 		<a
 			href="/"
-			class="flex-[1] pt-1"
+			class="w-fit h-fit grow pt-1"
 			on:click={() => {
-				open = false;
+				burgerOpen = false;
 				document.body.classList.toggle('no-scroll', false);
 			}}
 		>
-			<img
-				class="object-contain w-[20rem]"
-				src="/logos/colorstack-logo-title.svg"
-				alt="Colorstack logo and title"
-			/>
+			<div class="grid grid-cols-1 w-fit gap-1.5">
+				{#if innerWidth >= 1280}
+					<img src="/logos/colorstack.png" alt="ColorStack" width={280} height={69} />
+				{:else if innerWidth >= 768}
+					<img src="/logos/colorstack.png" alt="ColorStack" width={230} height={39} />
+				{:else}
+					<img src="/logos/colorstack.png" alt="ColorStack" width={200} height={9} />
+				{/if}
+				<p
+					class="justify-self-end text-colorstackuf-orange text-[0.73rem] notebook:text-[0.83rem] desktop:text-base"
+				>
+					At University of Florida
+				</p>
+			</div>
 		</a>
 
 		<!-- Navigation Section -->
@@ -88,11 +101,10 @@
 			{:else}
 				<!-- Hamburger Menu -->
 				<div>
-					{#if open}
-						<div class="absolute top-[86px] left-0 w-full h-full bg-black bg-opacity-90 z-20" />
+					{#if burgerOpen}
 						<div
 							transition:slide
-							class="absolute w-full left-0 top-[86px] h-[14rem] flex flex-col items-left justify-evenly bg-body-background-blue px-6 py-8 gap-4 z-20"
+							class="absolute w-full left-0 top-[81px] h-[14rem] flex flex-col items-left justify-evenly bg-body-background-blue px-6 py-8 gap-4 z-30"
 						>
 							<a
 								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
@@ -121,7 +133,7 @@
 							<a
 								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
 								href="https://linktr.ee/colorstackuf"
-								target="_blank">Get Involved</a
+								target="_blank">Become a Member</a
 							>
 						</div>
 					{/if}
@@ -131,13 +143,13 @@
 						{ariaLabel}
 						type="slider"
 						on:click={toggleBurger}
-						bind:open
+						bind:open={burgerOpen}
 					/>
 				</div>
 			{/if}
 		</div>
 	</div>
-</div>
+</header>
 
 <style>
 	.nav-btn {

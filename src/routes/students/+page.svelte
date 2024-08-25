@@ -34,7 +34,7 @@
 </script>
 
 <div
-	class="mt-6 justify-center grid grid-cols-1 lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white"
+	class="justify-center grid grid-cols-1 lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white"
 >
 	<div />
 
@@ -42,7 +42,7 @@
 		<!-- Get Involved Section -->
 		<section class="mt-6 flex flex-col items-center laptop:items-start notebook:pr-16 tablet:mx-0">
 			<div
-				class="slides-in bg-body-background-blue grid grid-cols-1 gap-6 p-8 min-[500px]:p-12 notebook:py-12 notebook:px-20 rounded-xl notebook:rounded-l-none lg-desktop:rounded-l-xl max-w-[700px] notebook:max-w-[1041px] w-full h-auto mt-16"
+				class="slides-in bg-body-background-blue grid grid-cols-1 gap-6 p-8 min-[500px]:p-12 notebook:px-tablet-padding-x laptop:px-laptop-padding-x rounded-xl notebook:rounded-l-none lg-desktop:rounded-l-xl max-w-[700px] notebook:max-w-[1041px] w-full h-auto mt-16"
 			>
 				<h1 class="text-white text-3xl tablet:text-4xl font-gotham">Get Involved</h1>
 				<p class="text-white text-lg leading-6 font-archer-light">
@@ -68,30 +68,12 @@
 		</section>
 
 		<!-- Calendar Section -->
-		<section class="relative bg-body-background-white p-2 rounded-md grid grid-cols-1 mb-2 mt-16">
-			<h2 class="text-black text-4xl font-gotham mb-4">Event Calendar</h2>
+		<section class="relative bg-body-background-white rounded-md grid grid-cols-1 mb-8 mt-16">
+			<h2 class="notebook:padding text-black text-4xl font-gotham mb-4">Event Calendar</h2>
 			<div
 				id="calendar"
-				class="slides-in justify-self-center w-[76vw] max-w-[1200px] max-h-[60vw] bg-gray-100 rounded-lg shadow-md"
+				class="slides-in justify-self-center w-[76vw] h-[76vw] max-w-[900px] max-h-[900px] bg-gray-100 rounded-lg shadow-md p-4"
 			></div>
 		</section>
 	</div>
 </div>
-
-<style lang="postcss">
-	@media (prefers-reduced-motion: no-preference) {
-		.slides-in {
-			@apply opacity-0 translate-y-10 transition-all duration-500;
-		}
-
-		/*
-          If Svelte doesn't see the `.slides-in--visible` class in the DOM, it
-          will attempt to remove the styles, breaking our animations.
-          To prevent this, we use `:global` to force Svelte to keep the styles.
-          https://svelte.dev/docs/faq#can-i-tell-svelte-not-to-remove-my-unused-styles
-         */
-		:global(.slides-in.slides-in--visible) {
-			@apply opacity-100 translate-y-0;
-		}
-	}
-</style>

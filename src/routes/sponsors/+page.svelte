@@ -26,26 +26,24 @@
 </script>
 
 <div
-	class="pt-20 mt-2 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white mb-5"
+	class="pt-20 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white mb-5"
 >
 	<!-- Sponsors -->
-	<section
-		class="lg-desktop:col-start-2 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
-	>
+	<section class="lg-desktop:col-start-2 padding">
 		<h2
 			class="text-body-background-blue font-gotham-medium text-[1.7rem] tablet:text-[2rem] mb-10 text-center tablet:text-left"
 		>
 			Our Sponsors
 		</h2>
-		<div class="ml-0 tablet:ml-0 lg:ml-0 bg-body-background-blue p-16 rounded-lg">
+		<div
+			class="ml-0 tablet:ml-0 lg:ml-0 bg-body-background-blue p-8 tablet:p-12 laptop:p-16 rounded-lg"
+		>
 			<Sponsors />
 		</div>
 	</section>
 
 	<!-- Sponsored Events -->
-	<section
-		class="lg-desktop:col-start-2 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
-	>
+	<section class="lg-desktop:col-start-2 padding">
 		<h2
 			class="text-body-background-blue font-gotham-medium text-[1.5rem] tablet:text-[2rem] mt-20 mb-10 text-center tablet:text-left"
 		>
@@ -63,9 +61,9 @@
 
 	<!-- Why Support Colorstack UF -->
 	<section
-		class="tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-light-blue py-10 tablet:py-24 px-mobile-padding-x tablet:px-tablet-padding-x laptop:flex laptop:justify-center laptop:px-laptop-padding-x pb-20"
+		class="tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-light-blue py-10 tablet:py-24 laptop:flex laptop:justify-center pb-20"
 	>
-		<div class="max-w-page-width w-full text-center">
+		<div class="max-w-page-width w-full text-center padding">
 			<h2
 				class="slides-in font-gotham-medium text-font-color-dark-blue text-center text-[1.5rem] tablet:text-4xl mb-20"
 			>
@@ -97,21 +95,3 @@
 
 	<!-- Our LinkedIn -->
 </div>
-
-<style lang="postcss">
-	@media (prefers-reduced-motion: no-preference) {
-		.slides-in {
-			@apply opacity-0 translate-y-10 transition-all duration-500;
-		}
-
-		/*
-          If Svelte doesn't see the `.slides-in--visible` class in the DOM, it
-          will attempt to remove the styles, breaking our animations.
-          To prevent this, we use `:global` to force Svelte to keep the styles.
-          https://svelte.dev/docs/faq#can-i-tell-svelte-not-to-remove-my-unused-styles
-         */
-		:global(.slides-in.slides-in--visible) {
-			@apply opacity-100 translate-y-0;
-		}
-	}
-</style>

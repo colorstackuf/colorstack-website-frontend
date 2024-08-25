@@ -8,37 +8,37 @@
 		{
 			name: 'Mya Ramsey',
 			position: 'President',
-			image: 'e-board/Mya_Ramsey.png',
+			image: 'e-board/Mya_Ramsey.jpeg',
 			linkedin: 'https://www.linkedin.com/in/mya-ramsey-uf/'
 		},
 		{
 			name: 'Yakub Mungai',
 			position: 'Vice Presdient',
-			image: 'e-board/Yakub_Mungai.png',
+			image: 'e-board/Yakub_Mungai.jpeg',
 			linkedin: 'https://www.linkedin.com/in/yakubjmungai/'
 		},
 		{
 			name: 'Bryan Mbaji',
 			position: 'Treasurer',
-			image: 'e-board/Bryan_Mbaji.png',
+			image: 'e-board/Bryan_Mbaji.jpeg',
 			linkedin: 'https://www.linkedin.com/in/brian-mbaji/'
 		},
 		{
 			name: 'Kacie Ross',
 			position: 'VP of Marketing',
-			image: 'e-board/Kacie_Ross.png',
+			image: 'e-board/Kacie_Ross.jpeg',
 			linkedin: 'https://www.linkedin.com/in/kacierossuf/'
 		},
 		{
 			name: 'Yohance de Souza',
 			position: 'Administration Chair',
-			image: 'e-board/Yohance_de_Souza.png',
+			image: 'e-board/Yohance_de_Souza.jpeg',
 			linkedin: 'https://www.linkedin.com/in/yohance-de-souza-217a291b5/'
 		},
 		{
 			name: 'Soraya Sardine',
 			position: 'Graphic Design Coordinator',
-			image: 'e-board/Soraya_Sardine.png',
+			image: 'e-board/Soraya_Sardine.jpeg',
 			linkedin: 'https://www.linkedin.com/in/soraya-sardine-64662216a/'
 		},
 		// {
@@ -50,43 +50,43 @@
 		{
 			name: 'Yonas Worku',
 			position: 'Career Events Coordinator',
-			image: 'e-board/Yonas_Worku.png',
+			image: 'e-board/Yonas_Worku.jpeg',
 			linkedin: 'https://www.linkedin.com/in/yonasworku/'
 		},
 		{
 			name: 'Matthew DeGuzman',
 			position: 'Technical Events Coordinator',
-			image: 'e-board/Matthew_DeGuzman.png',
+			image: 'e-board/Matthew_DeGuzman.jpeg',
 			linkedin: 'https://www.linkedin.com/in/matthew-deguzman/'
 		},
 		{
 			name: 'Alex Huper',
 			position: 'Academic Programs Coordinator',
-			image: 'e-board/Alex_Huper.png',
+			image: 'e-board/Alex_Huper.jpeg',
 			linkedin: 'https://www.linkedin.com/in/alex-huper/'
 		},
 		{
 			name: 'Josue Vicente',
 			position: 'Academic Events Coordinator',
-			image: 'e-board/Josue_Vicente.png',
+			image: 'e-board/Josue_Vicente.jpeg',
 			linkedin: 'https://www.linkedin.com/in/josue-e-vicente/'
 		},
 		{
 			name: 'Abigail Erefah',
 			position: 'Digital Marketing Coordinator',
-			image: 'e-board/Abigail_Erefah.png',
+			image: 'e-board/Abigail_Erefah.jpeg',
 			linkedin: 'https://www.linkedin.com/in/abigail-erefah/'
 		},
 		{
 			name: 'Dr. Sanethia Thomas',
 			position: 'Faculty Advisor',
-			image: 'e-board/Sanethia_Thomas.png',
+			image: 'e-board/Sanethia_Thomas.jpeg',
 			linkedin: 'https://www.linkedin.com/in/sanethia-thomas-phd-112806/'
 		},
 		{
 			name: 'Carson Johnson',
 			position: 'Founding President',
-			image: 'e-board/Carson_Johnson.png',
+			image: 'e-board/Carson_Johnson.jpeg',
 			linkedin: 'https://www.linkedin.com/in/carson74johnson/'
 		}
 	];
@@ -162,7 +162,7 @@
 	<!-- ColorStack UF intro -->
 	<section class="lg-desktop:max-w-[1536px] mx-auto">
 		<div
-			class="relative flex flex-col items-end laptop:items-start bg-[url('/graphics/about-intro.png')] bg-cover bg-no-repeat bg-center h-[25rem] laptop:h-[45rem] min-[1536px]:rounded-b-lg"
+			class="relative flex flex-col items-end laptop:items-start bg-[url('/graphics/about-intro.jpeg')] bg-cover bg-no-repeat bg-center h-[25rem] laptop:h-[45rem] min-[1536px]:rounded-b-lg"
 		>
 			<div
 				class="slides-in relative grid grid-cols-1 top-[16rem] laptop:top-0 laptop:left-[3rem] laptop:top-[5rem] z-10 bg-body-background-blue pl-7 pr-4 py-7 laptop:p-12 rounded-l-lg laptop:rounded-lg mb-12 w-11/12 min-w-[310px] laptop:w-[460px]"
@@ -192,13 +192,13 @@
 
 	<!-- About ColorStack National -->
 	<section
-		class="mt-60 laptop:mt-0 laptop:bg-body-background-white bg-body-background-blue max-w-[1536px] mx-auto laptop:py-40 py-6 px-8"
+		class="mt-60 laptop:mt-0 laptop:bg-body-background-white bg-body-background-blue max-w-[1536px] mx-auto laptop:py-40 py-6 padding"
 	>
 		<div
 			class="slides-in bg-body-background-blue laptop:rounded-lg laptop:p-12 desktop:p-16 grid grid-cols-1 laptop:grid-cols-2 gap-x-12"
 		>
 			<div class="w-full pt-4 laptop:pt-0">
-				<img src="graphics/colorstack_students.png" alt="People" class="rounded-md" />
+				<img src="graphics/colorstack_students.jpeg" alt="People" class="rounded-md" />
 			</div>
 
 			<div class="flex flex-col items-center self-center gap-y-4 desktop:gap-y-8">
@@ -226,10 +226,10 @@
 
 	<!-- Eboard -->
 	<section
-		class="relative top-[-1px] bg-body-background-blue flex flex-col items-center pt-16 laptop:pt-0"
+		class="relative top-[-1px] bg-body-background-blue flex flex-col items-center pt-16 laptop:pt-0 padding"
 	>
 		<div
-			class="slides-in w-full max-w-[1536px] flex flex-col justify-center font-gotham-medium py-12 gap-y-4 px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x"
+			class="slides-in w-full max-w-[1536px] flex flex-col justify-center font-gotham-medium py-12 gap-y-4"
 		>
 			<h1 class="text-white text-[2rem] text-center laptop:text-[3rem] desktop:[4rem]">
 				Meet the E-Board
@@ -237,7 +237,7 @@
 			<p class="text-white text-center pb-4 text-lg laptop:text-2xl">2024-2025</p>
 
 			<div
-				class="grid grid-cols-2 tablet:grid-cols-3 desktop:grid-cols-4 gap-x-16 gap-y-6 tablet:gap-y-10 px-6"
+				class="grid grid-cols-2 tablet:grid-cols-3 desktop:grid-cols-4 gap-x-6 tablet:gap-x-16 gap-y-6 px-4"
 			>
 				{#each eboard_members as member}
 					<!-- Member -->
@@ -246,7 +246,7 @@
 					>
 						<!-- Image -->
 						<div
-							class="relative w-[44vw] h-[44vw] tablet:w-[27vw] desktop:w-[20vw] max-w-[500px] desktop:max-w-[300px] tablet:h-[27vw] desktop:h-[20vw] max-h-[500px] desktop:max-h-[300px] mb-2 notebook:mb-4"
+							class="relative w-[42vw] h-[42vw] tablet:w-[27vw] tablet:h-[27vw] desktop:w-[20vw] max-w-[500px] desktop:max-w-[300px] tablet:h-[27vw] desktop:h-[20vw] max-h-[500px] desktop:max-h-[300px] mb-2 notebook:mb-4"
 						>
 							<div
 								class="group block w-full h-full transition-all duration-300 hover:bg-neutral-950/70 absolute grid grid-cols-1 justify-items-center items-center"
@@ -298,7 +298,10 @@
 				</p>
 			</div>
 
-			<div class="flex flex-col gap-4 justify-center w-full font-archer lg-desktop:text-2xl">
+			<form
+				class="flex flex-col gap-4 justify-center w-full font-archer lg-desktop:text-2xl"
+				on:submit|preventDefault={submitForm}
+			>
 				<div>
 					<input
 						type="text"
@@ -345,29 +348,10 @@
 				</div>
 				<button
 					class="w-full text-white bg-body-background-blue transition-bg-color transition-color hover:bg-colorstackuf-orange hover:text-black duration-300 py-4 px-7 rounded-md mt-4 font-gotham-medium"
-					on:click={submitForm}
 				>
 					Submit
 				</button>
-			</div>
+			</form>
 		</div>
 	</div>
 </section>
-
-<style lang="postcss">
-	@media (prefers-reduced-motion: no-preference) {
-		.slides-in {
-			@apply opacity-0 translate-y-10 transition-all duration-500;
-		}
-
-		/*
-          If Svelte doesn't see the `.slides-in--visible` class in the DOM, it
-          will attempt to remove the styles, breaking our animations.
-          To prevent this, we use `:global` to force Svelte to keep the styles.
-          https://svelte.dev/docs/faq#can-i-tell-svelte-not-to-remove-my-unused-styles
-         */
-		:global(.slides-in.slides-in--visible) {
-			@apply opacity-100 translate-y-0;
-		}
-	}
-</style>
