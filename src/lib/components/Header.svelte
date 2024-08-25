@@ -43,7 +43,7 @@
 {/if}
 
 <header
-	class="fixed z-20 w-full padding flex flex-col items-center font-gotham-book h-[81px] py-3 bg-body-background-blue"
+	class="fixed z-20 w-full padding flex flex-col items-center font-gotham-book h-[95px] py-3 bg-body-background-blue"
 >
 	<div class="w-full max-w-page-width h-full flex items-center">
 		<!-- Logo and Title -->

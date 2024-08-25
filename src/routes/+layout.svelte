@@ -12,7 +12,7 @@
 
 <main class="relative grid grid-rows-auto">
 	<Header />
-	<div class="h-[81px]" />
+	<div class="h-[95px]" />
 	<slot />
 	<Footer />
 </main>
