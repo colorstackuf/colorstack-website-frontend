@@ -41,12 +41,12 @@
 			image: 'e-board/Soraya_Sardine.jpeg',
 			linkedin: 'https://www.linkedin.com/in/soraya-sardine-64662216a/'
 		},
-		// {
-		//      name: 'Natahja Graddy',
-		//      position: 'VP of Events',
-		//     	image: 'e-board/Natahja_Graddy.png',
-		// 		linkedin: 'https://www.linkedin.com/in/natahja-graddy/'
-		// },
+		{
+			name: 'Natahja Graddy',
+			position: 'VP of Events',
+			image: 'e-board/Natahja_Graddy.jpeg',
+			linkedin: 'https://www.linkedin.com/in/natahja-graddy/'
+		},
 		{
 			name: 'Yonas Worku',
 			position: 'Career Events Coordinator',
