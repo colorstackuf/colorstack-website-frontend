@@ -6,15 +6,15 @@
 
 	export let ariaLabel: string = 'Toggle navigation';
 
-	let open: boolean = false;
+	let burgerOpen: boolean = false;
 
 	function toggleMenu() {
-		open = !open;
-		document.body.classList.toggle('no-scroll', open);
+		burgerOpen = !burgerOpen;
+		document.body.classList.toggle('no-scroll', burgerOpen);
 	}
 
 	function toggleBurger() {
-		document.body.classList.toggle('no-scroll', !open);
+		document.body.classList.toggle('no-scroll', !burgerOpen);
 	}
 
 	$: onAbout = $page.url.pathname === '/about';
@@ -25,7 +25,7 @@
 	$: {
 		// Close the menu when the screen is resized to desktop
 		if (innerWidth >= 1024) {
-			open = false;
+			burgerOpen = false;
 			document.body.classList.toggle('no-scroll', false);
 		}
 	}
@@ -38,14 +38,20 @@
 </script>
 
 <svelte:window bind:innerWidth />
-<header class="padding h-[5rem] flex flex-col items-center font-gotham-book my-3">
+{#if burgerOpen}
+	<div class="absolute top-[86px] inset-0 w-full h-full bg-black bg-opacity-90 z-20" />
+{/if}
+
+<header
+	class="fixed z-20 w-full padding flex flex-col items-center font-gotham-book h-[81px] py-3 bg-body-background-blue"
+>
 	<div class="w-full max-w-page-width h-full flex items-center">
 		<!-- Logo and Title -->
 		<a
 			href="/"
 			class="w-fit h-fit grow pt-1"
 			on:click={() => {
-				open = false;
+				burgerOpen = false;
 				document.body.classList.toggle('no-scroll', false);
 			}}
 		>
@@ -95,11 +101,10 @@
 			{:else}
 				<!-- Hamburger Menu -->
 				<div>
-					{#if open}
-						<div class="absolute top-[86px] left-0 w-full h-full bg-black bg-opacity-90 z-20" />
+					{#if burgerOpen}
 						<div
 							transition:slide
-							class="absolute w-full left-0 top-[86px] h-[14rem] flex flex-col items-left justify-evenly bg-body-background-blue px-6 py-8 gap-4 z-20"
+							class="absolute w-full left-0 top-[81px] h-[14rem] flex flex-col items-left justify-evenly bg-body-background-blue px-6 py-8 gap-4 z-30"
 						>
 							<a
 								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
@@ -138,7 +143,7 @@
 						{ariaLabel}
 						type="slider"
 						on:click={toggleBurger}
-						bind:open
+						bind:open={burgerOpen}
 					/>
 				</div>
 			{/if}

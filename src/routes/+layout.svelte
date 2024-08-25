@@ -10,8 +10,9 @@
 	onMount(setAnimations);
 </script>
 
-<main class="grid grid-rows-auto">
+<main class="relative grid grid-rows-auto">
 	<Header />
+	<div class="h-[81px]" />
 	<slot />
 	<Footer />
 </main>

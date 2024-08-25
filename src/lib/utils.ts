@@ -8,7 +8,7 @@ export function setAnimations() {
 				// Otherwise, remove the visible class
 				entry.target.classList.remove('slides-in--visible');
 			}
-		});
+		}, { threshold: 1 });
 	});
 
 	document.querySelectorAll('.slides-in').forEach((elem) => {
