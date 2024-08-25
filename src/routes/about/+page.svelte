@@ -162,7 +162,7 @@
 	<!-- ColorStack UF intro -->
 	<section class="lg-desktop:max-w-[1536px] mx-auto">
 		<div
-			class="relative flex flex-col items-end laptop:items-start bg-[url('/graphics/about-intro.png')] bg-cover bg-no-repeat bg-center h-[25rem] laptop:h-[45rem] min-[1536px]:rounded-b-lg"
+			class="relative flex flex-col items-end laptop:items-start bg-[url('/graphics/about-intro.jpg')] bg-cover bg-no-repeat bg-center h-[25rem] laptop:h-[45rem] min-[1536px]:rounded-b-lg"
 		>
 			<div
 				class="slides-in relative grid grid-cols-1 top-[16rem] laptop:top-0 laptop:left-[3rem] laptop:top-[5rem] z-10 bg-body-background-blue pl-7 pr-4 py-7 laptop:p-12 rounded-l-lg laptop:rounded-lg mb-12 w-11/12 min-w-[310px] laptop:w-[460px]"
