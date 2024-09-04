@@ -50,7 +50,11 @@
 					colorstackuf
 				</p>
 				<p class="text-white text-[0.6rem] tablet:text-sm font-gotham-light">
-					{timeSincePost.toFixed(0) + ' ' + unit} ago
+					{#if timeSincePost < 1}
+						{'Today'}
+					{:else}
+						{timeSincePost.toFixed(0) + ' ' + unit} ago
+					{/if}
 				</p>
 			</div>
 			<img
