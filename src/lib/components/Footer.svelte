@@ -24,7 +24,7 @@
 		</a>
 
 		<div
-			class="grid grid-cols-[repeat(2,_1fr)] grid-rows-[repeat(4,_1fr)] gap-y-2 gap-x-4 text-sm tablet:text-base"
+			class="grid grid-cols-[repeat(2,_1fr)] grid-rows-[repeat(4,_1fr)] gap-y-2 gap-x-4 text-sm tablet:text-base items-end"
 		>
 			<!-- Navigation Section -->
 			<a

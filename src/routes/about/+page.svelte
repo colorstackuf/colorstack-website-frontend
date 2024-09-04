@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { ContactData } from '$lib/types';
 	import { validEmail, setAnimations } from '$lib/utils';
 	onMount(setAnimations);
 
@@ -292,9 +291,7 @@
 
 <section id="contact-us" class="bg-body-background-light-blue">
 	<!-- Contact Us -->
-	<div
-		class="slides-in lg-desktop:max-w-[1536px] mx-auto laptop:px-24 laptop:py-36 py-12 px-12 mb-7"
-	>
+	<div class="slides-in lg-desktop:max-w-[1536px] mx-auto laptop:px-24 laptop:py-36 py-12 px-12">
 		<div class="grid grid-cols-1 laptop:grid-cols-2 laptop:cols-start-2 gap-12">
 			<div class="text-black">
 				<h1 class="text-3xl lg-desktop:text-5xl pb-8 font-gotham-medium">Contact Us</h1>

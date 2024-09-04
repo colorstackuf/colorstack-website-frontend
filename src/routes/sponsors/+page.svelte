@@ -30,7 +30,7 @@
 </svelte:head>
 
 <div
-	class="pt-20 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white mb-5"
+	class="pt-20 justify-center lg-desktop:grid lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white"
 >
 	<!-- Sponsors -->
 	<section class="lg-desktop:col-start-2 padding">
