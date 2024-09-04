@@ -38,13 +38,13 @@
 </svelte:head>
 
 <div
-	class="justify-center grid grid-cols-1 lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white"
+	class="justify-center overflow-x-hidden grid grid-cols-1 lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white"
 >
 	<div />
 
 	<div class="px-[16px] notebook:px-0">
 		<!-- Get Involved Section -->
-		<section class="mt-6 flex flex-col items-center laptop:items-start notebook:pr-16 tablet:mx-0">
+		<section class="mt-6 flex flex-col items-center laptop:pl-6 laptop:items-start notebook:pr-16 tablet:mx-0">
 			<div
 				class="slides-in bg-body-background-blue grid grid-cols-1 gap-6 p-8 min-[500px]:p-12 notebook:px-tablet-padding-x laptop:px-laptop-padding-x rounded-xl notebook:rounded-l-none lg-desktop:rounded-l-xl max-w-[700px] notebook:max-w-[1041px] w-full h-auto mt-16"
 			>

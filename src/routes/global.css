@@ -21,9 +21,30 @@ body {
 	background-color: var(--body-background-blue);
 }
 
+@font-face {
+	font-family: 'Gotham-Medium';
+	src: url('fonts/gotham/GothamMedium.otf') format('opentype'),
+		 url('fonts/gotham/gotham_medium-webfont.woff') format('woff'),
+		 url('fonts/gotham/gotham_medium-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'iCiel Gotham';
+	src: url('fonts/iciel-gotham/icielgothammediumregular.otf') format('opentype'),
+		 url('fonts/iciel-gotham/icielgothammediumregular-webfont.woff') format('woff'),
+		 url('fonts/iciel-gotham/icielgothammediumregular-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
 * {
-	font-family: 'Gotham-Medium', sans-serif;
-	font-family: 'iCiel Gotham', sans-serif;
+	font-family: 'Gotham-Medium', 'iCiel Gotham' sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .selected {
