@@ -43,7 +43,7 @@
 {/if}
 
 <header
-	class="fixed z-20 w-full padding flex flex-col items-center font-gotham-book h-[95px] py-3 bg-body-background-blue"
+	class="fixed z-20 w-full padding flex flex-col items-center font-gotham-book h-[100px] py-3 bg-body-background-blue"
 >
 	<div class="w-full max-w-page-width h-full flex items-center">
 		<!-- Logo and Title -->
@@ -90,11 +90,11 @@
 					href="/students">Students</a
 				>
 				<a
-					class="border-2 border-solid border-white self-center flex items-center pt-4 pb-[1.1rem] px-6 rounded-[1.4rem] hover:bg-colorstackuf-blue hover:border-colorstackuf-blue text-white hover:text-black transition-colors duration-300"
+					class="translate-y-2 border-2 border-solid border-white self-center flex items-center py-4 mt-1 px-6 rounded-[1.4rem] hover:bg-colorstackuf-blue hover:border-colorstackuf-blue text-white hover:text-black transition-colors duration-300"
 					href="https://linktr.ee/colorstackuf"
 					target="_blank"
 				>
-					<p class="translate-y-[0.5rem] text-[1.2rem] no-underline text-align-center">
+					<p class="text-[1.2rem] no-underline text-align-center">
 						Become a Member
 					</p>
 				</a>

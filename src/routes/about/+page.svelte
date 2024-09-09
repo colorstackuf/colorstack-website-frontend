@@ -17,9 +17,9 @@
 			linkedin: 'https://www.linkedin.com/in/yakubjmungai/'
 		},
 		{
-			name: 'Bryan Mbaji',
+			name: 'Brian Mbaji',
 			position: 'Treasurer',
-			image: 'e-board/Bryan_Mbaji.jpeg',
+			image: 'e-board/Brian_Mbaji.jpeg',
 			linkedin: 'https://www.linkedin.com/in/brian-mbaji/'
 		},
 		{
