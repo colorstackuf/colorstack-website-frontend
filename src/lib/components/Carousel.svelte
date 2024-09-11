@@ -5,9 +5,10 @@
 	export let images: carouselImage[];
 	export let interval: number = 3000;
 
-	let intervalId = 0;
+	let intervalId;
 	let imgIndex = 0;
 	let carouselContainer: HTMLElement;
+	let observer: IntersectionObserver;
 
 	function idToHref(id: string) {
 		return `#${id}`;
@@ -43,8 +44,7 @@
 
 	function handleNavigationClick(e: MouseEvent) {
 		e.preventDefault();
-		// @ts-expect-error - href is a valid attribute
-		const href = e.target.getAttribute('href');
+		const href = (e.target as HTMLElement).getAttribute('href');
 		if (!href) return;
 		const imageId = href.slice(1);
 		for (let i = 0; i < images.length; i++) {
@@ -84,8 +84,44 @@
 		clearInterval(intervalId);
 	}
 
-	onMount(startScroll);
-	onDestroy(stopScroll);
+	// Set up Intersection Observer to detect which image is in view
+	function observeImages() {
+		const options = {
+			root: carouselContainer,
+			threshold: 0.5 // Trigger when 50% of the image is visible
+		};
+
+		observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const imageId = entry.target.id;
+					const idx = images.findIndex((image) => image.id === imageId);
+					if (idx !== -1) {
+						unhighlight(imgIndex);
+						highlight(idx);
+						imgIndex = idx;
+					}
+				}
+			});
+		}, options);
+
+		// Observe each image
+		images.forEach((image) => {
+			const imageElement = document.getElementById(image.id);
+			if (imageElement) {
+				observer.observe(imageElement);
+			}
+		});
+	}
+
+	onMount(() => {
+		startScroll();
+		observeImages();
+		return () => {
+			stopScroll();
+			if (observer) observer.disconnect();
+		};
+	});
 </script>
 
 <div
@@ -148,3 +184,4 @@
 		width: 1px;
 	}
 </style>
+
