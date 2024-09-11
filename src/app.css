@@ -12,7 +12,7 @@
 		font-style: normal;
 		font-weight: 400;
 		font-display: swap;
-		src: url('/fonts/GothamBook.ttf') format('TrueType');
+		src: url('/fonts/gothambook-webfont.woff') format('woff');
 	}
 
 	@font-face {
@@ -20,7 +20,7 @@
 		font-style: normal;
 		font-weight: 400;
 		font-display: swap;
-		src: url('/fonts/GothamMedium.otf') format('opentype');
+		src: url('/fonts/gothammedium-webfont.woff') format('woff');
 	}
 
 	@font-face {
@@ -28,7 +28,7 @@
 		font-style: normal;
 		font-weight: 500;
 		font-display: swap;
-		src: url('/fonts/GothamLight.otf') format('opentype');
+		src: url('/fonts/gothamlight-webfont.woff') format('woff');
 	}
 
 	@font-face {
@@ -36,7 +36,7 @@
 		font-style: normal;
 		font-weight: 400;
 		font-display: swap;
-		src: url('/fonts/ArcherMedium.ttf') format('TrueType');
+		src: url('/fonts/archermedium-webfont.woff') format('woff');
 	}
 
 	@font-face {
@@ -44,7 +44,7 @@
 		font-style: normal;
 		font-weight: 400;
 		font-display: swap;
-		src: url('/fonts/ArcherBook.otf') format('opentype');
+		src: url('/fonts/archerbook-webfont.woff') format('woff');
 	}
 
 	@font-face {
@@ -52,7 +52,7 @@
 		font-style: normal;
 		font-weight: 400;
 		font-display: swap;
-		src: url('/fonts/ArcherLight.otf') format('opentype');
+		src: url('/fonts/archerlight-webfont.woff') format('woff');
 	}
 
 	.padding {

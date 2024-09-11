@@ -42,14 +42,16 @@
 >
 	<div />
 
-	<div class="px-[16px] notebook:px-0">
+	<div class="px-4 laptop:px-0">
 		<!-- Get Involved Section -->
-		<section class="mt-6 flex flex-col items-center laptop:items-start notebook:pr-16 tablet:mx-0">
+		<section class="mt-6 flex flex-col items-center laptop:items-start laptop:pr-16">
 			<div
-				class="slides-in bg-body-background-blue grid grid-cols-1 gap-6 p-8 min-[500px]:p-12 notebook:px-tablet-padding-x laptop:px-laptop-padding-x rounded-xl notebook:rounded-l-none lg-desktop:rounded-l-xl max-w-[700px] notebook:max-w-[1041px] w-full h-auto mt-16"
+				class="slides-in bg-body-background-blue grid grid-cols-1 gap-6 p-8 min-[500px]:p-12 notebook:px-[24px] laptop:px-[32px] rounded-xl laptop:rounded-l-none lg-desktop:rounded-l-xl max-w-[900px] laptop:max-w-[1041px] w-full h-auto mt-16"
 			>
-				<h1 class="text-white text-3xl tablet:text-4xl font-gotham">Get Involved</h1>
-				<p class="text-white text-lg leading-6 font-archer-light">
+				<h1 class="text-center tablet:text-left text-white text-3xl tablet:text-4xl font-gotham">
+					Get Involved
+				</h1>
+				<p class="text-center tablet:text-left text-white text-lg leading-6 font-archer-light">
 					The UF ColorStack chapter is a vibrant community of over 170 Black and Latinx students
 					majoring in computer science and related fields. Through year-round opportunities for
 					community building, academic support, and career development, our members exchange
@@ -57,23 +59,28 @@
 					collaborations with top tech companies provide mentorship, workshops, and enhanced job
 					search support, giving members a competitive edge in the industry.
 				</p>
-				<button
-					class="transition-color duration-300 bg-colorstackuf-orange hover:bg-colorstackuf-blue text-black hover:text-white text-xl font-gotham-medium hover:bg-colorstackuf-blue py-2 px-10 rounded-[24px] w-fit"
-				>
-					<a
-						href="https://calendar.google.com/calendar/u/0/r?cid=MWZiODE4MTg2NGNkZjEyMDIyNjg3NDQ3Y2Y5YmNkNDk2OTgyZWZkNmQ3OTU2N2ZiMzI1M2Q4NzViM2M5YWJhN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
-						target="_blank"
-						rel="noopener noreferrer"
+				<div class="flex flex-col items-center tablet:items-start">
+					<button
+						class="transition-color duration-300 bg-colorstackuf-orange hover:bg-colorstackuf-blue text-black hover:text-white text-base tablet:text-xl font-gotham-medium hover:bg-colorstackuf-blue py-3 px-10 rounded-full w-fit"
 					>
-						Subscribe to Calendar
-					</a>
-				</button>
+						<a
+							href="https://calendar.google.com/calendar/u/0/r?cid=MWZiODE4MTg2NGNkZjEyMDIyNjg3NDQ3Y2Y5YmNkNDk2OTgyZWZkNmQ3OTU2N2ZiMzI1M2Q4NzViM2M5YWJhN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
+							target="_blank"
+						>
+							Subscribe to Calendar
+						</a>
+					</button>
+				</div>
 			</div>
 		</section>
 
 		<!-- Calendar Section -->
 		<section class="relative bg-body-background-white rounded-md grid grid-cols-1 mb-8 mt-16">
-			<h2 class="notebook:padding text-black text-4xl font-gotham mb-4">Event Calendar</h2>
+			<h2
+				class="px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x lg-desktop:p-0 text-black text-4xl font-gotham mb-4"
+			>
+				Event Calendar
+			</h2>
 			<div
 				id="calendar"
 				class="slides-in justify-self-center w-[76vw] h-[76vw] max-w-[900px] max-h-[900px] bg-gray-100 rounded-lg shadow-md p-4"
