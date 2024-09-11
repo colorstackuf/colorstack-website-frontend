@@ -72,31 +72,17 @@
 		</a>
 
 		<!-- Navigation Section -->
-		<div class="flex items-center gap-12 h-full">
+		<div class="flex items-center gap-12 item-center h-full">
 			{#if innerWidth >= 1024}
+				<a class:on-page={onAbout} class="nav-btn" href="/about">About</a>
+				<a class:on-page={onSponsors} class="nav-btn" href="/sponsors">Sponsors</a>
+				<a class:on-page={onStudents} class="nav-btn" href="/students">Students</a>
 				<a
-					class:on-page={onAbout}
-					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300 pt-1"
-					href="/about">About</a
-				>
-				<a
-					class:on-page={onSponsors}
-					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300 pt-1"
-					href="/sponsors">Sponsors</a
-				>
-				<a
-					class:on-page={onStudents}
-					class="nav-btn text-white hover:text-colorstackuf-orange transition-colors duration-300 pt-1"
-					href="/students">Students</a
-				>
-				<a
-					class="translate-y-2 border-2 border-solid border-white self-center flex items-center py-4 mt-1 px-6 rounded-[1.4rem] hover:bg-colorstackuf-blue hover:border-colorstackuf-blue text-white hover:text-black transition-colors duration-300"
+					class="border-2 border-solid border-white self-center flex items-center py-4 px-6 rounded-[1.4rem] hover:bg-colorstackuf-blue hover:border-colorstackuf-blue text-white hover:text-black transition-colors duration-300"
 					href="https://linktr.ee/colorstackuf"
 					target="_blank"
 				>
-					<p class="text-[1.2rem] no-underline text-align-center">
-						Become a Member
-					</p>
+					<p class="text-[1.2rem] no-underline text-align-center">Become a Member</p>
 				</a>
 			{:else}
 				<!-- Hamburger Menu -->
@@ -151,10 +137,8 @@
 	</div>
 </header>
 
-<style>
+<style lang="postcss">
 	.nav-btn {
-		transform: translateY(0.5rem);
-		font-size: 1.2rem;
-		text-decoration: none;
+		@apply text-[1.2rem] no-underline text-white hover:text-colorstackuf-orange transition-colors duration-300;
 	}
 </style>
