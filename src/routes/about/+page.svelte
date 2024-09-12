@@ -91,7 +91,7 @@
 		},
 		{
 			name: 'Pablo Bueno',
-			position: 'Co-outreach Coordinator',
+			position: 'Outreach Coordinator',
 			image: 'e-board/Pablo_Bueno.jpeg',
 			linkedin: 'https://www.linkedin.com/in/pablojbueno/'
 		},
