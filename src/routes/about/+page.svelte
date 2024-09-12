@@ -102,6 +102,12 @@
 			linkedin: 'https://www.linkedin.com/in/braulioquintana/'
 		},
 		{
+			name: 'Xalan Dames',
+			position: 'Community Events Coordinator',
+			image: 'e-board/Xalan_Dames.jpeg',
+			linkedin: 'https://www.linkedin.com/in/xalandamesuf/'
+		},
+		{
 			name: 'Dr. Sanethia Thomas',
 			position: 'Faculty Advisor',
 			image: 'e-board/Sanethia_Thomas.jpeg',
