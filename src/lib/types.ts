@@ -1,20 +1,20 @@
-export type carouselImage = {
+export type CarouselImage = {
 	id: string;
 	src: string;
 	alt: string;
 };
 
-export type size = {
+export type Size = {
 	mediaUrl: string;
 	height: number;
 	width: number;
 };
 
-export type sizes = {
-	small: size;
-	medium: size;
-	large: size;
-	full: size;
+export type Sizes = {
+	small: Size;
+	medium: Size;
+	large: Size;
+	full: Size;
 };
 
 export type ColorPalette = {
@@ -34,14 +34,14 @@ export type Post = {
 	mediaType: string;
 	mediaUrl: string;
 	caption: string;
-	sizes: sizes;
+	sizes: Sizes;
 	prunedCaption: string;
 	hashtags: string[];
 	mentions: string[];
 	colorPalette: ColorPalette;
 };
 
-export interface FormData {
+export interface ContactData {
 	firstName: string;
 	lastName: string;
 	email: string;

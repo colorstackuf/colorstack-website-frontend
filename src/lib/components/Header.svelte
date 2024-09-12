@@ -45,17 +45,17 @@
 <header
 	class="fixed z-20 w-full padding flex flex-col items-center font-gotham-book h-[100px] py-3 bg-body-background-blue"
 >
-	<div class="w-full max-w-page-width h-full flex items-center">
+	<div class="w-full max-w-page-width h-full flex items-center justify-between">
 		<!-- Logo and Title -->
 		<a
 			href="/"
-			class="w-fit h-fit grow pt-1"
+			class="pt-1 w-fit"
 			on:click={() => {
 				burgerOpen = false;
 				document.body.classList.toggle('no-scroll', false);
 			}}
 		>
-			<div class="grid grid-cols-1 w-fit gap-1.5">
+			<div class="grid grid-cols-1 w-fit gap-1">
 				{#if innerWidth >= 1280}
 					<img src="/logos/colorstack.png" alt="ColorStack" width={280} height={69} />
 				{:else if innerWidth >= 768}
@@ -140,5 +140,9 @@
 <style lang="postcss">
 	.nav-btn {
 		@apply text-[1.2rem] no-underline text-white hover:text-colorstackuf-orange transition-colors duration-300;
+	}
+
+	.on-page {
+		@apply text-colorstackuf-orange;
 	}
 </style>

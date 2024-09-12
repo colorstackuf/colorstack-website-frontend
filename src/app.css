@@ -6,6 +6,55 @@
 	overflow: hidden;
 }
 
+html,
+body {
+	@apply flex flex-col min-h-screen w-full bg-body-background-blue;
+}
+
+* {
+	font-family: 'Gotham-Medium', sans-serif;
+	font-family: 'iCiel Gotham', sans-serif;
+}
+
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.no-scrollbar {
+	-ms-overflow-style: none;
+	/* Internet Explorer 10+ */
+	scrollbar-width: none;
+	/* Firefox */
+}
+
+/* Calendar styles */
+.fc .fc-toolbar-title {
+	font-family: 'Gotham-Medium', sans-serif;
+	font-size: 1.5rem;
+}
+
+@media (max-width: 640px) {
+	.fc .fc-toolbar-title {
+		font-family: 'Gotham-Medium', sans-serif;
+		font-size: 1rem;
+	}
+}
+
+.padding {
+	@apply px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.slides-in {
+		@apply opacity-0 translate-y-10 transition-all duration-500;
+	}
+
+	.slides-in.slides-in--visible {
+		@apply opacity-100 translate-y-0;
+	}
+}
+
 @layer base {
 	@font-face {
 		font-family: 'Gotham-Book';
@@ -53,19 +102,5 @@
 		font-weight: 400;
 		font-display: swap;
 		src: url('/fonts/archerlight-webfont.woff') format('woff');
-	}
-
-	.padding {
-		@apply px-mobile-padding-x tablet:px-tablet-padding-x laptop:px-laptop-padding-x;
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.slides-in {
-			@apply opacity-0 translate-y-10 transition-all duration-500;
-		}
-
-		.slides-in.slides-in--visible {
-			@apply opacity-100 translate-y-0;
-		}
 	}
 }

@@ -1,10 +1,11 @@
 <script lang="ts">
-	import { type carouselImage } from '$lib/types';
-	import { onMount, onDestroy } from 'svelte';
+	import { type CarouselImage } from '$lib/types';
+	import { onMount } from 'svelte';
 
-	export let images: carouselImage[];
+	export let images: CarouselImage[];
 	export let interval: number = 3000;
 
+	// @ts-expect-error - don't want to import NodeJS types
 	let intervalId;
 	let imgIndex = 0;
 	let carouselContainer: HTMLElement;
@@ -81,6 +82,7 @@
 	}
 
 	function stopScroll() {
+		// @ts-expect-error - don't want to import NodeJS types
 		clearInterval(intervalId);
 	}
 
@@ -163,6 +165,10 @@
 </div>
 
 <style lang="postcss">
+	.selected {
+		background-color: #f7f7f7;
+	}
+
 	.carousel {
 		scroll-snap-type: x mandatory;
 		-ms-overflow-style: none;
@@ -184,4 +190,3 @@
 		width: 1px;
 	}
 </style>
-
