@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { type ContactData } from '$lib/types';
 	import { validEmail, setAnimations } from '$lib/utils';
 	onMount(setAnimations);
 
@@ -17,28 +18,10 @@
 			linkedin: 'https://www.linkedin.com/in/yakubjmungai/'
 		},
 		{
-			name: 'Brian Mbaji',
-			position: 'Treasurer',
-			image: 'e-board/Brian_Mbaji.jpeg',
-			linkedin: 'https://www.linkedin.com/in/brian-mbaji/'
-		},
-		{
 			name: 'Kacie Ross',
 			position: 'VP of Marketing',
 			image: 'e-board/Kacie_Ross.jpeg',
 			linkedin: 'https://www.linkedin.com/in/kacierossuf/'
-		},
-		{
-			name: 'Yohance de Souza',
-			position: 'Administration Chair',
-			image: 'e-board/Yohance_de_Souza.jpeg',
-			linkedin: 'https://www.linkedin.com/in/yohance-de-souza-217a291b5/'
-		},
-		{
-			name: 'Soraya Sardine',
-			position: 'Graphic Design Coordinator',
-			image: 'e-board/Soraya_Sardine.jpeg',
-			linkedin: 'https://www.linkedin.com/in/soraya-sardine-64662216a/'
 		},
 		{
 			name: 'Natahja Graddy',
@@ -47,16 +30,40 @@
 			linkedin: 'https://www.linkedin.com/in/natahja-graddy/'
 		},
 		{
-			name: 'Yonas Worku',
-			position: 'Career Events Coordinator',
-			image: 'e-board/Yonas_Worku.jpeg',
-			linkedin: 'https://www.linkedin.com/in/yonasworku/'
-		},
-		{
 			name: 'Matthew DeGuzman',
 			position: 'Technical Events Coordinator',
 			image: 'e-board/Matthew_DeGuzman.jpeg',
 			linkedin: 'https://www.linkedin.com/in/matthew-deguzman/'
+		},
+		{
+			name: 'Robert Conde',
+			position: 'Technical Events Coordinator',
+			image: 'e-board/Robert_Conde.jpeg',
+			linkedin: 'https://www.linkedin.com/in/rcond/'
+		},
+		{
+			name: 'Soraya Sardine',
+			position: 'Graphic Design Coordinator',
+			image: 'e-board/Soraya_Sardine.jpeg',
+			linkedin: 'https://www.linkedin.com/in/soraya-sardine-64662216a/'
+		},
+		{
+			name: 'Brian Mbaji',
+			position: 'Treasurer',
+			image: 'e-board/Brian_Mbaji.jpeg',
+			linkedin: 'https://www.linkedin.com/in/brian-mbaji/'
+		},
+		{
+			name: 'Yohance de Souza',
+			position: 'Administration Chair',
+			image: 'e-board/Yohance_de_Souza.jpeg',
+			linkedin: 'https://www.linkedin.com/in/yohance-de-souza-217a291b5/'
+		},
+		{
+			name: 'Yonas Worku',
+			position: 'Career Events Coordinator',
+			image: 'e-board/Yonas_Worku.jpeg',
+			linkedin: 'https://www.linkedin.com/in/yonasworku/'
 		},
 		{
 			name: 'Alex Huper',
@@ -75,6 +82,24 @@
 			position: 'Digital Marketing Coordinator',
 			image: 'e-board/Abigail_Erefah.jpeg',
 			linkedin: 'https://www.linkedin.com/in/abigail-erefah/'
+		},
+		{
+			name: 'Marvens Dor',
+			position: 'Social Media Coordinator',
+			image: 'e-board/Marvens_Dor.jpeg',
+			linkedin: 'https://www.linkedin.com/in/marvensjd/'
+		},
+		{
+			name: 'Pablo Bueno',
+			position: 'Co-outreach Coordinator',
+			image: 'e-board/Pablo_Bueno.jpeg',
+			linkedin: 'https://www.linkedin.com/in/pablojbueno/'
+		},
+		{
+			name: 'Braulio Quintana',
+			position: 'Physical Marketing Coordinator',
+			image: 'e-board/Braulio_Quintana.jpeg',
+			linkedin: 'https://www.linkedin.com/in/braulioquintana/'
 		},
 		{
 			name: 'Dr. Sanethia Thomas',
@@ -267,7 +292,7 @@
 							</div>
 							<img
 								src={member.image}
-								alt="Photo of {member.name}"
+								alt={member.name}
 								class="w-full h-full object-cover rounded-lg laptop:rounded-xl items-start"
 							/>
 						</div>
