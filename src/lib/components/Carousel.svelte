@@ -165,6 +165,10 @@
 </div>
 
 <style lang="postcss">
+	.selected {
+		background-color: #f7f7f7;
+	}
+
 	.carousel {
 		scroll-snap-type: x mandatory;
 		-ms-overflow-style: none;

@@ -3,7 +3,6 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import '../app.css';
 	import './reset.css';
-	import './global.css';
 	import { onMount } from 'svelte';
 	import { setAnimations } from '$lib/utils';
 	import { inject } from '@vercel/analytics';
