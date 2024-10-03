@@ -33,6 +33,7 @@ export type Post = {
 	permalink: string;
 	mediaType: string;
 	mediaUrl: string;
+	thumbnailUrl?: string;
 	caption: string;
 	sizes: Sizes;
 	prunedCaption: string;
