@@ -91,7 +91,7 @@
 		},
 		{
 			name: 'Pablo Bueno',
-			position: 'Co-outreach Coordinator',
+			position: 'Outreach Coordinator',
 			image: 'e-board/Pablo_Bueno.jpeg',
 			linkedin: 'https://www.linkedin.com/in/pablojbueno/'
 		},
@@ -100,6 +100,12 @@
 			position: 'Physical Marketing Coordinator',
 			image: 'e-board/Braulio_Quintana.jpeg',
 			linkedin: 'https://www.linkedin.com/in/braulioquintana/'
+		},
+		{
+			name: 'Xalan Dames',
+			position: 'Community Events Coordinator',
+			image: 'e-board/Xalan_Dames.jpeg',
+			linkedin: 'https://www.linkedin.com/in/xalandamesuf/'
 		},
 		{
 			name: 'Dr. Sanethia Thomas',
