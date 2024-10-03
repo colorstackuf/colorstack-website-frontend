@@ -29,7 +29,7 @@
 	<a href={post.permalink} target="_blank">
 		<!-- Post -->
 		<img
-			src={post.mediaUrl}
+			src={post.thumbnailUrl ?? post.mediaUrl}
 			alt={post.caption}
 			class="w-full h-full object-cover rounded-md z-[-1]"
 		/>
