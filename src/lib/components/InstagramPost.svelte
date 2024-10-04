@@ -13,7 +13,7 @@
 	};
 
 	let timeSincePost = dateDifferenceInDays(post.timestamp); // in days
-	let unit = timeSincePost.toFixed(0) === '1' ? 'days' : 'day';
+	let unit = timeSincePost.toFixed(0) === '1' ? 'day' : 'days';
 	if (timeSincePost >= 7) {
 		timeSincePost = timeSincePost / 7; // in weeks
 		unit = timeSincePost.toFixed(0) === '1' ? 'week' : 'weeks';
