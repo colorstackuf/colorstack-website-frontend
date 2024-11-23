@@ -6,7 +6,7 @@
 	import googleCalendarPlugin from '@fullcalendar/google-calendar';
 
 	onMount(() => {
-		const observer = setAnimations();
+		const animations = setAnimations();
 		const calendarEl = document.getElementById('calendar');
 
 		if (calendarEl) {
@@ -31,7 +31,7 @@
 			console.error('Calendar element not found.');
 		}
 
-		return observer.disconnect;
+		return () => animations.disconnect();
 	});
 </script>
 

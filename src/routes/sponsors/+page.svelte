@@ -6,8 +6,8 @@
 	import { setAnimations } from '$lib/utils';
 
 	onMount(() => {
-		const observer = setAnimations();
-		return observer.disconnect;
+		const animations = setAnimations();
+		return () => animations.disconnect();
 	});
 
 	let descriptions = [

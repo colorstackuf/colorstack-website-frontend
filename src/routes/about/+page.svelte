@@ -5,8 +5,8 @@
 	import { members, submitForm } from './eboard';
 
 	onMount(() => {
-		const observer = setAnimations();
-		return observer.disconnect;
+		const animations = setAnimations();
+		return () => animations.disconnect();
 	});
 
 	const contactData: ContactData = {

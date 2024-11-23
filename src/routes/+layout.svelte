@@ -10,8 +10,8 @@
 
 	inject({ mode: dev ? 'development' : 'production' });
 	onMount(() => {
-		const observer = setAnimations();
-		return observer.disconnect;
+		const animations = setAnimations();
+		return () => animations.disconnect();
 	});
 </script>
 
