@@ -17,6 +17,8 @@ export function setAnimations() {
 	document.querySelectorAll('.slides-in').forEach((elem) => {
 		observer.observe(elem);
 	});
+
+	return observer
 }
 
 export const validEmail = (email: string) => /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);

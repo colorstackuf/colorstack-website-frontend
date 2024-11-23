@@ -4,7 +4,11 @@
 	import NvidiaImages from '$lib/components/Nvidia.svelte';
 	import { onMount } from 'svelte';
 	import { setAnimations } from '$lib/utils';
-	onMount(setAnimations);
+
+	onMount(() => {
+		const observer = setAnimations();
+		return observer.disconnect;
+	});
 
 	let descriptions = [
 		{

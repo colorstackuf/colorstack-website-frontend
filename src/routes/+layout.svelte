@@ -9,7 +9,10 @@
 	import { dev } from '$app/environment';
 
 	inject({ mode: dev ? 'development' : 'production' });
-	onMount(setAnimations);
+	onMount(() => {
+		const observer = setAnimations();
+		return observer.disconnect;
+	});
 </script>
 
 <main class="relative grid grid-rows-auto">

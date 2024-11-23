@@ -1,10 +1,14 @@
 <script lang="ts">
-	import type { carouselImage } from '$lib/types';
+	import type { CarouselImage } from '$lib/types';
 	import { onMount } from 'svelte';
 	import { setAnimations } from '$lib/utils';
-	onMount(setAnimations);
 
-	const nvidiaImages: carouselImage[] = [
+	onMount(() => {
+		const observer = setAnimations();
+		return observer.disconnect;
+	});
+
+	const nvidiaImages: CarouselImage[] = [
 		{ id: 'fdl1', src: '/nvidia-fdl/fdl1.jpg', alt: 'Image 1' },
 		{ id: 'fdl2', src: '/nvidia-fdl/fdl2.jpg', alt: 'Image 2' },
 		{ id: 'fdl3', src: '/nvidia-fdl/fdl3.jpg', alt: 'Image 3' },

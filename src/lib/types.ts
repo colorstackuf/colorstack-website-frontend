@@ -49,6 +49,14 @@ export interface ContactData {
 	message: string;
 }
 
+export interface ContactErrors {
+	firstName: string;
+	lastName: string;
+	email: string;
+	message: string;
+}
+
+
 export type InstagramData = {
 	username: string;
 	biography: string;

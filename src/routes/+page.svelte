@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { PageServerData } from './$types';
-	import { type carouselImage } from '$lib/types';
+	import { type CarouselImage } from '$lib/types';
 	import Carousel from '$lib/components/Carousel.svelte';
 	import Pillar from '$lib/components/Pillar.svelte';
 	import Accordion from '$lib/components/Accordion.svelte';
@@ -11,7 +11,7 @@
 
 	export let data: PageServerData;
 
-	const images: carouselImage[] = [
+	const images: CarouselImage[] = [
 		{
 			id: 'img0',
 			src: '/carousel/img0.jpeg',
@@ -65,7 +65,10 @@
 		}
 	];
 
-	onMount(setAnimations);
+	onMount(() => {
+		const observer = setAnimations();
+		return observer.disconnect;
+	});
 </script>
 
 <svelte:head>
@@ -82,7 +85,7 @@
 		<div
 			class="slides-in flex flex-col justify-center laptop:justify-normal laptop:mt-20 desktop:mt-28 items-center laptop:justify-self-center"
 		>
-			<h1 class="text-colorstackuf-blue text-[1.4rem] font-gotham-medium">WHAT WE DO</h1>
+			<h1 class="section-header">WHAT WE DO</h1>
 			<p
 				class="text-white font-archer-book text-2xl tablet:text-4xl tablet:leading-[2.5rem] max-w-[500px] text-center mt-8"
 			>
@@ -104,7 +107,7 @@
 
 	<!-- Pillars -->
 	<section
-		class="padding tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-white py-20 tablet:py-36 notebook:py-40 translate-y-[-110px] tablet:translate-y-[-130px] laptop:flex laptop:justify-center desktop:translate-y-[-40px]"
+		class="padding tablet:col-start-1 tablet:col-end-4 mt-16 bg-body-background-white py-20 tablet:py-36 notebook:py-40 laptop:flex laptop:justify-center section-size"
 	>
 		<div class="max-w-page-width grid grid-cols-1 tablet:grid-cols-3 gap-[70px] tablet:gap-[40px]">
 			{#each pillars as pillar}
@@ -114,49 +117,39 @@
 	</section>
 
 	<!-- Sponsors -->
-	<section
-		class="padding lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] desktop:translate-y-[-40px]"
-	>
-		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-8">Our Sponsors</h2>
+	<section class="padding lg-desktop:col-start-2 section-size">
+		<h2 class="section-header mt-16 mb-8">Our Sponsors</h2>
 		<Sponsors />
 	</section>
 
 	<!-- Follow Instagram -->
-	<section
-		class="padding slides-in lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] desktop:translate-y-[-40px]"
-	>
-		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-8">
-			Follow our Instagram!
-		</h2>
+	<section class="padding slides-in lg-desktop:col-start-2 section-size">
+		<h2 class="section-header mt-16 mb-8">Follow our Instagram!</h2>
 		<Instagram data={data.instagramData} />
 	</section>
 
 	<!-- FAQ -->
 	<section
-		class="padding slides-in lg-desktop:col-start-2 translate-y-[-110px] tablet:translate-y-[-130px] flex flex-col gap-y-6 desktop:translate-y-[-40px] desktop:mb-24"
+		class="padding slides-in lg-desktop:col-start-2 flex flex-col gap-y-6 desktop:mb-24 section-size"
 	>
-		<h2 class="text-colorstackuf-blue font-gotham-medium text-[1.4rem] mt-16 mb-4">FAQs</h2>
+		<h2 class="section-header mt-16 mb-4">FAQs</h2>
 		<Accordion>
 			<span slot="head">
-				<h3 class="text-black font-gotham-medium text-[1.1rem] leading-5 tablet:text-[1.2rem]">
-					What does ColorStack do?
-				</h3>
+				<h3 class="accordion-header">What does ColorStack do?</h3>
 			</span>
 			<div slot="details">
-				<p class="text-black text-base font-archer">
-					Increase the number of Black & Latinx computer science students that start rewarding
+				<p class="accordion-text">
+					Increase the number of Black &amp; Latinx computer science students that start rewarding
 					technical careers.
 				</p>
 			</div>
 		</Accordion>
 		<Accordion>
 			<span slot="head">
-				<h3 class="text-black font-gotham-medium text-[1.1rem] leading-5 tablet:text-[1.2rem]">
-					Do I have to be Black or Latinx to join?
-				</h3>
+				<h3 class="accordion-header">Do I have to be Black or Latinx to join?</h3>
 			</span>
 			<div slot="details">
-				<p class="text-black text-base font-archer">
+				<p class="accordion-text">
 					While you must be Black or Latinx to become a member of the national organization, the
 					chapter is open to everyone that is committed to our mission.
 				</p>
@@ -164,12 +157,12 @@
 		</Accordion>
 		<Accordion>
 			<span slot="head">
-				<h3 class="text-black font-gotham-medium text-[1.1rem] leading-5 tablet:text-[1.2rem]">
+				<h3 class="accordion-header">
 					If I join ColorStack UF am I automatically in ColorStack National?
 				</h3>
 			</span>
 			<div slot="details">
-				<p class="text-black text-base font-archer">
+				<p class="accordion-text">
 					No, you still need to apply to become a member of the ColorStack national chapter at <a
 						href="https://colorstack.org/"
 						class="decoration-solid decoration-2 decoration-colorstackuf-blue underline underline-offset-4 hover:decoration-colorstackuf-orange transition-color duration-300"
@@ -180,3 +173,21 @@
 		</Accordion>
 	</section>
 </div>
+
+<style lang="postcss">
+	.section-header {
+		@apply text-colorstackuf-blue font-gotham-medium text-[1.4rem];
+	}
+
+	.accordion-header {
+		@apply text-black font-gotham-medium text-[1.1rem] leading-5 tablet:text-[1.2rem];
+	}
+
+	.accordion-text {
+		@apply text-black text-base font-archer;
+	}
+
+	.section-size {
+		@apply translate-y-[-110px] tablet:translate-y-[-130px] desktop:translate-y-[-40px];
+	}
+</style>

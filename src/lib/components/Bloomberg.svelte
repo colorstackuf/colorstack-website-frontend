@@ -1,10 +1,14 @@
 <script lang="ts">
-	import type { carouselImage } from '$lib/types';
+	import type { CarouselImage } from '$lib/types';
 	import { onMount } from 'svelte';
 	import { setAnimations } from '$lib/utils';
-	onMount(setAnimations);
 
-	const bloombergImages: carouselImage[] = [
+	onMount(() => {
+		const observer = setAnimations();
+		return observer.disconnect;
+	});
+
+	const bloombergImages: CarouselImage[] = [
 		{ id: 'Lab1', src: '/bloomberg/Lab1.jpeg', alt: 'Image 1' },
 		{ id: 'Lab2', src: '/bloomberg/Lab2.jpeg', alt: 'Image 2' },
 		{ id: 'Lab3', src: '/bloomberg/Lab3.jpeg', alt: 'Image 3' },
