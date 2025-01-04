@@ -33,6 +33,7 @@
 			src: '/sponsors/bny-mellon.svg'
 		}
 	];
+
 	const gold = [
 		{
 			name: 'Capital One',
@@ -45,7 +46,15 @@
 		{
 			name: 'SEO',
 			src: '/sponsors/seo.png'
-		}
+		},
+		{
+			name: 'Next Era',
+			src: '/sponsors/next-era.svg'
+		},
+		{
+			name: 'Raymond James',
+			src: '/sponsors/raymond-james.svg'
+		},
 	];
 
 	const silver = [
@@ -79,7 +88,13 @@
 			</span>
 			{/snippet}
 		{#each gold as sponsor}
-			<img src={sponsor.src} alt={sponsor.name} class="h-[20px] tablet:h-[36px]" />
+			{#if sponsor.name === 'Raymond James'}
+				<img src={sponsor.src} alt={sponsor.name} class="h-[12px] tablet:h-[20px]" />
+			{:else if sponsor.name === 'Next Era'}
+				<img src={sponsor.src} alt={sponsor.name} class="h-[24px] tablet:h-[36px]" />
+			{:else}
+				<img src={sponsor.src} alt={sponsor.name} class="h-[20px] tablet:h-[36px]" />
+			{/if}
 		{/each}
 	</SponsorContainer>
 	<Divider />
