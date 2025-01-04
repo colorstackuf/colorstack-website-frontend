@@ -1,7 +1,11 @@
 <script lang="ts">
-	export let label: string;
-	export let description: string;
-	export let icon: string;
+	interface Props {
+		label: string;
+		description: string;
+		icon: string;
+	}
+
+	let { label, description, icon }: Props = $props();
 </script>
 
 <div class="slides-in flex flex-col items-center">

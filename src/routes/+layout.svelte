@@ -7,14 +7,22 @@
 	import { setAnimations } from '$lib/utils';
 	import { inject } from '@vercel/analytics';
 	import { dev } from '$app/environment';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 
 	inject({ mode: dev ? 'development' : 'production' });
-	onMount(setAnimations);
+	onMount(() => {
+		const animations = setAnimations();
+		return () => animations.disconnect();
+	});
 </script>
 
 <main class="relative grid grid-rows-auto">
 	<Header />
-	<div class="h-[95px]" />
-	<slot />
+	<div class="h-[95px]"></div>
+	{@render children?.()}
 	<Footer />
 </main>

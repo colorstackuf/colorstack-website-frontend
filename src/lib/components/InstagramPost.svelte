@@ -1,28 +1,18 @@
 <script lang="ts">
 	import type { Post, InstagramData } from '$lib/types';
+	import { calculatePostAge } from '$lib/utils';
 
-	// Defined here https://behold.so/docs/api/#response-format
-	export let post: Post;
-	export let large = false;
-	export let instagramData: InstagramData;
-
-	const dateDifferenceInDays = (date: string) => {
-		const currentDate = Date.now();
-		const postDate = new Date(date);
-		return (currentDate - postDate.getTime()) / 86_400_000;
-	};
-
-	let timeSincePost = dateDifferenceInDays(post.timestamp); // in days
-	let unit = timeSincePost.toFixed(0) === '1' ? 'day' : 'days';
-	if (timeSincePost >= 7) {
-		timeSincePost = timeSincePost / 7; // in weeks
-		unit = timeSincePost.toFixed(0) === '1' ? 'week' : 'weeks';
+	
+	interface Props {
+		// Defined here https://behold.so/docs/api/#response-format
+		post: Post;
+		large?: boolean;
+		instagramData: InstagramData;
 	}
 
-	if (timeSincePost > 4) {
-		timeSincePost = timeSincePost / 4; // in months
-		unit = timeSincePost.toFixed(0) === '1' ? 'month' : 'months';
-	}
+	let { post, large = false, instagramData }: Props = $props();
+
+	const [postAge, ageUnit] = calculatePostAge(post.timestamp);
 </script>
 
 <div class="relative h-full w-full">
@@ -50,10 +40,10 @@
 					colorstackuf
 				</p>
 				<p class="text-white text-[0.6rem] tablet:text-sm font-gotham-light">
-					{#if timeSincePost < 1}
+					{#if postAge < 1}
 						{'Today'}
 					{:else}
-						{timeSincePost.toFixed(0) + ' ' + unit} ago
+						{postAge.toFixed(0) + ' ' + ageUnit} ago
 					{/if}
 				</p>
 			</div>
@@ -69,7 +59,7 @@
 
 		<div
 			class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 opacity-100"
-		/>
+		></div>
 		<div
 			class="absolute inset-0 transition duration-300 hover:bg-neutral-950/70 z-10 flex items-center justify-center w-full h-full group"
 		>

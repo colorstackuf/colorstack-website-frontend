@@ -6,7 +6,7 @@
 	import googleCalendarPlugin from '@fullcalendar/google-calendar';
 
 	onMount(() => {
-		setAnimations();
+		const animations = setAnimations();
 		const calendarEl = document.getElementById('calendar');
 
 		if (calendarEl) {
@@ -30,6 +30,8 @@
 		} else {
 			console.error('Calendar element not found.');
 		}
+
+		return () => animations.disconnect();
 	});
 </script>
 
@@ -40,7 +42,7 @@
 <div
 	class="justify-center grid grid-cols-1 lg-desktop:grid-cols-[1fr_1536px_1fr] bg-body-background-white"
 >
-	<div />
+	<div></div>
 
 	<div class="px-4 laptop:px-0">
 		<!-- Get Involved Section -->

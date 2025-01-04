@@ -2,13 +2,17 @@
 	import { type CarouselImage } from '$lib/types';
 	import { onMount } from 'svelte';
 
-	export let images: CarouselImage[];
-	export let interval: number = 3000;
+	interface Props {
+		images: CarouselImage[];
+		interval?: number;
+	}
+
+	let { images, interval = 3000 }: Props = $props();
 
 	// @ts-expect-error - don't want to import NodeJS types
 	let intervalId;
 	let imgIndex = 0;
-	let carouselContainer: HTMLElement;
+	let carouselContainer: HTMLElement = $state();
 	let observer: IntersectionObserver;
 
 	function idToHref(id: string) {
@@ -132,10 +136,10 @@
 	<!-- Carousel Images -->
 	<div
 		bind:this={carouselContainer}
-		on:mouseover={stopScroll}
-		on:mouseout={startScroll}
-		on:focus={() => {}}
-		on:blur={() => {}}
+		onmouseover={stopScroll}
+		onmouseout={startScroll}
+		onfocus={() => {}}
+		onblur={() => {}}
 		class="w-full h-full flex scroll-smooth overflow-x-scroll carousel rounded-lg"
 		role="img"
 	>
@@ -148,7 +152,7 @@
 
 	<!-- Carousel Navigation -->
 	<div class="relative bottom-[25px] tablet:bottom-[55px] flex justify-center items-center">
-		<button class="bg-none border-none" on:click={handleNavigationClick}>
+		<button class="bg-none border-none" onclick={handleNavigationClick}>
 			{#each images as image, i}
 				<a
 					href={`#${image.id}`}
