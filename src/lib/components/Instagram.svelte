@@ -8,7 +8,11 @@
 		return () => animations.disconnect();
 	});
 
-	export let data: InstagramData;
+	interface Props {
+		data: InstagramData;
+	}
+
+	let { data }: Props = $props();
 </script>
 
 <div

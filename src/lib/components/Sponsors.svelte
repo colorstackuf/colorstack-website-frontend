@@ -55,7 +55,7 @@
 			</div>
 		</div>
 
-		<div class="border-b border-solid border-[#C6D1EF] my-8" />
+		<div class="border-b border-solid border-[#C6D1EF] my-8"></div>
 		<!-- adding margin at divider -->
 
 		<!-- Gold Sponsors -->

@@ -9,7 +9,11 @@
 	import Instagram from '$lib/components/Instagram.svelte';
 	import { setAnimations } from '$lib/utils';
 
-	export let data: PageServerData;
+	interface Props {
+		data: PageServerData;
+	}
+
+	let { data }: Props = $props();
 
 	const images: CarouselImage[] = [
 		{
@@ -134,42 +138,54 @@
 	>
 		<h2 class="section-header mt-16 mb-4">FAQs</h2>
 		<Accordion>
-			<span slot="head">
-				<h3 class="accordion-header">What does ColorStack do?</h3>
-			</span>
-			<div slot="details">
-				<p class="accordion-text">
-					Increase the number of Black &amp; Latinx computer science students that start rewarding
-					technical careers.
-				</p>
-			</div>
+			{#snippet head()}
+						<span >
+					<h3 class="accordion-header">What does ColorStack do?</h3>
+				</span>
+					{/snippet}
+			{#snippet details()}
+						<div >
+					<p class="accordion-text">
+						Increase the number of Black &amp; Latinx computer science students that start rewarding
+						technical careers.
+					</p>
+				</div>
+					{/snippet}
 		</Accordion>
 		<Accordion>
-			<span slot="head">
-				<h3 class="accordion-header">Do I have to be Black or Latinx to join?</h3>
-			</span>
-			<div slot="details">
-				<p class="accordion-text">
-					While you must be Black or Latinx to become a member of the national organization, the
-					chapter is open to everyone that is committed to our mission.
-				</p>
-			</div>
+			{#snippet head()}
+						<span >
+					<h3 class="accordion-header">Do I have to be Black or Latinx to join?</h3>
+				</span>
+					{/snippet}
+			{#snippet details()}
+						<div >
+					<p class="accordion-text">
+						While you must be Black or Latinx to become a member of the national organization, the
+						chapter is open to everyone that is committed to our mission.
+					</p>
+				</div>
+					{/snippet}
 		</Accordion>
 		<Accordion>
-			<span slot="head">
-				<h3 class="accordion-header">
-					If I join ColorStack UF am I automatically in ColorStack National?
-				</h3>
-			</span>
-			<div slot="details">
-				<p class="accordion-text">
-					No, you still need to apply to become a member of the ColorStack national chapter at <a
-						href="https://colorstack.org/"
-						class="decoration-solid decoration-2 decoration-colorstackuf-blue underline underline-offset-4 hover:decoration-colorstackuf-orange transition-color duration-300"
-						target="_blank">www.colorstack.org.</a
-					>
-				</p>
-			</div>
+			{#snippet head()}
+						<span >
+					<h3 class="accordion-header">
+						If I join ColorStack UF am I automatically in ColorStack National?
+					</h3>
+				</span>
+					{/snippet}
+			{#snippet details()}
+						<div >
+					<p class="accordion-text">
+						No, you still need to apply to become a member of the ColorStack national chapter at <a
+							href="https://colorstack.org/"
+							class="decoration-solid decoration-2 decoration-colorstackuf-blue underline underline-offset-4 hover:decoration-colorstackuf-orange transition-color duration-300"
+							target="_blank">www.colorstack.org.</a
+						>
+					</p>
+				</div>
+					{/snippet}
 		</Accordion>
 	</section>
 </div>

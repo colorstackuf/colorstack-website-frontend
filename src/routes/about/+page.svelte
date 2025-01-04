@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { preventDefault } from 'svelte/legacy';
+
 	import { onMount } from 'svelte';
 	import type { ContactData, ContactErrors } from '$lib/types';
 	import { setAnimations } from '$lib/utils';
@@ -9,19 +11,19 @@
 		return () => animations.disconnect();
 	});
 
-	const contactData: ContactData = {
+	const contactData: ContactData = $state({
 		firstName: '',
 		lastName: '',
 		email: '',
 		message: ''
-	};
+	});
 
-	const contactErrors: ContactErrors = {
+	const contactErrors: ContactErrors = $state({
 		firstName: '',
 		lastName: '',
 		email: '',
 		message: ''
-	};
+	});
 </script>
 
 <svelte:head>
@@ -169,7 +171,7 @@
 
 			<form
 				class="flex flex-col gap-4 justify-center w-full font-archer lg-desktop:text-2xl"
-				on:submit|preventDefault={() => submitForm(contactData, contactErrors)}
+				onsubmit={preventDefault(() => submitForm(contactData, contactErrors))}
 			>
 				<div>
 					<input
@@ -178,7 +180,7 @@
 						class="w-full h-12 rounded-md px-3"
 						style={contactErrors.firstName && 'border: 2px solid red'}
 						bind:value={contactData.firstName}
-						on:change={() => (contactErrors.firstName = '')}
+						onchange={() => (contactErrors.firstName = '')}
 					/>
 					{#if contactErrors.firstName}
 						<p class="text-red-800 text-sm">First Name is required</p>
@@ -197,7 +199,7 @@
 						class="w-full h-12 rounded-md px-3"
 						style={contactErrors.email && 'border: 2px solid red'}
 						bind:value={contactData.email}
-						on:change={() => (contactErrors.email = '')}
+						onchange={() => (contactErrors.email = '')}
 					/>
 					{#if contactErrors.email}
 						<p class="text-red-800 text-sm">Invalid Email</p>
@@ -209,8 +211,8 @@
 						class="w-full h-48 rounded-md p-3 resize-none align-bottom"
 						style={contactErrors.message && 'border: 2px solid red'}
 						bind:value={contactData.message}
-						on:change={() => (contactErrors.message = '')}
-					/>
+						onchange={() => (contactErrors.message = '')}
+					></textarea>
 					{#if contactErrors.message}
 						<p class="text-red-800 text-sm">Message is required</p>
 					{/if}

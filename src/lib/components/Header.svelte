@@ -1,12 +1,18 @@
 <script lang="ts">
+	import { run } from 'svelte/legacy';
+
 	import { slide } from 'svelte/transition';
 	import { Hamburger } from 'svelte-hamburgers';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 
-	export let ariaLabel: string = 'Toggle navigation';
+	interface Props {
+		ariaLabel?: string;
+	}
 
-	let burgerOpen: boolean = false;
+	let { ariaLabel = 'Toggle navigation' }: Props = $props();
+
+	let burgerOpen: boolean = $state(false);
 
 	function toggleMenu() {
 		burgerOpen = !burgerOpen;
@@ -17,18 +23,19 @@
 		document.body.classList.toggle('no-scroll', !burgerOpen);
 	}
 
-	$: onAbout = $page.url.pathname === '/about';
-	$: onSponsors = $page.url.pathname === '/sponsors';
-	$: onStudents = $page.url.pathname === '/students';
+	let onAbout = $derived($page.url.pathname === '/about');
+	let onSponsors = $derived($page.url.pathname === '/sponsors');
+	let onStudents = $derived($page.url.pathname === '/students');
 
-	$: innerWidth = 0;
-	$: {
+	let innerWidth = $state(0);
+	
+	run(() => {
 		// Close the menu when the screen is resized to desktop
 		if (innerWidth >= 1024) {
 			burgerOpen = false;
 			document.body.classList.toggle('no-scroll', false);
 		}
-	}
+	});
 
 	onMount(() => {
 		return () => {
@@ -39,7 +46,7 @@
 
 <svelte:window bind:innerWidth />
 {#if burgerOpen}
-	<div class="absolute top-[86px] inset-0 w-full h-full bg-black bg-opacity-90 z-20" />
+	<div class="absolute top-[86px] inset-0 w-full h-full bg-black bg-opacity-90 z-20"></div>
 {/if}
 
 <header
@@ -50,7 +57,7 @@
 		<a
 			href="/"
 			class="pt-1 w-fit"
-			on:click={() => {
+			onclick={() => {
 				burgerOpen = false;
 				document.body.classList.toggle('no-scroll', false);
 			}}
@@ -96,7 +103,7 @@
 								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
 								class:on-page={onAbout}
 								href="/about"
-								on:click={() => {
+								onclick={() => {
 									toggleMenu();
 								}}>About</a
 							>
@@ -104,7 +111,7 @@
 								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
 								href="/sponsors"
 								class:on-page={onSponsors}
-								on:click={() => {
+								onclick={() => {
 									toggleMenu();
 								}}>Sponsors</a
 							>
@@ -112,7 +119,7 @@
 								class="text-white hover:text-colorstackuf-orange transition-colors duration-300 text-xl pt-1"
 								href="/students"
 								class:on-page={onStudents}
-								on:click={() => {
+								onclick={() => {
 									toggleMenu();
 								}}>Students</a
 							>

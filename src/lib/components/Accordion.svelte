@@ -1,10 +1,17 @@
 <script lang="ts">
-	/** Accordion component for displaying collapsible content */
+	
 
-	export let open = false;
 	import { slide } from 'svelte/transition';
+	interface Props {
+		/** Accordion component for displaying collapsible content */
+		open?: boolean;
+		head?: import('svelte').Snippet;
+		details?: import('svelte').Snippet;
+	}
 
-	let chevron: HTMLImageElement;
+	let { open = $bindable(false), head, details }: Props = $props();
+
+	let chevron: HTMLImageElement = $state();
 	const handleClick = () => {
 		chevron.style.transform = open ? 'rotate(0deg)' : 'rotate(90deg)';
 		open = !open;
@@ -14,11 +21,11 @@
 <div class="bg-[#C6D1EF] border border-white rounded-lg">
 	<button
 		class="w-full py-6 px-4 transition-bg-color rounded-lg bg-body-background-white hover:bg-colorstackuf-orange duration-300"
-		on:click={handleClick}
+		onclick={handleClick}
 	>
 		<div class="flex w-full h-full items-center">
 			<div class="flex-[1] mr-[10px] text-left">
-				<slot name="head"></slot>
+				{@render head?.()}
 			</div>
 
 			<img
@@ -33,7 +40,7 @@
 	<!-- Content to display-->
 	{#if open}
 		<div class="p-4" transition:slide>
-			<slot name="details"></slot>
+			{@render details?.()}
 		</div>
 	{/if}
 </div>

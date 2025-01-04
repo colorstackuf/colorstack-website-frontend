@@ -1,5 +1,6 @@
 <script>
-	$: innerWidth = 0;
+	let innerWidth = $state(0);
+	
 </script>
 
 <svelte:window bind:innerWidth />

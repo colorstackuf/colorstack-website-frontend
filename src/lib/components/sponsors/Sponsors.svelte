@@ -60,9 +60,11 @@
 <div class="slides-in relative flex flex-col gap-12 bg-body-background-blue">
 	<!-- Platinum Sponsors -->
 	<SponsorContainer title="Platinum">
-		<span slot="icon">
-			<img src="/sponsors/tiers/platinum.svg" alt="Platinum" class="h-[30px] tablet:h-[40px]" />
-		</span>
+		{#snippet icon()}
+				<span >
+				<img src="/sponsors/tiers/platinum.svg" alt="Platinum" class="h-[30px] tablet:h-[40px]" />
+			</span>
+			{/snippet}
 		{#each platinum as sponsor}
 			<img src={sponsor.src} alt={sponsor.name} class="h-[20px] tablet:h-[40px]" />
 		{/each}
@@ -71,9 +73,11 @@
 
 	<!-- Gold Sponsors -->
 	<SponsorContainer title="Gold">
-		<span slot="icon">
-			<img src="/sponsors/tiers/gold.svg" alt="Gold" class="h-[30px] tablet:h-[40px]" />
-		</span>
+		{#snippet icon()}
+				<span >
+				<img src="/sponsors/tiers/gold.svg" alt="Gold" class="h-[30px] tablet:h-[40px]" />
+			</span>
+			{/snippet}
 		{#each gold as sponsor}
 			<img src={sponsor.src} alt={sponsor.name} class="h-[20px] tablet:h-[36px]" />
 		{/each}
@@ -82,9 +86,11 @@
 
 	<!-- Silver Sponsors -->
 	<SponsorContainer title="Silver">
-		<span slot="icon">
-			<img src="/sponsors/tiers/silver.svg" alt="Silver" class="h-[30px] tablet:h-[40px]" />
-		</span>
+		{#snippet icon()}
+				<span >
+				<img src="/sponsors/tiers/silver.svg" alt="Silver" class="h-[30px] tablet:h-[40px]" />
+			</span>
+			{/snippet}
 		{#each silver as sponsor}
 			<img src={sponsor.src} alt={sponsor.name} class="h-[20px] tablet:h-[36px]" />
 		{/each}
@@ -93,9 +99,11 @@
 
 	<!-- Founding Sponsors -->
 	<SponsorContainer title="Founding">
-		<span slot="icon">
-			<img src="/torch.svg" alt="Torch" class="h-[30px] tablet:h-[40px]" />
-		</span>
+		{#snippet icon()}
+				<span >
+				<img src="/torch.svg" alt="Torch" class="h-[30px] tablet:h-[40px]" />
+			</span>
+			{/snippet}
 		{#each founding as sponsor}
 			<img src={sponsor.src} alt={sponsor.name} class="h-[20px] tablet:h-[36px]" />
 		{/each}
