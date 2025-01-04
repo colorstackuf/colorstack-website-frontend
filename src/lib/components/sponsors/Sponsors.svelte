@@ -99,7 +99,11 @@
 			{#if sponsor.name === 'Raymond James'}
 				<img src={sponsor.src} alt={sponsor.name} class="h-[12px] tablet:h-[20px]" />
 			{:else if sponsor.name === 'Next Era'}
-				<img src={sponsor.src} alt={sponsor.name} class="h-[24px] tablet:h-[36px]" />
+				<img src={sponsor.src} alt={sponsor.name} class="h-[28px] tablet:h-[44px]" />
+			{:else if sponsor.name === 'Capital One'}
+				<img src={sponsor.src} alt={sponsor.name} class="h-[24px] tablet:h-[40px]" />
+			{:else if sponsor.name === 'Cisco'}
+				<img src={sponsor.src} alt={sponsor.name} class="h-[26px] tablet:h-[44px]" />
 			{:else}
 				<img src={sponsor.src} alt={sponsor.name} class="h-[20px] tablet:h-[36px]" />
 			{/if}
@@ -128,7 +132,11 @@
 			</span>
 			{/snippet}
 		{#each founding as sponsor}
-			<img src={sponsor.src} alt={sponsor.name} class="h-[20px] tablet:h-[36px]" />
+			{#if sponsor.name === 'Capital One'}
+				<img src={sponsor.src} alt={sponsor.name} class="h-[24px] tablet:h-[40px]" />
+			{:else}
+				<img src={sponsor.src} alt={sponsor.name} class="h-[20px] tablet:h-[36px]" />
+			{/if}
 		{/each}
 	</SponsorContainer>
 </div>
