@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Post, InstagramData } from '$lib/types';
+	import { calculatePostAge } from '$lib/utils';
 
 	
 	interface Props {
@@ -11,23 +12,7 @@
 
 	let { post, large = false, instagramData }: Props = $props();
 
-	const dateDifferenceInDays = (date: string) => {
-		const currentDate = Date.now();
-		const postDate = new Date(date);
-		return (currentDate - postDate.getTime()) / 86_400_000;
-	};
-
-	let timeSincePost = $state(dateDifferenceInDays(post.timestamp)); // in days
-	let unit = $state(timeSincePost.toFixed(0) === '1' ? 'day' : 'days');
-	if (timeSincePost >= 7) {
-		timeSincePost = timeSincePost / 7; // in weeks
-		unit = timeSincePost.toFixed(0) === '1' ? 'week' : 'weeks';
-	}
-
-	if (timeSincePost > 4) {
-		timeSincePost = timeSincePost / 4; // in months
-		unit = timeSincePost.toFixed(0) === '1' ? 'month' : 'months';
-	}
+	const [postAge, ageUnit] = calculatePostAge(post.timestamp);
 </script>
 
 <div class="relative h-full w-full">
@@ -55,10 +40,10 @@
 					colorstackuf
 				</p>
 				<p class="text-white text-[0.6rem] tablet:text-sm font-gotham-light">
-					{#if timeSincePost < 1}
+					{#if postAge < 1}
 						{'Today'}
 					{:else}
-						{timeSincePost.toFixed(0) + ' ' + unit} ago
+						{postAge.toFixed(0) + ' ' + ageUnit} ago
 					{/if}
 				</p>
 			</div>
